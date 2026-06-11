@@ -45,7 +45,9 @@ and what mock servers and tests use.
 encodes the `MUST`-level rules of this standard, and **MUST** fail the build on
 violations. Machines enforce consistency far more reliably and cheaply than
 reviewers. Each lint rule **SHOULD** reference the guideline rule identifier (for
-example `url-casing`) it enforces.
+example `url-casing`) it enforces. A starter ruleset that does exactly this —
+mapping lint rules to guideline identifiers — ships with this standard; see
+[tooling](../tooling/README.md).
 
 ### `governance-contract-tests`
 

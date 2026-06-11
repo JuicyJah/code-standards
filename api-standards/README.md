@@ -1,4 +1,4 @@
-# Universal REST API Standard
+# Universal Enterprise REST API Standard
 
 A vendor-neutral standard for designing RESTful HTTP APIs that are consistent,
 predictable, and pleasant to consume — regardless of the organization, language,
@@ -100,6 +100,20 @@ and prioritize consistency *within* an existing API over retrofitting it.
    additive; do not contradict `MUST`-level rules.
 3. Enforce the rules automatically wherever possible — see
    [Governance](guidelines/12-governance.md).
+
+## Tooling
+
+A starter [Spectral](https://docs.stoplight.io/docs/spectral) ruleset in
+[`tooling/`](tooling/README.md) lints OpenAPI descriptions against the
+machine-checkable subset of this standard, with each lint rule mapped to the
+guideline rule identifier it enforces. It is the floor, not the ceiling: the
+[tooling README](tooling/README.md) documents exactly what the linter does and does
+not cover, and what to pair it with (contract tests and a breaking-change detector).
+
+## Contributing
+
+This is a living standard. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose
+new rules and patterns, how rule identifiers work, and how changes are tiered.
 
 ## License
 

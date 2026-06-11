@@ -1,0 +1,177 @@
+# Universal REST API Standard — starter Spectral ruleset
+#
+# This ruleset encodes the machine-checkable subset of the standard's rules so that
+# OpenAPI descriptions can be linted in CI (see guideline `governance-lint`). It is a
+# STARTER, not a complete enforcement of the standard: many rules require human
+# judgement (resource modeling, naming quality, fitness for use) and some require
+# inspecting the running API rather than its description. See tooling/README.md for
+# the explicit list of what is and is not covered here.
+#
+# Each rule's `message` names the guideline rule identifier it enforces (e.g.
+# `url-no-trailing-slash`) so a failing lint points straight at the relevant guidance.
+#
+# Usage:  spectral lint openapi.yaml --ruleset api-standards/tooling/spectral-ruleset.yaml
+# Docs:   https://docs.stoplight.io/docs/spectral
+
+extends:
+  - "spectral:oas"   # structural OpenAPI rules (valid refs, required fields, etc.)
+
+aliases:
+  SchemaPropertyKeys:
+    - "$.components.schemas..properties.*~"
+    - "$.paths..content..schema..properties.*~"
+  QueryParamNames:
+    - "$..parameters[?(@.in == 'query')].name"
+
+rules:
+
+  # --- URLs and resources -------------------------------------------------------
+
+  uas-url-no-trailing-slash:
+    description: "Paths must not end with a trailing slash."
+    message: "{{property}} — url-no-trailing-slash: a path must not end with '/'."
+    severity: error
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: ".+/$"
+
+  uas-url-lowercase-kebab:
+    description: "API-defined path segments use lowercase kebab-case."
+    message: "{{property}} — naming-url-kebabcase/url-lowercase-path: path segments must be lowercase kebab-case (path params {like-this} and ':action' suffixes allowed)."
+    severity: error
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        # each segment: kebab-case word, or {param}, optionally with a :action suffix
+        match: "^(/(([a-z0-9]+(-[a-z0-9]+)*)|(\\{[a-zA-Z0-9_]+\\}))(:[a-z][a-zA-Z0-9]*)?)+/?$"
+
+  uas-no-verbs-in-paths:
+    description: "Resource paths should not contain RPC-style verbs; use HTTP methods."
+    message: "{{property}} — naming-no-verbs-in-paths: avoid verbs in path segments; the HTTP method is the verb (use a ':action' suffix only for genuine non-CRUD operations)."
+    severity: warn
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: "/(get|list|create|update|delete|remove|fetch|make|do|set|put|post)[A-Za-z0-9]+(/|$)"
+
+  # --- Naming -------------------------------------------------------------------
+
+  uas-property-names-camelcase:
+    description: "JSON schema property names use camelCase."
+    message: "{{property}} — naming-json-camelcase: schema property names must be camelCase."
+    severity: error
+    given: "#SchemaPropertyKeys"
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+
+  uas-query-param-camelcase:
+    description: "Query parameter names use camelCase (covers the reserved names too)."
+    message: "{{value}} — naming-query-camelcase: query parameter names must be camelCase."
+    severity: error
+    given: "#QueryParamNames"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[a-z][a-zA-Z0-9]*$"
+
+  # --- HTTP methods and status --------------------------------------------------
+
+  uas-created-has-location:
+    description: "A 201 Created response must define a Location header."
+    message: "status-201-location: a 201 response must include a Location header pointing to the new resource."
+    severity: error
+    given: "$.paths[*][*].responses[?(@property == '201')]"
+    then:
+      field: "headers.Location"
+      function: truthy
+
+  uas-no-success-with-error-shape:
+    description: "Success (2xx) responses must not return the Problem Details media type."
+    message: "status-correct-class: failures must use a 4xx/5xx status, not a 2xx with a problem+json body."
+    severity: error
+    given: "$.paths[*][*].responses[?(@property.match(/^2/))].content"
+    then:
+      field: "application/problem+json"
+      function: undefined
+
+  # --- Errors -------------------------------------------------------------------
+
+  uas-errors-use-problem-details:
+    description: "Error (4xx/5xx) responses with a body should use application/problem+json."
+    message: "error-problem-details: 4xx/5xx responses should return application/problem+json (RFC 9457)."
+    severity: warn
+    given: "$.paths[*][*].responses[?(@property.match(/^[45]/))].content"
+    then:
+      field: "application/problem+json"
+      function: truthy
+
+  # --- Requests and responses ---------------------------------------------------
+
+  uas-json-charset-utf8:
+    description: "JSON bodies are UTF-8; do not pin a different charset."
+    message: "payload-utf8: JSON media types must not declare a non-UTF-8 charset."
+    severity: warn
+    given: "$.paths[*][*]..content.*~"
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: "charset=(?!utf-8|UTF-8)"
+
+  # --- Versioning ---------------------------------------------------------------
+
+  uas-info-has-version:
+    description: "The API description declares a version."
+    message: "version-explicit: info.version must be present and non-empty."
+    severity: error
+    given: "$.info"
+    then:
+      field: version
+      function: truthy
+
+  # --- Rate limiting ------------------------------------------------------------
+
+  uas-429-has-retry-after:
+    description: "A defined 429 response should advertise a Retry-After header."
+    message: "ratelimit-retry-after: a 429 response should include a Retry-After header."
+    severity: warn
+    given: "$.paths[*][*].responses[?(@property == '429')]"
+    then:
+      field: "headers.Retry-After"
+      function: truthy
+
+  # --- Security -----------------------------------------------------------------
+
+  uas-https-servers-only:
+    description: "All declared servers use HTTPS."
+    message: "{{value}} — security-tls-only: server URLs must use https://."
+    severity: error
+    given: "$.servers[*].url"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://"
+
+  uas-security-defined:
+    description: "The API defines at least one security scheme."
+    message: "security-authn-required: define authentication via components.securitySchemes and apply it."
+    severity: warn
+    given: "$.components.securitySchemes"
+    then:
+      function: truthy
+
+  # --- Governance ---------------------------------------------------------------
+
+  uas-operation-has-description:
+    description: "Every operation has a human-readable description."
+    message: "governance-examples: each operation should have a description (and examples) for generated docs."
+    severity: warn
+    given: "$.paths[*][get,put,post,patch,delete]"
+    then:
+      field: description
+      function: truthy
