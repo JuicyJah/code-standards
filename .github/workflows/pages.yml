@@ -34,6 +34,8 @@ jobs:
         working-directory: scripts
       - run: npm test
         working-directory: scripts
+      # Fail the build on any SID/registry violation (NUMBERING.md).
+      - run: node scripts/build-catalog.mjs --strict
 
       # The web app: install, test, then build (prebuild regenerates catalog.json).
       - run: npm ci

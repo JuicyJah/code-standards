@@ -1,0 +1,3064 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Standards Builder" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Select rules from the code & API standards, customize them, export a markdown pack.
+    - navigation [ref=e7]:
+      - button "Browse & select" [ref=e8] [cursor=pointer]
+      - button "Customize" [ref=e9] [cursor=pointer]
+      - button "Export" [ref=e10] [cursor=pointer]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - searchbox "Search SID, slug, title, or text…" [ref=e13]
+      - combobox "Standard" [ref=e14]:
+        - option "All standards" [selected]
+        - option "Code"
+        - option "API"
+      - combobox "Kind" [ref=e15]:
+        - option "All kinds" [selected]
+        - option "Rules"
+        - option "Patterns"
+        - option "Tooling"
+      - generic [ref=e16]:
+        - checkbox "Selected only" [ref=e17]
+        - text: Selected only
+    - generic [ref=e18]:
+      - generic [ref=e19]: 307 shown · 0 selected
+      - button "Select all shown" [ref=e20] [cursor=pointer]
+      - button "Deselect shown" [ref=e21] [cursor=pointer]
+    - generic [ref=e22]:
+      - heading "Code Standards — 01 — Design principles · SOLID" [level=3] [ref=e23]
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26] [cursor=pointer]:
+            - checkbox "principle-single-responsibility no SID Preview" [ref=e27]
+            - generic [ref=e28]: principle-single-responsibility
+            - generic "No SID assigned yet" [ref=e29]: no SID
+            - button "Preview" [ref=e30]
+          - generic [ref=e31]:
+            - code [ref=e32]: principle-single-responsibility
+            - text: · Code Standards · 01 — Design principles · SOLID
+        - generic [ref=e33]:
+          - generic [ref=e34] [cursor=pointer]:
+            - checkbox "principle-open-closed no SID Preview" [ref=e35]
+            - generic [ref=e36]: principle-open-closed
+            - generic "No SID assigned yet" [ref=e37]: no SID
+            - button "Preview" [ref=e38]
+          - generic [ref=e39]:
+            - code [ref=e40]: principle-open-closed
+            - text: · Code Standards · 01 — Design principles · SOLID
+        - generic [ref=e41]:
+          - generic [ref=e42] [cursor=pointer]:
+            - checkbox "principle-liskov-substitution no SID Preview" [ref=e43]
+            - generic [ref=e44]: principle-liskov-substitution
+            - generic "No SID assigned yet" [ref=e45]: no SID
+            - button "Preview" [ref=e46]
+          - generic [ref=e47]:
+            - code [ref=e48]: principle-liskov-substitution
+            - text: · Code Standards · 01 — Design principles · SOLID
+        - generic [ref=e49]:
+          - generic [ref=e50] [cursor=pointer]:
+            - checkbox "principle-interface-segregation no SID Preview" [ref=e51]
+            - generic [ref=e52]: principle-interface-segregation
+            - generic "No SID assigned yet" [ref=e53]: no SID
+            - button "Preview" [ref=e54]
+          - generic [ref=e55]:
+            - code [ref=e56]: principle-interface-segregation
+            - text: · Code Standards · 01 — Design principles · SOLID
+        - generic [ref=e57]:
+          - generic [ref=e58] [cursor=pointer]:
+            - checkbox "principle-dependency-inversion no SID Preview" [ref=e59]
+            - generic [ref=e60]: principle-dependency-inversion
+            - generic "No SID assigned yet" [ref=e61]: no SID
+            - button "Preview" [ref=e62]
+          - generic [ref=e63]:
+            - code [ref=e64]: principle-dependency-inversion
+            - text: · Code Standards · 01 — Design principles · SOLID
+    - generic [ref=e65]:
+      - heading "Code Standards — 01 — Design principles · Simplicity and reuse" [level=3] [ref=e66]
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69] [cursor=pointer]:
+            - checkbox "principle-kiss no SID Preview" [ref=e70]
+            - generic [ref=e71]: principle-kiss
+            - generic "No SID assigned yet" [ref=e72]: no SID
+            - button "Preview" [ref=e73]
+          - generic [ref=e74]:
+            - code [ref=e75]: principle-kiss
+            - text: · Code Standards · 01 — Design principles · Simplicity and reuse
+        - generic [ref=e76]:
+          - generic [ref=e77] [cursor=pointer]:
+            - checkbox "principle-yagni no SID Preview" [ref=e78]
+            - generic [ref=e79]: principle-yagni
+            - generic "No SID assigned yet" [ref=e80]: no SID
+            - button "Preview" [ref=e81]
+          - generic [ref=e82]:
+            - code [ref=e83]: principle-yagni
+            - text: · Code Standards · 01 — Design principles · Simplicity and reuse
+        - generic [ref=e84]:
+          - generic [ref=e85] [cursor=pointer]:
+            - checkbox "principle-dry no SID Preview" [ref=e86]
+            - generic [ref=e87]: principle-dry
+            - generic "No SID assigned yet" [ref=e88]: no SID
+            - button "Preview" [ref=e89]
+          - generic [ref=e90]:
+            - code [ref=e91]: principle-dry
+            - text: · Code Standards · 01 — Design principles · Simplicity and reuse
+    - generic [ref=e92]:
+      - heading "Code Standards — 01 — Design principles · Structure" [level=3] [ref=e93]
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96] [cursor=pointer]:
+            - checkbox "principle-low-coupling no SID Preview" [ref=e97]
+            - generic [ref=e98]: principle-low-coupling
+            - generic "No SID assigned yet" [ref=e99]: no SID
+            - button "Preview" [ref=e100]
+          - generic [ref=e101]:
+            - code [ref=e102]: principle-low-coupling
+            - text: · Code Standards · 01 — Design principles · Structure
+        - generic [ref=e103]:
+          - generic [ref=e104] [cursor=pointer]:
+            - checkbox "principle-high-cohesion no SID Preview" [ref=e105]
+            - generic [ref=e106]: principle-high-cohesion
+            - generic "No SID assigned yet" [ref=e107]: no SID
+            - button "Preview" [ref=e108]
+          - generic [ref=e109]:
+            - code [ref=e110]: principle-high-cohesion
+            - text: · Code Standards · 01 — Design principles · Structure
+        - generic [ref=e111]:
+          - generic [ref=e112] [cursor=pointer]:
+            - checkbox "principle-composition-over-inheritance no SID Preview" [ref=e113]
+            - generic [ref=e114]: principle-composition-over-inheritance
+            - generic "No SID assigned yet" [ref=e115]: no SID
+            - button "Preview" [ref=e116]
+          - generic [ref=e117]:
+            - code [ref=e118]: principle-composition-over-inheritance
+            - text: · Code Standards · 01 — Design principles · Structure
+    - generic [ref=e119]:
+      - heading "Code Standards — 01 — Design principles · Disposition" [level=3] [ref=e120]
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123] [cursor=pointer]:
+            - checkbox "principle-least-astonishment no SID Preview" [ref=e124]
+            - generic [ref=e125]: principle-least-astonishment
+            - generic "No SID assigned yet" [ref=e126]: no SID
+            - button "Preview" [ref=e127]
+          - generic [ref=e128]:
+            - code [ref=e129]: principle-least-astonishment
+            - text: · Code Standards · 01 — Design principles · Disposition
+        - generic [ref=e130]:
+          - generic [ref=e131] [cursor=pointer]:
+            - checkbox "principle-explicit-over-implicit no SID Preview" [ref=e132]
+            - generic [ref=e133]: principle-explicit-over-implicit
+            - generic "No SID assigned yet" [ref=e134]: no SID
+            - button "Preview" [ref=e135]
+          - generic [ref=e136]:
+            - code [ref=e137]: principle-explicit-over-implicit
+            - text: · Code Standards · 01 — Design principles · Disposition
+        - generic [ref=e138]:
+          - generic [ref=e139] [cursor=pointer]:
+            - checkbox "principle-boy-scout no SID Preview" [ref=e140]
+            - generic [ref=e141]: principle-boy-scout
+            - generic "No SID assigned yet" [ref=e142]: no SID
+            - button "Preview" [ref=e143]
+          - generic [ref=e144]:
+            - code [ref=e145]: principle-boy-scout
+            - text: · Code Standards · 01 — Design principles · Disposition
+    - generic [ref=e146]:
+      - heading "Code Standards — 02 — Code style and readability · Automated formatting and linting" [level=3] [ref=e147]
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150] [cursor=pointer]:
+            - checkbox "style-formatter no SID Preview" [ref=e151]
+            - generic [ref=e152]: style-formatter
+            - generic "No SID assigned yet" [ref=e153]: no SID
+            - button "Preview" [ref=e154]
+          - generic [ref=e155]:
+            - code [ref=e156]: style-formatter
+            - text: · Code Standards · 02 — Code style and readability · Automated formatting and linting
+        - generic [ref=e157]:
+          - generic [ref=e158] [cursor=pointer]:
+            - checkbox "style-linter no SID Preview" [ref=e159]
+            - generic [ref=e160]: style-linter
+            - generic "No SID assigned yet" [ref=e161]: no SID
+            - button "Preview" [ref=e162]
+          - generic [ref=e163]:
+            - code [ref=e164]: style-linter
+            - text: · Code Standards · 02 — Code style and readability · Automated formatting and linting
+        - generic [ref=e165]:
+          - generic [ref=e166] [cursor=pointer]:
+            - checkbox "style-no-warnings no SID Preview" [ref=e167]
+            - generic [ref=e168]: style-no-warnings
+            - generic "No SID assigned yet" [ref=e169]: no SID
+            - button "Preview" [ref=e170]
+          - generic [ref=e171]:
+            - code [ref=e172]: style-no-warnings
+            - text: · Code Standards · 02 — Code style and readability · Automated formatting and linting
+        - generic [ref=e173]:
+          - generic [ref=e174] [cursor=pointer]:
+            - checkbox "style-consistent no SID Preview" [ref=e175]
+            - generic [ref=e176]: style-consistent
+            - generic "No SID assigned yet" [ref=e177]: no SID
+            - button "Preview" [ref=e178]
+          - generic [ref=e179]:
+            - code [ref=e180]: style-consistent
+            - text: · Code Standards · 02 — Code style and readability · Automated formatting and linting
+    - generic [ref=e181]:
+      - heading "Code Standards — 02 — Code style and readability · Naming" [level=3] [ref=e182]
+      - generic [ref=e183]:
+        - generic [ref=e184]:
+          - generic [ref=e185] [cursor=pointer]:
+            - checkbox "style-intention-revealing-names no SID Preview" [ref=e186]
+            - generic [ref=e187]: style-intention-revealing-names
+            - generic "No SID assigned yet" [ref=e188]: no SID
+            - button "Preview" [ref=e189]
+          - generic [ref=e190]:
+            - code [ref=e191]: style-intention-revealing-names
+            - text: · Code Standards · 02 — Code style and readability · Naming
+        - generic [ref=e192]:
+          - generic [ref=e193] [cursor=pointer]:
+            - checkbox "style-naming-conventions no SID Preview" [ref=e194]
+            - generic [ref=e195]: style-naming-conventions
+            - generic "No SID assigned yet" [ref=e196]: no SID
+            - button "Preview" [ref=e197]
+          - generic [ref=e198]:
+            - code [ref=e199]: style-naming-conventions
+            - text: · Code Standards · 02 — Code style and readability · Naming
+        - generic [ref=e200]:
+          - generic [ref=e201] [cursor=pointer]:
+            - checkbox "style-no-misleading-names no SID Preview" [ref=e202]
+            - generic [ref=e203]: style-no-misleading-names
+            - generic "No SID assigned yet" [ref=e204]: no SID
+            - button "Preview" [ref=e205]
+          - generic [ref=e206]:
+            - code [ref=e207]: style-no-misleading-names
+            - text: · Code Standards · 02 — Code style and readability · Naming
+    - generic [ref=e208]:
+      - heading "Code Standards — 02 — Code style and readability · Structure of the code" [level=3] [ref=e209]
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - generic [ref=e212] [cursor=pointer]:
+            - checkbox "style-small-units no SID Preview" [ref=e213]
+            - generic [ref=e214]: style-small-units
+            - generic "No SID assigned yet" [ref=e215]: no SID
+            - button "Preview" [ref=e216]
+          - generic [ref=e217]:
+            - code [ref=e218]: style-small-units
+            - text: · Code Standards · 02 — Code style and readability · Structure of the code
+        - generic [ref=e219]:
+          - generic [ref=e220] [cursor=pointer]:
+            - checkbox "style-no-deep-nesting no SID Preview" [ref=e221]
+            - generic [ref=e222]: style-no-deep-nesting
+            - generic "No SID assigned yet" [ref=e223]: no SID
+            - button "Preview" [ref=e224]
+          - generic [ref=e225]:
+            - code [ref=e226]: style-no-deep-nesting
+            - text: · Code Standards · 02 — Code style and readability · Structure of the code
+        - generic [ref=e227]:
+          - generic [ref=e228] [cursor=pointer]:
+            - checkbox "style-no-magic-values no SID Preview" [ref=e229]
+            - generic [ref=e230]: style-no-magic-values
+            - generic "No SID assigned yet" [ref=e231]: no SID
+            - button "Preview" [ref=e232]
+          - generic [ref=e233]:
+            - code [ref=e234]: style-no-magic-values
+            - text: · Code Standards · 02 — Code style and readability · Structure of the code
+        - generic [ref=e235]:
+          - generic [ref=e236] [cursor=pointer]:
+            - checkbox "style-no-dead-code no SID Preview" [ref=e237]
+            - generic [ref=e238]: style-no-dead-code
+            - generic "No SID assigned yet" [ref=e239]: no SID
+            - button "Preview" [ref=e240]
+          - generic [ref=e241]:
+            - code [ref=e242]: style-no-dead-code
+            - text: · Code Standards · 02 — Code style and readability · Structure of the code
+        - generic [ref=e243]:
+          - generic [ref=e244] [cursor=pointer]:
+            - checkbox "style-no-todo-without-tracking no SID Preview" [ref=e245]
+            - generic [ref=e246]: style-no-todo-without-tracking
+            - generic "No SID assigned yet" [ref=e247]: no SID
+            - button "Preview" [ref=e248]
+          - generic [ref=e249]:
+            - code [ref=e250]: style-no-todo-without-tracking
+            - text: · Code Standards · 02 — Code style and readability · Structure of the code
+    - generic [ref=e251]:
+      - heading "Code Standards — 03 — Version control · What goes in" [level=3] [ref=e252]
+      - generic [ref=e253]:
+        - generic [ref=e254]:
+          - generic [ref=e255] [cursor=pointer]:
+            - checkbox "vc-everything-tracked no SID Preview" [ref=e256]
+            - generic [ref=e257]: vc-everything-tracked
+            - generic "No SID assigned yet" [ref=e258]: no SID
+            - button "Preview" [ref=e259]
+          - generic [ref=e260]:
+            - code [ref=e261]: vc-everything-tracked
+            - text: · Code Standards · 03 — Version control · What goes in
+        - generic [ref=e262]:
+          - generic [ref=e263] [cursor=pointer]:
+            - checkbox "vc-no-generated-artifacts no SID Preview" [ref=e264]
+            - generic [ref=e265]: vc-no-generated-artifacts
+            - generic "No SID assigned yet" [ref=e266]: no SID
+            - button "Preview" [ref=e267]
+          - generic [ref=e268]:
+            - code [ref=e269]: vc-no-generated-artifacts
+            - text: · Code Standards · 03 — Version control · What goes in
+        - generic [ref=e270]:
+          - generic [ref=e271] [cursor=pointer]:
+            - checkbox "vc-no-secrets no SID Preview" [ref=e272]
+            - generic [ref=e273]: vc-no-secrets
+            - generic "No SID assigned yet" [ref=e274]: no SID
+            - button "Preview" [ref=e275]
+          - generic [ref=e276]:
+            - code [ref=e277]: vc-no-secrets
+            - text: · Code Standards · 03 — Version control · What goes in
+    - generic [ref=e278]:
+      - heading "Code Standards — 03 — Version control · Commits" [level=3] [ref=e279]
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - generic [ref=e282] [cursor=pointer]:
+            - checkbox "vc-atomic-commits no SID Preview" [ref=e283]
+            - generic [ref=e284]: vc-atomic-commits
+            - generic "No SID assigned yet" [ref=e285]: no SID
+            - button "Preview" [ref=e286]
+          - generic [ref=e287]:
+            - code [ref=e288]: vc-atomic-commits
+            - text: · Code Standards · 03 — Version control · Commits
+        - generic [ref=e289]:
+          - generic [ref=e290] [cursor=pointer]:
+            - checkbox "vc-meaningful-messages no SID Preview" [ref=e291]
+            - generic [ref=e292]: vc-meaningful-messages
+            - generic "No SID assigned yet" [ref=e293]: no SID
+            - button "Preview" [ref=e294]
+          - generic [ref=e295]:
+            - code [ref=e296]: vc-meaningful-messages
+            - text: · Code Standards · 03 — Version control · Commits
+        - generic [ref=e297]:
+          - generic [ref=e298] [cursor=pointer]:
+            - checkbox "vc-reference-context no SID Preview" [ref=e299]
+            - generic [ref=e300]: vc-reference-context
+            - generic "No SID assigned yet" [ref=e301]: no SID
+            - button "Preview" [ref=e302]
+          - generic [ref=e303]:
+            - code [ref=e304]: vc-reference-context
+            - text: · Code Standards · 03 — Version control · Commits
+    - generic [ref=e305]:
+      - heading "Code Standards — 03 — Version control · Branches and integration" [level=3] [ref=e306]
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309] [cursor=pointer]:
+            - checkbox "vc-main-always-releasable no SID Preview" [ref=e310]
+            - generic [ref=e311]: vc-main-always-releasable
+            - generic "No SID assigned yet" [ref=e312]: no SID
+            - button "Preview" [ref=e313]
+          - generic [ref=e314]:
+            - code [ref=e315]: vc-main-always-releasable
+            - text: · Code Standards · 03 — Version control · Branches and integration
+        - generic [ref=e316]:
+          - generic [ref=e317] [cursor=pointer]:
+            - checkbox "vc-short-lived-branches no SID Preview" [ref=e318]
+            - generic [ref=e319]: vc-short-lived-branches
+            - generic "No SID assigned yet" [ref=e320]: no SID
+            - button "Preview" [ref=e321]
+          - generic [ref=e322]:
+            - code [ref=e323]: vc-short-lived-branches
+            - text: · Code Standards · 03 — Version control · Branches and integration
+        - generic [ref=e324]:
+          - generic [ref=e325] [cursor=pointer]:
+            - checkbox "vc-review-before-merge no SID Preview" [ref=e326]
+            - generic [ref=e327]: vc-review-before-merge
+            - generic "No SID assigned yet" [ref=e328]: no SID
+            - button "Preview" [ref=e329]
+          - generic [ref=e330]:
+            - code [ref=e331]: vc-review-before-merge
+            - text: · Code Standards · 03 — Version control · Branches and integration
+        - generic [ref=e332]:
+          - generic [ref=e333] [cursor=pointer]:
+            - checkbox "vc-no-history-rewrite-shared no SID Preview" [ref=e334]
+            - generic [ref=e335]: vc-no-history-rewrite-shared
+            - generic "No SID assigned yet" [ref=e336]: no SID
+            - button "Preview" [ref=e337]
+          - generic [ref=e338]:
+            - code [ref=e339]: vc-no-history-rewrite-shared
+            - text: · Code Standards · 03 — Version control · Branches and integration
+    - generic [ref=e340]:
+      - heading "Code Standards — 04 — Code review · When review happens" [level=3] [ref=e341]
+      - generic [ref=e342]:
+        - generic [ref=e343]:
+          - generic [ref=e344] [cursor=pointer]:
+            - checkbox "review-required no SID Preview" [ref=e345]
+            - generic [ref=e346]: review-required
+            - generic "No SID assigned yet" [ref=e347]: no SID
+            - button "Preview" [ref=e348]
+          - generic [ref=e349]:
+            - code [ref=e350]: review-required
+            - text: · Code Standards · 04 — Code review · When review happens
+        - generic [ref=e351]:
+          - generic [ref=e352] [cursor=pointer]:
+            - checkbox "review-automation-first no SID Preview" [ref=e353]
+            - generic [ref=e354]: review-automation-first
+            - generic "No SID assigned yet" [ref=e355]: no SID
+            - button "Preview" [ref=e356]
+          - generic [ref=e357]:
+            - code [ref=e358]: review-automation-first
+            - text: · Code Standards · 04 — Code review · When review happens
+        - generic [ref=e359]:
+          - generic [ref=e360] [cursor=pointer]:
+            - checkbox "review-independence no SID Preview" [ref=e361]
+            - generic [ref=e362]: review-independence
+            - generic "No SID assigned yet" [ref=e363]: no SID
+            - button "Preview" [ref=e364]
+          - generic [ref=e365]:
+            - code [ref=e366]: review-independence
+            - text: · Code Standards · 04 — Code review · When review happens
+    - generic [ref=e367]:
+      - heading "Code Standards — 04 — Code review · What review covers" [level=3] [ref=e368]
+      - generic [ref=e369]:
+        - generic [ref=e370]:
+          - generic [ref=e371] [cursor=pointer]:
+            - checkbox "review-scope no SID Preview" [ref=e372]
+            - generic [ref=e373]: review-scope
+            - generic "No SID assigned yet" [ref=e374]: no SID
+            - button "Preview" [ref=e375]
+          - generic [ref=e376]:
+            - code [ref=e377]: review-scope
+            - text: · Code Standards · 04 — Code review · What review covers
+        - generic [ref=e378]:
+          - generic [ref=e379] [cursor=pointer]:
+            - checkbox "review-tests-present no SID Preview" [ref=e380]
+            - generic [ref=e381]: review-tests-present
+            - generic "No SID assigned yet" [ref=e382]: no SID
+            - button "Preview" [ref=e383]
+          - generic [ref=e384]:
+            - code [ref=e385]: review-tests-present
+            - text: · Code Standards · 04 — Code review · What review covers
+        - generic [ref=e386]:
+          - generic [ref=e387] [cursor=pointer]:
+            - checkbox "review-understandable no SID Preview" [ref=e388]
+            - generic [ref=e389]: review-understandable
+            - generic "No SID assigned yet" [ref=e390]: no SID
+            - button "Preview" [ref=e391]
+          - generic [ref=e392]:
+            - code [ref=e393]: review-understandable
+            - text: · Code Standards · 04 — Code review · What review covers
+    - generic [ref=e394]:
+      - heading "Code Standards — 04 — Code review · How review is conducted" [level=3] [ref=e395]
+      - generic [ref=e396]:
+        - generic [ref=e397]:
+          - generic [ref=e398] [cursor=pointer]:
+            - checkbox "review-small-changes no SID Preview" [ref=e399]
+            - generic [ref=e400]: review-small-changes
+            - generic "No SID assigned yet" [ref=e401]: no SID
+            - button "Preview" [ref=e402]
+          - generic [ref=e403]:
+            - code [ref=e404]: review-small-changes
+            - text: · Code Standards · 04 — Code review · How review is conducted
+        - generic [ref=e405]:
+          - generic [ref=e406] [cursor=pointer]:
+            - checkbox "review-author-context no SID Preview" [ref=e407]
+            - generic [ref=e408]: review-author-context
+            - generic "No SID assigned yet" [ref=e409]: no SID
+            - button "Preview" [ref=e410]
+          - generic [ref=e411]:
+            - code [ref=e412]: review-author-context
+            - text: · Code Standards · 04 — Code review · How review is conducted
+        - generic [ref=e413]:
+          - generic [ref=e414] [cursor=pointer]:
+            - checkbox "review-timely no SID Preview" [ref=e415]
+            - generic [ref=e416]: review-timely
+            - generic "No SID assigned yet" [ref=e417]: no SID
+            - button "Preview" [ref=e418]
+          - generic [ref=e419]:
+            - code [ref=e420]: review-timely
+            - text: · Code Standards · 04 — Code review · How review is conducted
+        - generic [ref=e421]:
+          - generic [ref=e422] [cursor=pointer]:
+            - checkbox "review-constructive no SID Preview" [ref=e423]
+            - generic [ref=e424]: review-constructive
+            - generic "No SID assigned yet" [ref=e425]: no SID
+            - button "Preview" [ref=e426]
+          - generic [ref=e427]:
+            - code [ref=e428]: review-constructive
+            - text: · Code Standards · 04 — Code review · How review is conducted
+    - generic [ref=e429]:
+      - heading "Code Standards — 05 — Testing · Tests must exist and run" [level=3] [ref=e430]
+      - generic [ref=e431]:
+        - generic [ref=e432]:
+          - generic [ref=e433] [cursor=pointer]:
+            - checkbox "test-automated no SID Preview" [ref=e434]
+            - generic [ref=e435]: test-automated
+            - generic "No SID assigned yet" [ref=e436]: no SID
+            - button "Preview" [ref=e437]
+          - generic [ref=e438]:
+            - code [ref=e439]: test-automated
+            - text: · Code Standards · 05 — Testing · Tests must exist and run
+        - generic [ref=e440]:
+          - generic [ref=e441] [cursor=pointer]:
+            - checkbox "test-run-in-ci no SID Preview" [ref=e442]
+            - generic [ref=e443]: test-run-in-ci
+            - generic "No SID assigned yet" [ref=e444]: no SID
+            - button "Preview" [ref=e445]
+          - generic [ref=e446]:
+            - code [ref=e447]: test-run-in-ci
+            - text: · Code Standards · 05 — Testing · Tests must exist and run
+        - generic [ref=e448]:
+          - generic [ref=e449] [cursor=pointer]:
+            - checkbox "test-with-change no SID Preview" [ref=e450]
+            - generic [ref=e451]: test-with-change
+            - generic "No SID assigned yet" [ref=e452]: no SID
+            - button "Preview" [ref=e453]
+          - generic [ref=e454]:
+            - code [ref=e455]: test-with-change
+            - text: · Code Standards · 05 — Testing · Tests must exist and run
+    - generic [ref=e456]:
+      - heading "Code Standards — 05 — Testing · Coverage" [level=3] [ref=e457]
+      - generic [ref=e458]:
+        - generic [ref=e459]:
+          - generic [ref=e460] [cursor=pointer]:
+            - checkbox "test-coverage-gate no SID Preview" [ref=e461]
+            - generic [ref=e462]: test-coverage-gate
+            - generic "No SID assigned yet" [ref=e463]: no SID
+            - button "Preview" [ref=e464]
+          - generic [ref=e465]:
+            - code [ref=e466]: test-coverage-gate
+            - text: · Code Standards · 05 — Testing · Coverage
+        - generic [ref=e467]:
+          - generic [ref=e468] [cursor=pointer]:
+            - checkbox "test-coverage-floor no SID Preview" [ref=e469]
+            - generic [ref=e470]: test-coverage-floor
+            - generic "No SID assigned yet" [ref=e471]: no SID
+            - button "Preview" [ref=e472]
+          - generic [ref=e473]:
+            - code [ref=e474]: test-coverage-floor
+            - text: · Code Standards · 05 — Testing · Coverage
+        - generic [ref=e475]:
+          - generic [ref=e476] [cursor=pointer]:
+            - checkbox "test-meaningful-assertions no SID Preview" [ref=e477]
+            - generic [ref=e478]: test-meaningful-assertions
+            - generic "No SID assigned yet" [ref=e479]: no SID
+            - button "Preview" [ref=e480]
+          - generic [ref=e481]:
+            - code [ref=e482]: test-meaningful-assertions
+            - text: · Code Standards · 05 — Testing · Coverage
+    - generic [ref=e483]:
+      - heading "Code Standards — 05 — Testing · Qualities of a good suite" [level=3] [ref=e484]
+      - generic [ref=e485]:
+        - generic [ref=e486]:
+          - generic [ref=e487] [cursor=pointer]:
+            - checkbox "test-deterministic no SID Preview" [ref=e488]
+            - generic [ref=e489]: test-deterministic
+            - generic "No SID assigned yet" [ref=e490]: no SID
+            - button "Preview" [ref=e491]
+          - generic [ref=e492]:
+            - code [ref=e493]: test-deterministic
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+        - generic [ref=e494]:
+          - generic [ref=e495] [cursor=pointer]:
+            - checkbox "test-isolated no SID Preview" [ref=e496]
+            - generic [ref=e497]: test-isolated
+            - generic "No SID assigned yet" [ref=e498]: no SID
+            - button "Preview" [ref=e499]
+          - generic [ref=e500]:
+            - code [ref=e501]: test-isolated
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+        - generic [ref=e502]:
+          - generic [ref=e503] [cursor=pointer]:
+            - checkbox "test-fast no SID Preview" [ref=e504]
+            - generic [ref=e505]: test-fast
+            - generic "No SID assigned yet" [ref=e506]: no SID
+            - button "Preview" [ref=e507]
+          - generic [ref=e508]:
+            - code [ref=e509]: test-fast
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+        - generic [ref=e510]:
+          - generic [ref=e511] [cursor=pointer]:
+            - checkbox "test-behavior-not-implementation no SID Preview" [ref=e512]
+            - generic [ref=e513]: test-behavior-not-implementation
+            - generic "No SID assigned yet" [ref=e514]: no SID
+            - button "Preview" [ref=e515]
+          - generic [ref=e516]:
+            - code [ref=e517]: test-behavior-not-implementation
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+        - generic [ref=e518]:
+          - generic [ref=e519] [cursor=pointer]:
+            - checkbox "test-pyramid no SID Preview" [ref=e520]
+            - generic [ref=e521]: test-pyramid
+            - generic "No SID assigned yet" [ref=e522]: no SID
+            - button "Preview" [ref=e523]
+          - generic [ref=e524]:
+            - code [ref=e525]: test-pyramid
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+        - generic [ref=e526]:
+          - generic [ref=e527] [cursor=pointer]:
+            - checkbox "test-no-silent-skip no SID Preview" [ref=e528]
+            - generic [ref=e529]: test-no-silent-skip
+            - generic "No SID assigned yet" [ref=e530]: no SID
+            - button "Preview" [ref=e531]
+          - generic [ref=e532]:
+            - code [ref=e533]: test-no-silent-skip
+            - text: · Code Standards · 05 — Testing · Qualities of a good suite
+    - generic [ref=e534]:
+      - heading "Code Standards — 06 — Documentation and comments · Repository documentation" [level=3] [ref=e535]
+      - generic [ref=e536]:
+        - generic [ref=e537]:
+          - generic [ref=e538] [cursor=pointer]:
+            - checkbox "docs-readme no SID Preview" [ref=e539]
+            - generic [ref=e540]: docs-readme
+            - generic "No SID assigned yet" [ref=e541]: no SID
+            - button "Preview" [ref=e542]
+          - generic [ref=e543]:
+            - code [ref=e544]: docs-readme
+            - text: · Code Standards · 06 — Documentation and comments · Repository documentation
+        - generic [ref=e545]:
+          - generic [ref=e546] [cursor=pointer]:
+            - checkbox "docs-runnable-instructions no SID Preview" [ref=e547]
+            - generic [ref=e548]: docs-runnable-instructions
+            - generic "No SID assigned yet" [ref=e549]: no SID
+            - button "Preview" [ref=e550]
+          - generic [ref=e551]:
+            - code [ref=e552]: docs-runnable-instructions
+            - text: · Code Standards · 06 — Documentation and comments · Repository documentation
+        - generic [ref=e553]:
+          - generic [ref=e554] [cursor=pointer]:
+            - checkbox "docs-ownership no SID Preview" [ref=e555]
+            - generic [ref=e556]: docs-ownership
+            - generic "No SID assigned yet" [ref=e557]: no SID
+            - button "Preview" [ref=e558]
+          - generic [ref=e559]:
+            - code [ref=e560]: docs-ownership
+            - text: · Code Standards · 06 — Documentation and comments · Repository documentation
+    - generic [ref=e561]:
+      - heading "Code Standards — 06 — Documentation and comments · Comments" [level=3] [ref=e562]
+      - generic [ref=e563]:
+        - generic [ref=e564]:
+          - generic [ref=e565] [cursor=pointer]:
+            - checkbox "docs-why-not-what no SID Preview" [ref=e566]
+            - generic [ref=e567]: docs-why-not-what
+            - generic "No SID assigned yet" [ref=e568]: no SID
+            - button "Preview" [ref=e569]
+          - generic [ref=e570]:
+            - code [ref=e571]: docs-why-not-what
+            - text: · Code Standards · 06 — Documentation and comments · Comments
+        - generic [ref=e572]:
+          - generic [ref=e573] [cursor=pointer]:
+            - checkbox "docs-prefer-clear-code no SID Preview" [ref=e574]
+            - generic [ref=e575]: docs-prefer-clear-code
+            - generic "No SID assigned yet" [ref=e576]: no SID
+            - button "Preview" [ref=e577]
+          - generic [ref=e578]:
+            - code [ref=e579]: docs-prefer-clear-code
+            - text: · Code Standards · 06 — Documentation and comments · Comments
+        - generic [ref=e580]:
+          - generic [ref=e581] [cursor=pointer]:
+            - checkbox "docs-explain-surprises no SID Preview" [ref=e582]
+            - generic [ref=e583]: docs-explain-surprises
+            - generic "No SID assigned yet" [ref=e584]: no SID
+            - button "Preview" [ref=e585]
+          - generic [ref=e586]:
+            - code [ref=e587]: docs-explain-surprises
+            - text: · Code Standards · 06 — Documentation and comments · Comments
+        - generic [ref=e588]:
+          - generic [ref=e589] [cursor=pointer]:
+            - checkbox "docs-no-commented-code no SID Preview" [ref=e590]
+            - generic [ref=e591]: docs-no-commented-code
+            - generic "No SID assigned yet" [ref=e592]: no SID
+            - button "Preview" [ref=e593]
+          - generic [ref=e594]:
+            - code [ref=e595]: docs-no-commented-code
+            - text: · Code Standards · 06 — Documentation and comments · Comments
+    - generic [ref=e596]:
+      - heading "Code Standards — 06 — Documentation and comments · Interfaces and decisions" [level=3] [ref=e597]
+      - generic [ref=e598]:
+        - generic [ref=e599]:
+          - generic [ref=e600] [cursor=pointer]:
+            - checkbox "docs-public-interfaces no SID Preview" [ref=e601]
+            - generic [ref=e602]: docs-public-interfaces
+            - generic "No SID assigned yet" [ref=e603]: no SID
+            - button "Preview" [ref=e604]
+          - generic [ref=e605]:
+            - code [ref=e606]: docs-public-interfaces
+            - text: · Code Standards · 06 — Documentation and comments · Interfaces and decisions
+        - generic [ref=e607]:
+          - generic [ref=e608] [cursor=pointer]:
+            - checkbox "docs-decision-records no SID Preview" [ref=e609]
+            - generic [ref=e610]: docs-decision-records
+            - generic "No SID assigned yet" [ref=e611]: no SID
+            - button "Preview" [ref=e612]
+          - generic [ref=e613]:
+            - code [ref=e614]: docs-decision-records
+            - text: · Code Standards · 06 — Documentation and comments · Interfaces and decisions
+        - generic [ref=e615]:
+          - generic [ref=e616] [cursor=pointer]:
+            - checkbox "docs-keep-current no SID Preview" [ref=e617]
+            - generic [ref=e618]: docs-keep-current
+            - generic "No SID assigned yet" [ref=e619]: no SID
+            - button "Preview" [ref=e620]
+          - generic [ref=e621]:
+            - code [ref=e622]: docs-keep-current
+            - text: · Code Standards · 06 — Documentation and comments · Interfaces and decisions
+    - generic [ref=e623]:
+      - heading "Code Standards — 07 — Error handling · Never hide failure" [level=3] [ref=e624]
+      - generic [ref=e625]:
+        - generic [ref=e626]:
+          - generic [ref=e627] [cursor=pointer]:
+            - checkbox "error-no-silent-failure no SID Preview" [ref=e628]
+            - generic [ref=e629]: error-no-silent-failure
+            - generic "No SID assigned yet" [ref=e630]: no SID
+            - button "Preview" [ref=e631]
+          - generic [ref=e632]:
+            - code [ref=e633]: error-no-silent-failure
+            - text: · Code Standards · 07 — Error handling · Never hide failure
+        - generic [ref=e634]:
+          - generic [ref=e635] [cursor=pointer]:
+            - checkbox "error-fail-fast no SID Preview" [ref=e636]
+            - generic [ref=e637]: error-fail-fast
+            - generic "No SID assigned yet" [ref=e638]: no SID
+            - button "Preview" [ref=e639]
+          - generic [ref=e640]:
+            - code [ref=e641]: error-fail-fast
+            - text: · Code Standards · 07 — Error handling · Never hide failure
+        - generic [ref=e642]:
+          - generic [ref=e643] [cursor=pointer]:
+            - checkbox "error-no-control-flow no SID Preview" [ref=e644]
+            - generic [ref=e645]: error-no-control-flow
+            - generic "No SID assigned yet" [ref=e646]: no SID
+            - button "Preview" [ref=e647]
+          - generic [ref=e648]:
+            - code [ref=e649]: error-no-control-flow
+            - text: · Code Standards · 07 — Error handling · Never hide failure
+    - generic [ref=e650]:
+      - heading "Code Standards — 07 — Error handling · Errors must carry information" [level=3] [ref=e651]
+      - generic [ref=e652]:
+        - generic [ref=e653]:
+          - generic [ref=e654] [cursor=pointer]:
+            - checkbox "error-context no SID Preview" [ref=e655]
+            - generic [ref=e656]: error-context
+            - generic "No SID assigned yet" [ref=e657]: no SID
+            - button "Preview" [ref=e658]
+          - generic [ref=e659]:
+            - code [ref=e660]: error-context
+            - text: · Code Standards · 07 — Error handling · Errors must carry information
+        - generic [ref=e661]:
+          - generic [ref=e662] [cursor=pointer]:
+            - checkbox "error-typed no SID Preview" [ref=e663]
+            - generic [ref=e664]: error-typed
+            - generic "No SID assigned yet" [ref=e665]: no SID
+            - button "Preview" [ref=e666]
+          - generic [ref=e667]:
+            - code [ref=e668]: error-typed
+            - text: · Code Standards · 07 — Error handling · Errors must carry information
+        - generic [ref=e669]:
+          - generic [ref=e670] [cursor=pointer]:
+            - checkbox "error-distinguish-recoverable no SID Preview" [ref=e671]
+            - generic [ref=e672]: error-distinguish-recoverable
+            - generic "No SID assigned yet" [ref=e673]: no SID
+            - button "Preview" [ref=e674]
+          - generic [ref=e675]:
+            - code [ref=e676]: error-distinguish-recoverable
+            - text: · Code Standards · 07 — Error handling · Errors must carry information
+    - generic [ref=e677]:
+      - heading "Code Standards — 07 — Error handling · Boundaries and cleanup" [level=3] [ref=e678]
+      - generic [ref=e679]:
+        - generic [ref=e680]:
+          - generic [ref=e681] [cursor=pointer]:
+            - checkbox "error-cleanup no SID Preview" [ref=e682]
+            - generic [ref=e683]: error-cleanup
+            - generic "No SID assigned yet" [ref=e684]: no SID
+            - button "Preview" [ref=e685]
+          - generic [ref=e686]:
+            - code [ref=e687]: error-cleanup
+            - text: · Code Standards · 07 — Error handling · Boundaries and cleanup
+        - generic [ref=e688]:
+          - generic [ref=e689] [cursor=pointer]:
+            - checkbox "error-no-leak-to-users no SID Preview" [ref=e690]
+            - generic [ref=e691]: error-no-leak-to-users
+            - generic "No SID assigned yet" [ref=e692]: no SID
+            - button "Preview" [ref=e693]
+          - generic [ref=e694]:
+            - code [ref=e695]: error-no-leak-to-users
+            - text: · Code Standards · 07 — Error handling · Boundaries and cleanup
+        - generic [ref=e696]:
+          - generic [ref=e697] [cursor=pointer]:
+            - checkbox "error-retry-safely no SID Preview" [ref=e698]
+            - generic [ref=e699]: error-retry-safely
+            - generic "No SID assigned yet" [ref=e700]: no SID
+            - button "Preview" [ref=e701]
+          - generic [ref=e702]:
+            - code [ref=e703]: error-retry-safely
+            - text: · Code Standards · 07 — Error handling · Boundaries and cleanup
+    - generic [ref=e704]:
+      - heading "Code Standards — 08 — Logging and observability · Logging" [level=3] [ref=e705]
+      - generic [ref=e706]:
+        - generic [ref=e707]:
+          - generic [ref=e708] [cursor=pointer]:
+            - checkbox "log-structured no SID Preview" [ref=e709]
+            - generic [ref=e710]: log-structured
+            - generic "No SID assigned yet" [ref=e711]: no SID
+            - button "Preview" [ref=e712]
+          - generic [ref=e713]:
+            - code [ref=e714]: log-structured
+            - text: · Code Standards · 08 — Logging and observability · Logging
+        - generic [ref=e715]:
+          - generic [ref=e716] [cursor=pointer]:
+            - checkbox "log-levels no SID Preview" [ref=e717]
+            - generic [ref=e718]: log-levels
+            - generic "No SID assigned yet" [ref=e719]: no SID
+            - button "Preview" [ref=e720]
+          - generic [ref=e721]:
+            - code [ref=e722]: log-levels
+            - text: · Code Standards · 08 — Logging and observability · Logging
+        - generic [ref=e723]:
+          - generic [ref=e724] [cursor=pointer]:
+            - checkbox "log-actionable no SID Preview" [ref=e725]
+            - generic [ref=e726]: log-actionable
+            - generic "No SID assigned yet" [ref=e727]: no SID
+            - button "Preview" [ref=e728]
+          - generic [ref=e729]:
+            - code [ref=e730]: log-actionable
+            - text: · Code Standards · 08 — Logging and observability · Logging
+        - generic [ref=e731]:
+          - generic [ref=e732] [cursor=pointer]:
+            - checkbox "log-no-secrets no SID Preview" [ref=e733]
+            - generic [ref=e734]: log-no-secrets
+            - generic "No SID assigned yet" [ref=e735]: no SID
+            - button "Preview" [ref=e736]
+          - generic [ref=e737]:
+            - code [ref=e738]: log-no-secrets
+            - text: · Code Standards · 08 — Logging and observability · Logging
+        - generic [ref=e739]:
+          - generic [ref=e740] [cursor=pointer]:
+            - checkbox "log-correlation no SID Preview" [ref=e741]
+            - generic [ref=e742]: log-correlation
+            - generic "No SID assigned yet" [ref=e743]: no SID
+            - button "Preview" [ref=e744]
+          - generic [ref=e745]:
+            - code [ref=e746]: log-correlation
+            - text: · Code Standards · 08 — Logging and observability · Logging
+        - generic [ref=e747]:
+          - generic [ref=e748] [cursor=pointer]:
+            - checkbox "log-no-behavior-change no SID Preview" [ref=e749]
+            - generic [ref=e750]: log-no-behavior-change
+            - generic "No SID assigned yet" [ref=e751]: no SID
+            - button "Preview" [ref=e752]
+          - generic [ref=e753]:
+            - code [ref=e754]: log-no-behavior-change
+            - text: · Code Standards · 08 — Logging and observability · Logging
+    - generic [ref=e755]:
+      - heading "Code Standards — 08 — Logging and observability · Metrics, health, and tracing" [level=3] [ref=e756]
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - generic [ref=e759] [cursor=pointer]:
+            - checkbox "observability-health no SID Preview" [ref=e760]
+            - generic [ref=e761]: observability-health
+            - generic "No SID assigned yet" [ref=e762]: no SID
+            - button "Preview" [ref=e763]
+          - generic [ref=e764]:
+            - code [ref=e765]: observability-health
+            - text: · Code Standards · 08 — Logging and observability · Metrics, health, and tracing
+        - generic [ref=e766]:
+          - generic [ref=e767] [cursor=pointer]:
+            - checkbox "observability-metrics no SID Preview" [ref=e768]
+            - generic [ref=e769]: observability-metrics
+            - generic "No SID assigned yet" [ref=e770]: no SID
+            - button "Preview" [ref=e771]
+          - generic [ref=e772]:
+            - code [ref=e773]: observability-metrics
+            - text: · Code Standards · 08 — Logging and observability · Metrics, health, and tracing
+        - generic [ref=e774]:
+          - generic [ref=e775] [cursor=pointer]:
+            - checkbox "observability-tracing no SID Preview" [ref=e776]
+            - generic [ref=e777]: observability-tracing
+            - generic "No SID assigned yet" [ref=e778]: no SID
+            - button "Preview" [ref=e779]
+          - generic [ref=e780]:
+            - code [ref=e781]: observability-tracing
+            - text: · Code Standards · 08 — Logging and observability · Metrics, health, and tracing
+    - generic [ref=e782]:
+      - heading "Code Standards — 09 — Security · Secrets" [level=3] [ref=e783]
+      - generic [ref=e784]:
+        - generic [ref=e785]:
+          - generic [ref=e786] [cursor=pointer]:
+            - checkbox "security-no-hardcoded-secrets no SID Preview" [ref=e787]
+            - generic [ref=e788]: security-no-hardcoded-secrets
+            - generic "No SID assigned yet" [ref=e789]: no SID
+            - button "Preview" [ref=e790]
+          - generic [ref=e791]:
+            - code [ref=e792]: security-no-hardcoded-secrets
+            - text: · Code Standards · 09 — Security · Secrets
+        - generic [ref=e793]:
+          - generic [ref=e794] [cursor=pointer]:
+            - checkbox "security-secret-scanning no SID Preview" [ref=e795]
+            - generic [ref=e796]: security-secret-scanning
+            - generic "No SID assigned yet" [ref=e797]: no SID
+            - button "Preview" [ref=e798]
+          - generic [ref=e799]:
+            - code [ref=e800]: security-secret-scanning
+            - text: · Code Standards · 09 — Security · Secrets
+    - generic [ref=e801]:
+      - heading "Code Standards — 09 — Security · Handling untrusted input" [level=3] [ref=e802]
+      - generic [ref=e803]:
+        - generic [ref=e804]:
+          - generic [ref=e805] [cursor=pointer]:
+            - checkbox "security-validate-input no SID Preview" [ref=e806]
+            - generic [ref=e807]: security-validate-input
+            - generic "No SID assigned yet" [ref=e808]: no SID
+            - button "Preview" [ref=e809]
+          - generic [ref=e810]:
+            - code [ref=e811]: security-validate-input
+            - text: · Code Standards · 09 — Security · Handling untrusted input
+        - generic [ref=e812]:
+          - generic [ref=e813] [cursor=pointer]:
+            - checkbox "security-safe-interpolation no SID Preview" [ref=e814]
+            - generic [ref=e815]: security-safe-interpolation
+            - generic "No SID assigned yet" [ref=e816]: no SID
+            - button "Preview" [ref=e817]
+          - generic [ref=e818]:
+            - code [ref=e819]: security-safe-interpolation
+            - text: · Code Standards · 09 — Security · Handling untrusted input
+        - generic [ref=e820]:
+          - generic [ref=e821] [cursor=pointer]:
+            - checkbox "security-no-sensitive-data-exposure no SID Preview" [ref=e822]
+            - generic [ref=e823]: security-no-sensitive-data-exposure
+            - generic "No SID assigned yet" [ref=e824]: no SID
+            - button "Preview" [ref=e825]
+          - generic [ref=e826]:
+            - code [ref=e827]: security-no-sensitive-data-exposure
+            - text: · Code Standards · 09 — Security · Handling untrusted input
+        - generic [ref=e828]:
+          - generic [ref=e829] [cursor=pointer]:
+            - checkbox "security-error-no-leak no SID Preview" [ref=e830]
+            - generic [ref=e831]: security-error-no-leak
+            - generic "No SID assigned yet" [ref=e832]: no SID
+            - button "Preview" [ref=e833]
+          - generic [ref=e834]:
+            - code [ref=e835]: security-error-no-leak
+            - text: · Code Standards · 09 — Security · Handling untrusted input
+    - generic [ref=e836]:
+      - heading "Code Standards — 09 — Security · Access and trust" [level=3] [ref=e837]
+      - generic [ref=e838]:
+        - generic [ref=e839]:
+          - generic [ref=e840] [cursor=pointer]:
+            - checkbox "security-least-privilege no SID Preview" [ref=e841]
+            - generic [ref=e842]: security-least-privilege
+            - generic "No SID assigned yet" [ref=e843]: no SID
+            - button "Preview" [ref=e844]
+          - generic [ref=e845]:
+            - code [ref=e846]: security-least-privilege
+            - text: · Code Standards · 09 — Security · Access and trust
+        - generic [ref=e847]:
+          - generic [ref=e848] [cursor=pointer]:
+            - checkbox "security-authorize-every-access no SID Preview" [ref=e849]
+            - generic [ref=e850]: security-authorize-every-access
+            - generic "No SID assigned yet" [ref=e851]: no SID
+            - button "Preview" [ref=e852]
+          - generic [ref=e853]:
+            - code [ref=e854]: security-authorize-every-access
+            - text: · Code Standards · 09 — Security · Access and trust
+    - generic [ref=e855]:
+      - heading "Code Standards — 09 — Security · Building securely" [level=3] [ref=e856]
+      - generic [ref=e857]:
+        - generic [ref=e858]:
+          - generic [ref=e859] [cursor=pointer]:
+            - checkbox "security-trusted-crypto no SID Preview" [ref=e860]
+            - generic [ref=e861]: security-trusted-crypto
+            - generic "No SID assigned yet" [ref=e862]: no SID
+            - button "Preview" [ref=e863]
+          - generic [ref=e864]:
+            - code [ref=e865]: security-trusted-crypto
+            - text: · Code Standards · 09 — Security · Building securely
+        - generic [ref=e866]:
+          - generic [ref=e867] [cursor=pointer]:
+            - checkbox "security-secure-defaults no SID Preview" [ref=e868]
+            - generic [ref=e869]: security-secure-defaults
+            - generic "No SID assigned yet" [ref=e870]: no SID
+            - button "Preview" [ref=e871]
+          - generic [ref=e872]:
+            - code [ref=e873]: security-secure-defaults
+            - text: · Code Standards · 09 — Security · Building securely
+        - generic [ref=e874]:
+          - generic [ref=e875] [cursor=pointer]:
+            - checkbox "security-dependencies no SID Preview" [ref=e876]
+            - generic [ref=e877]: security-dependencies
+            - generic "No SID assigned yet" [ref=e878]: no SID
+            - button "Preview" [ref=e879]
+          - generic [ref=e880]:
+            - code [ref=e881]: security-dependencies
+            - text: · Code Standards · 09 — Security · Building securely
+    - generic [ref=e882]:
+      - heading "Code Standards — 10 — Dependencies · Declared and reproducible" [level=3] [ref=e883]
+      - generic [ref=e884]:
+        - generic [ref=e885]:
+          - generic [ref=e886] [cursor=pointer]:
+            - checkbox "dep-declared no SID Preview" [ref=e887]
+            - generic [ref=e888]: dep-declared
+            - generic "No SID assigned yet" [ref=e889]: no SID
+            - button "Preview" [ref=e890]
+          - generic [ref=e891]:
+            - code [ref=e892]: dep-declared
+            - text: · Code Standards · 10 — Dependencies · Declared and reproducible
+        - generic [ref=e893]:
+          - generic [ref=e894] [cursor=pointer]:
+            - checkbox "dep-pinned no SID Preview" [ref=e895]
+            - generic [ref=e896]: dep-pinned
+            - generic "No SID assigned yet" [ref=e897]: no SID
+            - button "Preview" [ref=e898]
+          - generic [ref=e899]:
+            - code [ref=e900]: dep-pinned
+            - text: · Code Standards · 10 — Dependencies · Declared and reproducible
+        - generic [ref=e901]:
+          - generic [ref=e902] [cursor=pointer]:
+            - checkbox "dep-reproducible-build no SID Preview" [ref=e903]
+            - generic [ref=e904]: dep-reproducible-build
+            - generic "No SID assigned yet" [ref=e905]: no SID
+            - button "Preview" [ref=e906]
+          - generic [ref=e907]:
+            - code [ref=e908]: dep-reproducible-build
+            - text: · Code Standards · 10 — Dependencies · Declared and reproducible
+    - generic [ref=e909]:
+      - heading "Code Standards — 10 — Dependencies · Choosing dependencies" [level=3] [ref=e910]
+      - generic [ref=e911]:
+        - generic [ref=e912]:
+          - generic [ref=e913] [cursor=pointer]:
+            - checkbox "dep-vetted no SID Preview" [ref=e914]
+            - generic [ref=e915]: dep-vetted
+            - generic "No SID assigned yet" [ref=e916]: no SID
+            - button "Preview" [ref=e917]
+          - generic [ref=e918]:
+            - code [ref=e919]: dep-vetted
+            - text: · Code Standards · 10 — Dependencies · Choosing dependencies
+        - generic [ref=e920]:
+          - generic [ref=e921] [cursor=pointer]:
+            - checkbox "dep-minimal no SID Preview" [ref=e922]
+            - generic [ref=e923]: dep-minimal
+            - generic "No SID assigned yet" [ref=e924]: no SID
+            - button "Preview" [ref=e925]
+          - generic [ref=e926]:
+            - code [ref=e927]: dep-minimal
+            - text: · Code Standards · 10 — Dependencies · Choosing dependencies
+        - generic [ref=e928]:
+          - generic [ref=e929] [cursor=pointer]:
+            - checkbox "dep-license-compliance no SID Preview" [ref=e930]
+            - generic [ref=e931]: dep-license-compliance
+            - generic "No SID assigned yet" [ref=e932]: no SID
+            - button "Preview" [ref=e933]
+          - generic [ref=e934]:
+            - code [ref=e935]: dep-license-compliance
+            - text: · Code Standards · 10 — Dependencies · Choosing dependencies
+    - generic [ref=e936]:
+      - heading "Code Standards — 10 — Dependencies · Keeping them safe" [level=3] [ref=e937]
+      - generic [ref=e938]:
+        - generic [ref=e939]:
+          - generic [ref=e940] [cursor=pointer]:
+            - checkbox "dep-vulnerability-scanning no SID Preview" [ref=e941]
+            - generic [ref=e942]: dep-vulnerability-scanning
+            - generic "No SID assigned yet" [ref=e943]: no SID
+            - button "Preview" [ref=e944]
+          - generic [ref=e945]:
+            - code [ref=e946]: dep-vulnerability-scanning
+            - text: · Code Standards · 10 — Dependencies · Keeping them safe
+        - generic [ref=e947]:
+          - generic [ref=e948] [cursor=pointer]:
+            - checkbox "dep-keep-current no SID Preview" [ref=e949]
+            - generic [ref=e950]: dep-keep-current
+            - generic "No SID assigned yet" [ref=e951]: no SID
+            - button "Preview" [ref=e952]
+          - generic [ref=e953]:
+            - code [ref=e954]: dep-keep-current
+            - text: · Code Standards · 10 — Dependencies · Keeping them safe
+        - generic [ref=e955]:
+          - generic [ref=e956] [cursor=pointer]:
+            - checkbox "dep-verify-integrity no SID Preview" [ref=e957]
+            - generic [ref=e958]: dep-verify-integrity
+            - generic "No SID assigned yet" [ref=e959]: no SID
+            - button "Preview" [ref=e960]
+          - generic [ref=e961]:
+            - code [ref=e962]: dep-verify-integrity
+            - text: · Code Standards · 10 — Dependencies · Keeping them safe
+        - generic [ref=e963]:
+          - generic [ref=e964] [cursor=pointer]:
+            - checkbox "dep-no-unmaintained no SID Preview" [ref=e965]
+            - generic [ref=e966]: dep-no-unmaintained
+            - generic "No SID assigned yet" [ref=e967]: no SID
+            - button "Preview" [ref=e968]
+          - generic [ref=e969]:
+            - code [ref=e970]: dep-no-unmaintained
+            - text: · Code Standards · 10 — Dependencies · Keeping them safe
+    - generic [ref=e971]:
+      - heading "Code Standards — 11 — Governance · Automated enforcement" [level=3] [ref=e972]
+      - generic [ref=e973]:
+        - generic [ref=e974]:
+          - generic [ref=e975] [cursor=pointer]:
+            - checkbox "governance-automate no SID Preview" [ref=e976]
+            - generic [ref=e977]: governance-automate
+            - generic "No SID assigned yet" [ref=e978]: no SID
+            - button "Preview" [ref=e979]
+          - generic [ref=e980]:
+            - code [ref=e981]: governance-automate
+            - text: · Code Standards · 11 — Governance · Automated enforcement
+        - generic [ref=e982]:
+          - generic [ref=e983] [cursor=pointer]:
+            - checkbox "governance-required-checks no SID Preview" [ref=e984]
+            - generic [ref=e985]: governance-required-checks
+            - generic "No SID assigned yet" [ref=e986]: no SID
+            - button "Preview" [ref=e987]
+          - generic [ref=e988]:
+            - code [ref=e989]: governance-required-checks
+            - text: · Code Standards · 11 — Governance · Automated enforcement
+        - generic [ref=e990]:
+          - generic [ref=e991] [cursor=pointer]:
+            - checkbox "governance-protected-main no SID Preview" [ref=e992]
+            - generic [ref=e993]: governance-protected-main
+            - generic "No SID assigned yet" [ref=e994]: no SID
+            - button "Preview" [ref=e995]
+          - generic [ref=e996]:
+            - code [ref=e997]: governance-protected-main
+            - text: · Code Standards · 11 — Governance · Automated enforcement
+    - generic [ref=e998]:
+      - heading "Code Standards — 11 — Governance · Applying the standard" [level=3] [ref=e999]
+      - generic [ref=e1000]:
+        - generic [ref=e1001]:
+          - generic [ref=e1002] [cursor=pointer]:
+            - checkbox "governance-conformance no SID Preview" [ref=e1003]
+            - generic [ref=e1004]: governance-conformance
+            - generic "No SID assigned yet" [ref=e1005]: no SID
+            - button "Preview" [ref=e1006]
+          - generic [ref=e1007]:
+            - code [ref=e1008]: governance-conformance
+            - text: · Code Standards · 11 — Governance · Applying the standard
+        - generic [ref=e1009]:
+          - generic [ref=e1010] [cursor=pointer]:
+            - checkbox "governance-new-code no SID Preview" [ref=e1011]
+            - generic [ref=e1012]: governance-new-code
+            - generic "No SID assigned yet" [ref=e1013]: no SID
+            - button "Preview" [ref=e1014]
+          - generic [ref=e1015]:
+            - code [ref=e1016]: governance-new-code
+            - text: · Code Standards · 11 — Governance · Applying the standard
+        - generic [ref=e1017]:
+          - generic [ref=e1018] [cursor=pointer]:
+            - checkbox "governance-ratchet-legacy no SID Preview" [ref=e1019]
+            - generic [ref=e1020]: governance-ratchet-legacy
+            - generic "No SID assigned yet" [ref=e1021]: no SID
+            - button "Preview" [ref=e1022]
+          - generic [ref=e1023]:
+            - code [ref=e1024]: governance-ratchet-legacy
+            - text: · Code Standards · 11 — Governance · Applying the standard
+    - generic [ref=e1025]:
+      - heading "Code Standards — 11 — Governance · Exceptions and evolution" [level=3] [ref=e1026]
+      - generic [ref=e1027]:
+        - generic [ref=e1028]:
+          - generic [ref=e1029] [cursor=pointer]:
+            - checkbox "governance-exceptions no SID Preview" [ref=e1030]
+            - generic [ref=e1031]: governance-exceptions
+            - generic "No SID assigned yet" [ref=e1032]: no SID
+            - button "Preview" [ref=e1033]
+          - generic [ref=e1034]:
+            - code [ref=e1035]: governance-exceptions
+            - text: · Code Standards · 11 — Governance · Exceptions and evolution
+        - generic [ref=e1036]:
+          - generic [ref=e1037] [cursor=pointer]:
+            - checkbox "governance-tech-debt no SID Preview" [ref=e1038]
+            - generic [ref=e1039]: governance-tech-debt
+            - generic "No SID assigned yet" [ref=e1040]: no SID
+            - button "Preview" [ref=e1041]
+          - generic [ref=e1042]:
+            - code [ref=e1043]: governance-tech-debt
+            - text: · Code Standards · 11 — Governance · Exceptions and evolution
+        - generic [ref=e1044]:
+          - generic [ref=e1045] [cursor=pointer]:
+            - checkbox "governance-evolve no SID Preview" [ref=e1046]
+            - generic [ref=e1047]: governance-evolve
+            - generic "No SID assigned yet" [ref=e1048]: no SID
+            - button "Preview" [ref=e1049]
+          - generic [ref=e1050]:
+            - code [ref=e1051]: governance-evolve
+            - text: · Code Standards · 11 — Governance · Exceptions and evolution
+    - generic [ref=e1052]:
+      - heading "Code Standards — Conventional commits" [level=3] [ref=e1053]
+      - generic [ref=e1055]:
+        - generic [ref=e1056] [cursor=pointer]:
+          - checkbox "Conventional commits no SID pattern Preview" [ref=e1057]
+          - generic [ref=e1058]: Conventional commits
+          - generic "No SID assigned yet" [ref=e1059]: no SID
+          - generic [ref=e1060]: pattern
+          - button "Preview" [ref=e1061]
+        - generic [ref=e1062]:
+          - code [ref=e1063]: conventional-commits
+          - text: · Code Standards · Conventional commits
+    - generic [ref=e1064]:
+      - heading "Code Standards — Feature flags" [level=3] [ref=e1065]
+      - generic [ref=e1067]:
+        - generic [ref=e1068] [cursor=pointer]:
+          - checkbox "Feature flags no SID pattern Preview" [ref=e1069]
+          - generic [ref=e1070]: Feature flags
+          - generic "No SID assigned yet" [ref=e1071]: no SID
+          - generic [ref=e1072]: pattern
+          - button "Preview" [ref=e1073]
+        - generic [ref=e1074]:
+          - code [ref=e1075]: feature-flags
+          - text: · Code Standards · Feature flags
+    - generic [ref=e1076]:
+      - heading "Code Standards — Test doubles" [level=3] [ref=e1077]
+      - generic [ref=e1079]:
+        - generic [ref=e1080] [cursor=pointer]:
+          - checkbox "Test doubles no SID pattern Preview" [ref=e1081]
+          - generic [ref=e1082]: Test doubles
+          - generic "No SID assigned yet" [ref=e1083]: no SID
+          - generic [ref=e1084]: pattern
+          - button "Preview" [ref=e1085]
+        - generic [ref=e1086]:
+          - code [ref=e1087]: test-doubles
+          - text: · Code Standards · Test doubles
+    - generic [ref=e1088]:
+      - heading "Code Standards — Trunk-based development" [level=3] [ref=e1089]
+      - generic [ref=e1091]:
+        - generic [ref=e1092] [cursor=pointer]:
+          - checkbox "Trunk-based development no SID pattern Preview" [ref=e1093]
+          - generic [ref=e1094]: Trunk-based development
+          - generic "No SID assigned yet" [ref=e1095]: no SID
+          - generic [ref=e1096]: pattern
+          - button "Preview" [ref=e1097]
+        - generic [ref=e1098]:
+          - code [ref=e1099]: trunk-based-development
+          - text: · Code Standards · Trunk-based development
+    - generic [ref=e1100]:
+      - heading "Code Standards — Tooling" [level=3] [ref=e1101]
+      - generic [ref=e1103]:
+        - generic [ref=e1104] [cursor=pointer]:
+          - checkbox "Tooling no SID tooling Preview" [ref=e1105]
+          - generic [ref=e1106]: Tooling
+          - generic "No SID assigned yet" [ref=e1107]: no SID
+          - generic [ref=e1108]: tooling
+          - button "Preview" [ref=e1109]
+        - generic [ref=e1110]:
+          - code [ref=e1111]: tooling
+          - text: · Code Standards · Tooling
+    - generic [ref=e1112]:
+      - heading "API Standards — 01 — Design Principles · Principles" [level=3] [ref=e1113]
+      - generic [ref=e1114]:
+        - generic [ref=e1115]:
+          - generic [ref=e1116] [cursor=pointer]:
+            - checkbox "principle-contract-first no SID Preview" [ref=e1117]
+            - generic [ref=e1118]: principle-contract-first
+            - generic "No SID assigned yet" [ref=e1119]: no SID
+            - button "Preview" [ref=e1120]
+          - generic [ref=e1121]:
+            - code [ref=e1122]: principle-contract-first
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1123]:
+          - generic [ref=e1124] [cursor=pointer]:
+            - checkbox "principle-design-before-build no SID Preview" [ref=e1125]
+            - generic [ref=e1126]: principle-design-before-build
+            - generic "No SID assigned yet" [ref=e1127]: no SID
+            - button "Preview" [ref=e1128]
+          - generic [ref=e1129]:
+            - code [ref=e1130]: principle-design-before-build
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1131]:
+          - generic [ref=e1132] [cursor=pointer]:
+            - checkbox "principle-resource-oriented no SID Preview" [ref=e1133]
+            - generic [ref=e1134]: principle-resource-oriented
+            - generic "No SID assigned yet" [ref=e1135]: no SID
+            - button "Preview" [ref=e1136]
+          - generic [ref=e1137]:
+            - code [ref=e1138]: principle-resource-oriented
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1139]:
+          - generic [ref=e1140] [cursor=pointer]:
+            - checkbox "principle-least-surprise no SID Preview" [ref=e1141]
+            - generic [ref=e1142]: principle-least-surprise
+            - generic "No SID assigned yet" [ref=e1143]: no SID
+            - button "Preview" [ref=e1144]
+          - generic [ref=e1145]:
+            - code [ref=e1146]: principle-least-surprise
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1147]:
+          - generic [ref=e1148] [cursor=pointer]:
+            - checkbox "principle-consistency no SID Preview" [ref=e1149]
+            - generic [ref=e1150]: principle-consistency
+            - generic "No SID assigned yet" [ref=e1151]: no SID
+            - button "Preview" [ref=e1152]
+          - generic [ref=e1153]:
+            - code [ref=e1154]: principle-consistency
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1155]:
+          - generic [ref=e1156] [cursor=pointer]:
+            - checkbox "principle-evolvable no SID Preview" [ref=e1157]
+            - generic [ref=e1158]: principle-evolvable
+            - generic "No SID assigned yet" [ref=e1159]: no SID
+            - button "Preview" [ref=e1160]
+          - generic [ref=e1161]:
+            - code [ref=e1162]: principle-evolvable
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1163]:
+          - generic [ref=e1164] [cursor=pointer]:
+            - checkbox "principle-explicit no SID Preview" [ref=e1165]
+            - generic [ref=e1166]: principle-explicit
+            - generic "No SID assigned yet" [ref=e1167]: no SID
+            - button "Preview" [ref=e1168]
+          - generic [ref=e1169]:
+            - code [ref=e1170]: principle-explicit
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1171]:
+          - generic [ref=e1172] [cursor=pointer]:
+            - checkbox "principle-secure-by-default no SID Preview" [ref=e1173]
+            - generic [ref=e1174]: principle-secure-by-default
+            - generic "No SID assigned yet" [ref=e1175]: no SID
+            - button "Preview" [ref=e1176]
+          - generic [ref=e1177]:
+            - code [ref=e1178]: principle-secure-by-default
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1179]:
+          - generic [ref=e1180] [cursor=pointer]:
+            - checkbox "principle-fault-tolerant no SID Preview" [ref=e1181]
+            - generic [ref=e1182]: principle-fault-tolerant
+            - generic "No SID assigned yet" [ref=e1183]: no SID
+            - button "Preview" [ref=e1184]
+          - generic [ref=e1185]:
+            - code [ref=e1186]: principle-fault-tolerant
+            - text: · API Standards · 01 — Design Principles · Principles
+        - generic [ref=e1187]:
+          - generic [ref=e1188] [cursor=pointer]:
+            - checkbox "principle-minimal-surface no SID Preview" [ref=e1189]
+            - generic [ref=e1190]: principle-minimal-surface
+            - generic "No SID assigned yet" [ref=e1191]: no SID
+            - button "Preview" [ref=e1192]
+          - generic [ref=e1193]:
+            - code [ref=e1194]: principle-minimal-surface
+            - text: · API Standards · 01 — Design Principles · Principles
+    - generic [ref=e1195]:
+      - heading "API Standards — 02 — Naming · Casing" [level=3] [ref=e1196]
+      - generic [ref=e1197]:
+        - generic [ref=e1198]:
+          - generic [ref=e1199] [cursor=pointer]:
+            - checkbox "naming-json-camelcase no SID Preview" [ref=e1200]
+            - generic [ref=e1201]: naming-json-camelcase
+            - generic "No SID assigned yet" [ref=e1202]: no SID
+            - button "Preview" [ref=e1203]
+          - generic [ref=e1204]:
+            - code [ref=e1205]: naming-json-camelcase
+            - text: · API Standards · 02 — Naming · Casing
+        - generic [ref=e1206]:
+          - generic [ref=e1207] [cursor=pointer]:
+            - checkbox "naming-url-kebabcase no SID Preview" [ref=e1208]
+            - generic [ref=e1209]: naming-url-kebabcase
+            - generic "No SID assigned yet" [ref=e1210]: no SID
+            - button "Preview" [ref=e1211]
+          - generic [ref=e1212]:
+            - code [ref=e1213]: naming-url-kebabcase
+            - text: · API Standards · 02 — Naming · Casing
+        - generic [ref=e1214]:
+          - generic [ref=e1215] [cursor=pointer]:
+            - checkbox "naming-query-camelcase no SID Preview" [ref=e1216]
+            - generic [ref=e1217]: naming-query-camelcase
+            - generic "No SID assigned yet" [ref=e1218]: no SID
+            - button "Preview" [ref=e1219]
+          - generic [ref=e1220]:
+            - code [ref=e1221]: naming-query-camelcase
+            - text: · API Standards · 02 — Naming · Casing
+        - generic [ref=e1222]:
+          - generic [ref=e1223] [cursor=pointer]:
+            - checkbox "naming-header-conventional no SID Preview" [ref=e1224]
+            - generic [ref=e1225]: naming-header-conventional
+            - generic "No SID assigned yet" [ref=e1226]: no SID
+            - button "Preview" [ref=e1227]
+          - generic [ref=e1228]:
+            - code [ref=e1229]: naming-header-conventional
+            - text: · API Standards · 02 — Naming · Casing
+        - generic [ref=e1230]:
+          - generic [ref=e1231] [cursor=pointer]:
+            - checkbox "naming-enum-values no SID Preview" [ref=e1232]
+            - generic [ref=e1233]: naming-enum-values
+            - generic "No SID assigned yet" [ref=e1234]: no SID
+            - button "Preview" [ref=e1235]
+          - generic [ref=e1236]:
+            - code [ref=e1237]: naming-enum-values
+            - text: · API Standards · 02 — Naming · Casing
+    - generic [ref=e1238]:
+      - heading "API Standards — 02 — Naming · Word choice" [level=3] [ref=e1239]
+      - generic [ref=e1240]:
+        - generic [ref=e1241]:
+          - generic [ref=e1242] [cursor=pointer]:
+            - checkbox "naming-collections-plural no SID Preview" [ref=e1243]
+            - generic [ref=e1244]: naming-collections-plural
+            - generic "No SID assigned yet" [ref=e1245]: no SID
+            - button "Preview" [ref=e1246]
+          - generic [ref=e1247]:
+            - code [ref=e1248]: naming-collections-plural
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1249]:
+          - generic [ref=e1250] [cursor=pointer]:
+            - checkbox "naming-no-verbs-in-paths no SID Preview" [ref=e1251]
+            - generic [ref=e1252]: naming-no-verbs-in-paths
+            - generic "No SID assigned yet" [ref=e1253]: no SID
+            - button "Preview" [ref=e1254]
+          - generic [ref=e1255]:
+            - code [ref=e1256]: naming-no-verbs-in-paths
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1257]:
+          - generic [ref=e1258] [cursor=pointer]:
+            - checkbox "naming-consistent-vocabulary no SID Preview" [ref=e1259]
+            - generic [ref=e1260]: naming-consistent-vocabulary
+            - generic "No SID assigned yet" [ref=e1261]: no SID
+            - button "Preview" [ref=e1262]
+          - generic [ref=e1263]:
+            - code [ref=e1264]: naming-consistent-vocabulary
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1265]:
+          - generic [ref=e1266] [cursor=pointer]:
+            - checkbox "naming-abbreviations no SID Preview" [ref=e1267]
+            - generic [ref=e1268]: naming-abbreviations
+            - generic "No SID assigned yet" [ref=e1269]: no SID
+            - button "Preview" [ref=e1270]
+          - generic [ref=e1271]:
+            - code [ref=e1272]: naming-abbreviations
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1273]:
+          - generic [ref=e1274] [cursor=pointer]:
+            - checkbox "naming-acronyms no SID Preview" [ref=e1275]
+            - generic [ref=e1276]: naming-acronyms
+            - generic "No SID assigned yet" [ref=e1277]: no SID
+            - button "Preview" [ref=e1278]
+          - generic [ref=e1279]:
+            - code [ref=e1280]: naming-acronyms
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1281]:
+          - generic [ref=e1282] [cursor=pointer]:
+            - checkbox "naming-booleans no SID Preview" [ref=e1283]
+            - generic [ref=e1284]: naming-booleans
+            - generic "No SID assigned yet" [ref=e1285]: no SID
+            - button "Preview" [ref=e1286]
+          - generic [ref=e1287]:
+            - code [ref=e1288]: naming-booleans
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1289]:
+          - generic [ref=e1290] [cursor=pointer]:
+            - checkbox "naming-dates no SID Preview" [ref=e1291]
+            - generic [ref=e1292]: naming-dates
+            - generic "No SID assigned yet" [ref=e1293]: no SID
+            - button "Preview" [ref=e1294]
+          - generic [ref=e1295]:
+            - code [ref=e1296]: naming-dates
+            - text: · API Standards · 02 — Naming · Word choice
+        - generic [ref=e1297]:
+          - generic [ref=e1298] [cursor=pointer]:
+            - checkbox "naming-counts-and-collections no SID Preview" [ref=e1299]
+            - generic [ref=e1300]: naming-counts-and-collections
+            - generic "No SID assigned yet" [ref=e1301]: no SID
+            - button "Preview" [ref=e1302]
+          - generic [ref=e1303]:
+            - code [ref=e1304]: naming-counts-and-collections
+            - text: · API Standards · 02 — Naming · Word choice
+    - generic [ref=e1305]:
+      - heading "API Standards — 02 — Naming · Reserved and special names" [level=3] [ref=e1306]
+      - generic [ref=e1307]:
+        - generic [ref=e1308]:
+          - generic [ref=e1309] [cursor=pointer]:
+            - checkbox "naming-reserved-properties no SID Preview" [ref=e1310]
+            - generic [ref=e1311]: naming-reserved-properties
+            - generic "No SID assigned yet" [ref=e1312]: no SID
+            - button "Preview" [ref=e1313]
+          - generic [ref=e1314]:
+            - code [ref=e1315]: naming-reserved-properties
+            - text: · API Standards · 02 — Naming · Reserved and special names
+        - generic [ref=e1316]:
+          - generic [ref=e1317] [cursor=pointer]:
+            - checkbox "naming-no-leading-special-characters no SID Preview" [ref=e1318]
+            - generic [ref=e1319]: naming-no-leading-special-characters
+            - generic "No SID assigned yet" [ref=e1320]: no SID
+            - button "Preview" [ref=e1321]
+          - generic [ref=e1322]:
+            - code [ref=e1323]: naming-no-leading-special-characters
+            - text: · API Standards · 02 — Naming · Reserved and special names
+    - generic [ref=e1324]:
+      - heading "API Standards — 03 — URLs and Resources · Resource modeling" [level=3] [ref=e1325]
+      - generic [ref=e1326]:
+        - generic [ref=e1327]:
+          - generic [ref=e1328] [cursor=pointer]:
+            - checkbox "resource-noun no SID Preview" [ref=e1329]
+            - generic [ref=e1330]: resource-noun
+            - generic "No SID assigned yet" [ref=e1331]: no SID
+            - button "Preview" [ref=e1332]
+          - generic [ref=e1333]:
+            - code [ref=e1334]: resource-noun
+            - text: · API Standards · 03 — URLs and Resources · Resource modeling
+        - generic [ref=e1335]:
+          - generic [ref=e1336] [cursor=pointer]:
+            - checkbox "resource-stable-identity no SID Preview" [ref=e1337]
+            - generic [ref=e1338]: resource-stable-identity
+            - generic "No SID assigned yet" [ref=e1339]: no SID
+            - button "Preview" [ref=e1340]
+          - generic [ref=e1341]:
+            - code [ref=e1342]: resource-stable-identity
+            - text: · API Standards · 03 — URLs and Resources · Resource modeling
+        - generic [ref=e1343]:
+          - generic [ref=e1344] [cursor=pointer]:
+            - checkbox "resource-from-domain no SID Preview" [ref=e1345]
+            - generic [ref=e1346]: resource-from-domain
+            - generic "No SID assigned yet" [ref=e1347]: no SID
+            - button "Preview" [ref=e1348]
+          - generic [ref=e1349]:
+            - code [ref=e1350]: resource-from-domain
+            - text: · API Standards · 03 — URLs and Resources · Resource modeling
+    - generic [ref=e1351]:
+      - heading "API Standards — 03 — URLs and Resources · URL structure" [level=3] [ref=e1352]
+      - generic [ref=e1353]:
+        - generic [ref=e1354]:
+          - generic [ref=e1355] [cursor=pointer]:
+            - checkbox "url-pattern no SID Preview" [ref=e1356]
+            - generic [ref=e1357]: url-pattern
+            - generic "No SID assigned yet" [ref=e1358]: no SID
+            - button "Preview" [ref=e1359]
+          - generic [ref=e1360]:
+            - code [ref=e1361]: url-pattern
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1362]:
+          - generic [ref=e1363] [cursor=pointer]:
+            - checkbox "url-https-only no SID Preview" [ref=e1364]
+            - generic [ref=e1365]: url-https-only
+            - generic "No SID assigned yet" [ref=e1366]: no SID
+            - button "Preview" [ref=e1367]
+          - generic [ref=e1368]:
+            - code [ref=e1369]: url-https-only
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1370]:
+          - generic [ref=e1371] [cursor=pointer]:
+            - checkbox "url-lowercase-path no SID Preview" [ref=e1372]
+            - generic [ref=e1373]: url-lowercase-path
+            - generic "No SID assigned yet" [ref=e1374]: no SID
+            - button "Preview" [ref=e1375]
+          - generic [ref=e1376]:
+            - code [ref=e1377]: url-lowercase-path
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1378]:
+          - generic [ref=e1379] [cursor=pointer]:
+            - checkbox "url-no-trailing-slash no SID Preview" [ref=e1380]
+            - generic [ref=e1381]: url-no-trailing-slash
+            - generic "No SID assigned yet" [ref=e1382]: no SID
+            - button "Preview" [ref=e1383]
+          - generic [ref=e1384]:
+            - code [ref=e1385]: url-no-trailing-slash
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1386]:
+          - generic [ref=e1387] [cursor=pointer]:
+            - checkbox "url-stable-and-readable no SID Preview" [ref=e1388]
+            - generic [ref=e1389]: url-stable-and-readable
+            - generic "No SID assigned yet" [ref=e1390]: no SID
+            - button "Preview" [ref=e1391]
+          - generic [ref=e1392]:
+            - code [ref=e1393]: url-stable-and-readable
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1394]:
+          - generic [ref=e1395] [cursor=pointer]:
+            - checkbox "url-query-for-non-identity no SID Preview" [ref=e1396]
+            - generic [ref=e1397]: url-query-for-non-identity
+            - generic "No SID assigned yet" [ref=e1398]: no SID
+            - button "Preview" [ref=e1399]
+          - generic [ref=e1400]:
+            - code [ref=e1401]: url-query-for-non-identity
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+        - generic [ref=e1402]:
+          - generic [ref=e1403] [cursor=pointer]:
+            - checkbox "url-no-secrets no SID Preview" [ref=e1404]
+            - generic [ref=e1405]: url-no-secrets
+            - generic "No SID assigned yet" [ref=e1406]: no SID
+            - button "Preview" [ref=e1407]
+          - generic [ref=e1408]:
+            - code [ref=e1409]: url-no-secrets
+            - text: · API Standards · 03 — URLs and Resources · URL structure
+    - generic [ref=e1410]:
+      - heading "API Standards — 03 — URLs and Resources · Hierarchy and relationships" [level=3] [ref=e1411]
+      - generic [ref=e1412]:
+        - generic [ref=e1413]:
+          - generic [ref=e1414] [cursor=pointer]:
+            - checkbox "resource-nesting-depth no SID Preview" [ref=e1415]
+            - generic [ref=e1416]: resource-nesting-depth
+            - generic "No SID assigned yet" [ref=e1417]: no SID
+            - button "Preview" [ref=e1418]
+          - generic [ref=e1419]:
+            - code [ref=e1420]: resource-nesting-depth
+            - text: · API Standards · 03 — URLs and Resources · Hierarchy and relationships
+        - generic [ref=e1421]:
+          - generic [ref=e1422] [cursor=pointer]:
+            - checkbox "resource-relationship-by-reference no SID Preview" [ref=e1423]
+            - generic [ref=e1424]: resource-relationship-by-reference
+            - generic "No SID assigned yet" [ref=e1425]: no SID
+            - button "Preview" [ref=e1426]
+          - generic [ref=e1427]:
+            - code [ref=e1428]: resource-relationship-by-reference
+            - text: · API Standards · 03 — URLs and Resources · Hierarchy and relationships
+        - generic [ref=e1429]:
+          - generic [ref=e1430] [cursor=pointer]:
+            - checkbox "resource-no-implementation-keys no SID Preview" [ref=e1431]
+            - generic [ref=e1432]: resource-no-implementation-keys
+            - generic "No SID assigned yet" [ref=e1433]: no SID
+            - button "Preview" [ref=e1434]
+          - generic [ref=e1435]:
+            - code [ref=e1436]: resource-no-implementation-keys
+            - text: · API Standards · 03 — URLs and Resources · Hierarchy and relationships
+    - generic [ref=e1437]:
+      - heading "API Standards — 03 — URLs and Resources · Actions" [level=3] [ref=e1438]
+      - generic [ref=e1439]:
+        - generic [ref=e1440]:
+          - generic [ref=e1441] [cursor=pointer]:
+            - checkbox "resource-prefer-state no SID Preview" [ref=e1442]
+            - generic [ref=e1443]: resource-prefer-state
+            - generic "No SID assigned yet" [ref=e1444]: no SID
+            - button "Preview" [ref=e1445]
+          - generic [ref=e1446]:
+            - code [ref=e1447]: resource-prefer-state
+            - text: · API Standards · 03 — URLs and Resources · Actions
+        - generic [ref=e1448]:
+          - generic [ref=e1449] [cursor=pointer]:
+            - checkbox "resource-action-sub-resource no SID Preview" [ref=e1450]
+            - generic [ref=e1451]: resource-action-sub-resource
+            - generic "No SID assigned yet" [ref=e1452]: no SID
+            - button "Preview" [ref=e1453]
+          - generic [ref=e1454]:
+            - code [ref=e1455]: resource-action-sub-resource
+            - text: · API Standards · 03 — URLs and Resources · Actions
+        - generic [ref=e1456]:
+          - generic [ref=e1457] [cursor=pointer]:
+            - checkbox "resource-action-verb-segment no SID Preview" [ref=e1458]
+            - generic [ref=e1459]: resource-action-verb-segment
+            - generic "No SID assigned yet" [ref=e1460]: no SID
+            - button "Preview" [ref=e1461]
+          - generic [ref=e1462]:
+            - code [ref=e1463]: resource-action-verb-segment
+            - text: · API Standards · 03 — URLs and Resources · Actions
+    - generic [ref=e1464]:
+      - heading "API Standards — 04 — HTTP Methods and Status Codes · Methods" [level=3] [ref=e1465]
+      - generic [ref=e1466]:
+        - generic [ref=e1467]:
+          - generic [ref=e1468] [cursor=pointer]:
+            - checkbox "method-standard-semantics no SID Preview" [ref=e1469]
+            - generic [ref=e1470]: method-standard-semantics
+            - generic "No SID assigned yet" [ref=e1471]: no SID
+            - button "Preview" [ref=e1472]
+          - generic [ref=e1473]:
+            - code [ref=e1474]: method-standard-semantics
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1475]:
+          - generic [ref=e1476] [cursor=pointer]:
+            - checkbox "method-get-no-side-effects no SID Preview" [ref=e1477]
+            - generic [ref=e1478]: method-get-no-side-effects
+            - generic "No SID assigned yet" [ref=e1479]: no SID
+            - button "Preview" [ref=e1480]
+          - generic [ref=e1481]:
+            - code [ref=e1482]: method-get-no-side-effects
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1483]:
+          - generic [ref=e1484] [cursor=pointer]:
+            - checkbox "method-get-no-body no SID Preview" [ref=e1485]
+            - generic [ref=e1486]: method-get-no-body
+            - generic "No SID assigned yet" [ref=e1487]: no SID
+            - button "Preview" [ref=e1488]
+          - generic [ref=e1489]:
+            - code [ref=e1490]: method-get-no-body
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1491]:
+          - generic [ref=e1492] [cursor=pointer]:
+            - checkbox "method-put-full-replace no SID Preview" [ref=e1493]
+            - generic [ref=e1494]: method-put-full-replace
+            - generic "No SID assigned yet" [ref=e1495]: no SID
+            - button "Preview" [ref=e1496]
+          - generic [ref=e1497]:
+            - code [ref=e1498]: method-put-full-replace
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1499]:
+          - generic [ref=e1500] [cursor=pointer]:
+            - checkbox "method-patch-partial no SID Preview" [ref=e1501]
+            - generic [ref=e1502]: method-patch-partial
+            - generic "No SID assigned yet" [ref=e1503]: no SID
+            - button "Preview" [ref=e1504]
+          - generic [ref=e1505]:
+            - code [ref=e1506]: method-patch-partial
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1507]:
+          - generic [ref=e1508] [cursor=pointer]:
+            - checkbox "method-patch-idempotency no SID Preview" [ref=e1509]
+            - generic [ref=e1510]: method-patch-idempotency
+            - generic "No SID assigned yet" [ref=e1511]: no SID
+            - button "Preview" [ref=e1512]
+          - generic [ref=e1513]:
+            - code [ref=e1514]: method-patch-idempotency
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1515]:
+          - generic [ref=e1516] [cursor=pointer]:
+            - checkbox "method-idempotency no SID Preview" [ref=e1517]
+            - generic [ref=e1518]: method-idempotency
+            - generic "No SID assigned yet" [ref=e1519]: no SID
+            - button "Preview" [ref=e1520]
+          - generic [ref=e1521]:
+            - code [ref=e1522]: method-idempotency
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+        - generic [ref=e1523]:
+          - generic [ref=e1524] [cursor=pointer]:
+            - checkbox "method-no-custom-methods no SID Preview" [ref=e1525]
+            - generic [ref=e1526]: method-no-custom-methods
+            - generic "No SID assigned yet" [ref=e1527]: no SID
+            - button "Preview" [ref=e1528]
+          - generic [ref=e1529]:
+            - code [ref=e1530]: method-no-custom-methods
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Methods
+    - generic [ref=e1531]:
+      - heading "API Standards — 04 — HTTP Methods and Status Codes · Status codes" [level=3] [ref=e1532]
+      - generic [ref=e1533]:
+        - generic [ref=e1534]:
+          - generic [ref=e1535] [cursor=pointer]:
+            - checkbox "status-correct-class no SID Preview" [ref=e1536]
+            - generic [ref=e1537]: status-correct-class
+            - generic "No SID assigned yet" [ref=e1538]: no SID
+            - button "Preview" [ref=e1539]
+          - generic [ref=e1540]:
+            - code [ref=e1541]: status-correct-class
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1542]:
+          - generic [ref=e1543] [cursor=pointer]:
+            - checkbox "status-use-standard-codes no SID Preview" [ref=e1544]
+            - generic [ref=e1545]: status-use-standard-codes
+            - generic "No SID assigned yet" [ref=e1546]: no SID
+            - button "Preview" [ref=e1547]
+          - generic [ref=e1548]:
+            - code [ref=e1549]: status-use-standard-codes
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1550]:
+          - generic [ref=e1551] [cursor=pointer]:
+            - checkbox "status-400-vs-422 no SID Preview" [ref=e1552]
+            - generic [ref=e1553]: status-400-vs-422
+            - generic "No SID assigned yet" [ref=e1554]: no SID
+            - button "Preview" [ref=e1555]
+          - generic [ref=e1556]:
+            - code [ref=e1557]: status-400-vs-422
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1558]:
+          - generic [ref=e1559] [cursor=pointer]:
+            - checkbox "status-401-vs-403 no SID Preview" [ref=e1560]
+            - generic [ref=e1561]: status-401-vs-403
+            - generic "No SID assigned yet" [ref=e1562]: no SID
+            - button "Preview" [ref=e1563]
+          - generic [ref=e1564]:
+            - code [ref=e1565]: status-401-vs-403
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1566]:
+          - generic [ref=e1567] [cursor=pointer]:
+            - checkbox "status-404-for-authorization no SID Preview" [ref=e1568]
+            - generic [ref=e1569]: status-404-for-authorization
+            - generic "No SID assigned yet" [ref=e1570]: no SID
+            - button "Preview" [ref=e1571]
+          - generic [ref=e1572]:
+            - code [ref=e1573]: status-404-for-authorization
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1574]:
+          - generic [ref=e1575] [cursor=pointer]:
+            - checkbox "status-201-location no SID Preview" [ref=e1576]
+            - generic [ref=e1577]: status-201-location
+            - generic "No SID assigned yet" [ref=e1578]: no SID
+            - button "Preview" [ref=e1579]
+          - generic [ref=e1580]:
+            - code [ref=e1581]: status-201-location
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1582]:
+          - generic [ref=e1583] [cursor=pointer]:
+            - checkbox "status-405-allow no SID Preview" [ref=e1584]
+            - generic [ref=e1585]: status-405-allow
+            - generic "No SID assigned yet" [ref=e1586]: no SID
+            - button "Preview" [ref=e1587]
+          - generic [ref=e1588]:
+            - code [ref=e1589]: status-405-allow
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+        - generic [ref=e1590]:
+          - generic [ref=e1591] [cursor=pointer]:
+            - checkbox "status-no-vanity-codes no SID Preview" [ref=e1592]
+            - generic [ref=e1593]: status-no-vanity-codes
+            - generic "No SID assigned yet" [ref=e1594]: no SID
+            - button "Preview" [ref=e1595]
+          - generic [ref=e1596]:
+            - code [ref=e1597]: status-no-vanity-codes
+            - text: · API Standards · 04 — HTTP Methods and Status Codes · Status codes
+    - generic [ref=e1598]:
+      - heading "API Standards — 05 — Requests and Responses · Media types and content negotiation" [level=3] [ref=e1599]
+      - generic [ref=e1600]:
+        - generic [ref=e1601]:
+          - generic [ref=e1602] [cursor=pointer]:
+            - checkbox "payload-json-default no SID Preview" [ref=e1603]
+            - generic [ref=e1604]: payload-json-default
+            - generic "No SID assigned yet" [ref=e1605]: no SID
+            - button "Preview" [ref=e1606]
+          - generic [ref=e1607]:
+            - code [ref=e1608]: payload-json-default
+            - text: · API Standards · 05 — Requests and Responses · Media types and content negotiation
+        - generic [ref=e1609]:
+          - generic [ref=e1610] [cursor=pointer]:
+            - checkbox "payload-content-type-required no SID Preview" [ref=e1611]
+            - generic [ref=e1612]: payload-content-type-required
+            - generic "No SID assigned yet" [ref=e1613]: no SID
+            - button "Preview" [ref=e1614]
+          - generic [ref=e1615]:
+            - code [ref=e1616]: payload-content-type-required
+            - text: · API Standards · 05 — Requests and Responses · Media types and content negotiation
+        - generic [ref=e1617]:
+          - generic [ref=e1618] [cursor=pointer]:
+            - checkbox "payload-utf8 no SID Preview" [ref=e1619]
+            - generic [ref=e1620]: payload-utf8
+            - generic "No SID assigned yet" [ref=e1621]: no SID
+            - button "Preview" [ref=e1622]
+          - generic [ref=e1623]:
+            - code [ref=e1624]: payload-utf8
+            - text: · API Standards · 05 — Requests and Responses · Media types and content negotiation
+        - generic [ref=e1625]:
+          - generic [ref=e1626] [cursor=pointer]:
+            - checkbox "payload-respect-accept no SID Preview" [ref=e1627]
+            - generic [ref=e1628]: payload-respect-accept
+            - generic "No SID assigned yet" [ref=e1629]: no SID
+            - button "Preview" [ref=e1630]
+          - generic [ref=e1631]:
+            - code [ref=e1632]: payload-respect-accept
+            - text: · API Standards · 05 — Requests and Responses · Media types and content negotiation
+        - generic [ref=e1633]:
+          - generic [ref=e1634] [cursor=pointer]:
+            - checkbox "payload-validate-content-type no SID Preview" [ref=e1635]
+            - generic [ref=e1636]: payload-validate-content-type
+            - generic "No SID assigned yet" [ref=e1637]: no SID
+            - button "Preview" [ref=e1638]
+          - generic [ref=e1639]:
+            - code [ref=e1640]: payload-validate-content-type
+            - text: · API Standards · 05 — Requests and Responses · Media types and content negotiation
+    - generic [ref=e1641]:
+      - heading "API Standards — 05 — Requests and Responses · JSON body conventions" [level=3] [ref=e1642]
+      - generic [ref=e1643]:
+        - generic [ref=e1644]:
+          - generic [ref=e1645] [cursor=pointer]:
+            - checkbox "payload-top-level-object no SID Preview" [ref=e1646]
+            - generic [ref=e1647]: payload-top-level-object
+            - generic "No SID assigned yet" [ref=e1648]: no SID
+            - button "Preview" [ref=e1649]
+          - generic [ref=e1650]:
+            - code [ref=e1651]: payload-top-level-object
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+        - generic [ref=e1652]:
+          - generic [ref=e1653] [cursor=pointer]:
+            - checkbox "payload-no-envelope no SID Preview" [ref=e1654]
+            - generic [ref=e1655]: payload-no-envelope
+            - generic "No SID assigned yet" [ref=e1656]: no SID
+            - button "Preview" [ref=e1657]
+          - generic [ref=e1658]:
+            - code [ref=e1659]: payload-no-envelope
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+        - generic [ref=e1660]:
+          - generic [ref=e1661] [cursor=pointer]:
+            - checkbox "payload-omit-vs-null no SID Preview" [ref=e1662]
+            - generic [ref=e1663]: payload-omit-vs-null
+            - generic "No SID assigned yet" [ref=e1664]: no SID
+            - button "Preview" [ref=e1665]
+          - generic [ref=e1666]:
+            - code [ref=e1667]: payload-omit-vs-null
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+        - generic [ref=e1668]:
+          - generic [ref=e1669] [cursor=pointer]:
+            - checkbox "payload-no-sensitive-data no SID Preview" [ref=e1670]
+            - generic [ref=e1671]: payload-no-sensitive-data
+            - generic "No SID assigned yet" [ref=e1672]: no SID
+            - button "Preview" [ref=e1673]
+          - generic [ref=e1674]:
+            - code [ref=e1675]: payload-no-sensitive-data
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+        - generic [ref=e1676]:
+          - generic [ref=e1677] [cursor=pointer]:
+            - checkbox "payload-stable-shape no SID Preview" [ref=e1678]
+            - generic [ref=e1679]: payload-stable-shape
+            - generic "No SID assigned yet" [ref=e1680]: no SID
+            - button "Preview" [ref=e1681]
+          - generic [ref=e1682]:
+            - code [ref=e1683]: payload-stable-shape
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+        - generic [ref=e1684]:
+          - generic [ref=e1685] [cursor=pointer]:
+            - checkbox "payload-unknown-fields-ignored no SID Preview" [ref=e1686]
+            - generic [ref=e1687]: payload-unknown-fields-ignored
+            - generic "No SID assigned yet" [ref=e1688]: no SID
+            - button "Preview" [ref=e1689]
+          - generic [ref=e1690]:
+            - code [ref=e1691]: payload-unknown-fields-ignored
+            - text: · API Standards · 05 — Requests and Responses · JSON body conventions
+    - generic [ref=e1692]:
+      - heading "API Standards — 05 — Requests and Responses · Headers" [level=3] [ref=e1693]
+      - generic [ref=e1694]:
+        - generic [ref=e1695]:
+          - generic [ref=e1696] [cursor=pointer]:
+            - checkbox "header-standard-first no SID Preview" [ref=e1697]
+            - generic [ref=e1698]: header-standard-first
+            - generic "No SID assigned yet" [ref=e1699]: no SID
+            - button "Preview" [ref=e1700]
+          - generic [ref=e1701]:
+            - code [ref=e1702]: header-standard-first
+            - text: · API Standards · 05 — Requests and Responses · Headers
+        - generic [ref=e1703]:
+          - generic [ref=e1704] [cursor=pointer]:
+            - checkbox "header-case-insensitive no SID Preview" [ref=e1705]
+            - generic [ref=e1706]: header-case-insensitive
+            - generic "No SID assigned yet" [ref=e1707]: no SID
+            - button "Preview" [ref=e1708]
+          - generic [ref=e1709]:
+            - code [ref=e1710]: header-case-insensitive
+            - text: · API Standards · 05 — Requests and Responses · Headers
+        - generic [ref=e1711]:
+          - generic [ref=e1712] [cursor=pointer]:
+            - checkbox "header-request-id no SID Preview" [ref=e1713]
+            - generic [ref=e1714]: header-request-id
+            - generic "No SID assigned yet" [ref=e1715]: no SID
+            - button "Preview" [ref=e1716]
+          - generic [ref=e1717]:
+            - code [ref=e1718]: header-request-id
+            - text: · API Standards · 05 — Requests and Responses · Headers
+        - generic [ref=e1719]:
+          - generic [ref=e1720] [cursor=pointer]:
+            - checkbox "header-no-secrets-in-custom no SID Preview" [ref=e1721]
+            - generic [ref=e1722]: header-no-secrets-in-custom
+            - generic "No SID assigned yet" [ref=e1723]: no SID
+            - button "Preview" [ref=e1724]
+          - generic [ref=e1725]:
+            - code [ref=e1726]: header-no-secrets-in-custom
+            - text: · API Standards · 05 — Requests and Responses · Headers
+        - generic [ref=e1727]:
+          - generic [ref=e1728] [cursor=pointer]:
+            - checkbox "header-tracing no SID Preview" [ref=e1729]
+            - generic [ref=e1730]: header-tracing
+            - generic "No SID assigned yet" [ref=e1731]: no SID
+            - button "Preview" [ref=e1732]
+          - generic [ref=e1733]:
+            - code [ref=e1734]: header-tracing
+            - text: · API Standards · 05 — Requests and Responses · Headers
+    - generic [ref=e1735]:
+      - heading "API Standards — 05 — Requests and Responses · Caching" [level=3] [ref=e1736]
+      - generic [ref=e1737]:
+        - generic [ref=e1738]:
+          - generic [ref=e1739] [cursor=pointer]:
+            - checkbox "cache-explicit no SID Preview" [ref=e1740]
+            - generic [ref=e1741]: cache-explicit
+            - generic "No SID assigned yet" [ref=e1742]: no SID
+            - button "Preview" [ref=e1743]
+          - generic [ref=e1744]:
+            - code [ref=e1745]: cache-explicit
+            - text: · API Standards · 05 — Requests and Responses · Caching
+        - generic [ref=e1746]:
+          - generic [ref=e1747] [cursor=pointer]:
+            - checkbox "cache-validators no SID Preview" [ref=e1748]
+            - generic [ref=e1749]: cache-validators
+            - generic "No SID assigned yet" [ref=e1750]: no SID
+            - button "Preview" [ref=e1751]
+          - generic [ref=e1752]:
+            - code [ref=e1753]: cache-validators
+            - text: · API Standards · 05 — Requests and Responses · Caching
+    - generic [ref=e1754]:
+      - heading "API Standards — 06 — Data Types · Primitives" [level=3] [ref=e1755]
+      - generic [ref=e1756]:
+        - generic [ref=e1757]:
+          - generic [ref=e1758] [cursor=pointer]:
+            - checkbox "type-use-json-types no SID Preview" [ref=e1759]
+            - generic [ref=e1760]: type-use-json-types
+            - generic "No SID assigned yet" [ref=e1761]: no SID
+            - button "Preview" [ref=e1762]
+          - generic [ref=e1763]:
+            - code [ref=e1764]: type-use-json-types
+            - text: · API Standards · 06 — Data Types · Primitives
+        - generic [ref=e1765]:
+          - generic [ref=e1766] [cursor=pointer]:
+            - checkbox "type-no-magic-values no SID Preview" [ref=e1767]
+            - generic [ref=e1768]: type-no-magic-values
+            - generic "No SID assigned yet" [ref=e1769]: no SID
+            - button "Preview" [ref=e1770]
+          - generic [ref=e1771]:
+            - code [ref=e1772]: type-no-magic-values
+            - text: · API Standards · 06 — Data Types · Primitives
+    - generic [ref=e1773]:
+      - heading "API Standards — 06 — Data Types · Numbers" [level=3] [ref=e1774]
+      - generic [ref=e1775]:
+        - generic [ref=e1776]:
+          - generic [ref=e1777] [cursor=pointer]:
+            - checkbox "type-number-precision no SID Preview" [ref=e1778]
+            - generic [ref=e1779]: type-number-precision
+            - generic "No SID assigned yet" [ref=e1780]: no SID
+            - button "Preview" [ref=e1781]
+          - generic [ref=e1782]:
+            - code [ref=e1783]: type-number-precision
+            - text: · API Standards · 06 — Data Types · Numbers
+        - generic [ref=e1784]:
+          - generic [ref=e1785] [cursor=pointer]:
+            - checkbox "type-integers no SID Preview" [ref=e1786]
+            - generic [ref=e1787]: type-integers
+            - generic "No SID assigned yet" [ref=e1788]: no SID
+            - button "Preview" [ref=e1789]
+          - generic [ref=e1790]:
+            - code [ref=e1791]: type-integers
+            - text: · API Standards · 06 — Data Types · Numbers
+        - generic [ref=e1792]:
+          - generic [ref=e1793] [cursor=pointer]:
+            - checkbox "type-money no SID Preview" [ref=e1794]
+            - generic [ref=e1795]: type-money
+            - generic "No SID assigned yet" [ref=e1796]: no SID
+            - button "Preview" [ref=e1797]
+          - generic [ref=e1798]:
+            - code [ref=e1799]: type-money
+            - text: · API Standards · 06 — Data Types · Numbers
+    - generic [ref=e1800]:
+      - heading "API Standards — 06 — Data Types · Strings and text" [level=3] [ref=e1801]
+      - generic [ref=e1802]:
+        - generic [ref=e1803]:
+          - generic [ref=e1804] [cursor=pointer]:
+            - checkbox "type-string-length no SID Preview" [ref=e1805]
+            - generic [ref=e1806]: type-string-length
+            - generic "No SID assigned yet" [ref=e1807]: no SID
+            - button "Preview" [ref=e1808]
+          - generic [ref=e1809]:
+            - code [ref=e1810]: type-string-length
+            - text: · API Standards · 06 — Data Types · Strings and text
+        - generic [ref=e1811]:
+          - generic [ref=e1812] [cursor=pointer]:
+            - checkbox "type-enums no SID Preview" [ref=e1813]
+            - generic [ref=e1814]: type-enums
+            - generic "No SID assigned yet" [ref=e1815]: no SID
+            - button "Preview" [ref=e1816]
+          - generic [ref=e1817]:
+            - code [ref=e1818]: type-enums
+            - text: · API Standards · 06 — Data Types · Strings and text
+        - generic [ref=e1819]:
+          - generic [ref=e1820] [cursor=pointer]:
+            - checkbox "type-extensible-enums no SID Preview" [ref=e1821]
+            - generic [ref=e1822]: type-extensible-enums
+            - generic "No SID assigned yet" [ref=e1823]: no SID
+            - button "Preview" [ref=e1824]
+          - generic [ref=e1825]:
+            - code [ref=e1826]: type-extensible-enums
+            - text: · API Standards · 06 — Data Types · Strings and text
+    - generic [ref=e1827]:
+      - heading "API Standards — 06 — Data Types · Date and time" [level=3] [ref=e1828]
+      - generic [ref=e1829]:
+        - generic [ref=e1830]:
+          - generic [ref=e1831] [cursor=pointer]:
+            - checkbox "type-datetime-rfc3339 no SID Preview" [ref=e1832]
+            - generic [ref=e1833]: type-datetime-rfc3339
+            - generic "No SID assigned yet" [ref=e1834]: no SID
+            - button "Preview" [ref=e1835]
+          - generic [ref=e1836]:
+            - code [ref=e1837]: type-datetime-rfc3339
+            - text: · API Standards · 06 — Data Types · Date and time
+        - generic [ref=e1838]:
+          - generic [ref=e1839] [cursor=pointer]:
+            - checkbox "type-date-only no SID Preview" [ref=e1840]
+            - generic [ref=e1841]: type-date-only
+            - generic "No SID assigned yet" [ref=e1842]: no SID
+            - button "Preview" [ref=e1843]
+          - generic [ref=e1844]:
+            - code [ref=e1845]: type-date-only
+            - text: · API Standards · 06 — Data Types · Date and time
+        - generic [ref=e1846]:
+          - generic [ref=e1847] [cursor=pointer]:
+            - checkbox "type-duration no SID Preview" [ref=e1848]
+            - generic [ref=e1849]: type-duration
+            - generic "No SID assigned yet" [ref=e1850]: no SID
+            - button "Preview" [ref=e1851]
+          - generic [ref=e1852]:
+            - code [ref=e1853]: type-duration
+            - text: · API Standards · 06 — Data Types · Date and time
+        - generic [ref=e1854]:
+          - generic [ref=e1855] [cursor=pointer]:
+            - checkbox "type-http-date-headers no SID Preview" [ref=e1856]
+            - generic [ref=e1857]: type-http-date-headers
+            - generic "No SID assigned yet" [ref=e1858]: no SID
+            - button "Preview" [ref=e1859]
+          - generic [ref=e1860]:
+            - code [ref=e1861]: type-http-date-headers
+            - text: · API Standards · 06 — Data Types · Date and time
+    - generic [ref=e1862]:
+      - heading "API Standards — 06 — Data Types · Identifiers" [level=3] [ref=e1863]
+      - generic [ref=e1864]:
+        - generic [ref=e1865]:
+          - generic [ref=e1866] [cursor=pointer]:
+            - checkbox "type-identifiers no SID Preview" [ref=e1867]
+            - generic [ref=e1868]: type-identifiers
+            - generic "No SID assigned yet" [ref=e1869]: no SID
+            - button "Preview" [ref=e1870]
+          - generic [ref=e1871]:
+            - code [ref=e1872]: type-identifiers
+            - text: · API Standards · 06 — Data Types · Identifiers
+        - generic [ref=e1873]:
+          - generic [ref=e1874] [cursor=pointer]:
+            - checkbox "type-id-no-leak no SID Preview" [ref=e1875]
+            - generic [ref=e1876]: type-id-no-leak
+            - generic "No SID assigned yet" [ref=e1877]: no SID
+            - button "Preview" [ref=e1878]
+          - generic [ref=e1879]:
+            - code [ref=e1880]: type-id-no-leak
+            - text: · API Standards · 06 — Data Types · Identifiers
+        - generic [ref=e1881]:
+          - generic [ref=e1882] [cursor=pointer]:
+            - checkbox "type-id-name-vs-id no SID Preview" [ref=e1883]
+            - generic [ref=e1884]: type-id-name-vs-id
+            - generic "No SID assigned yet" [ref=e1885]: no SID
+            - button "Preview" [ref=e1886]
+          - generic [ref=e1887]:
+            - code [ref=e1888]: type-id-name-vs-id
+            - text: · API Standards · 06 — Data Types · Identifiers
+    - generic [ref=e1889]:
+      - heading "API Standards — 06 — Data Types · Other common types" [level=3] [ref=e1890]
+      - generic [ref=e1891]:
+        - generic [ref=e1892]:
+          - generic [ref=e1893] [cursor=pointer]:
+            - checkbox "type-enumerated-standards no SID Preview" [ref=e1894]
+            - generic [ref=e1895]: type-enumerated-standards
+            - generic "No SID assigned yet" [ref=e1896]: no SID
+            - button "Preview" [ref=e1897]
+          - generic [ref=e1898]:
+            - code [ref=e1899]: type-enumerated-standards
+            - text: · API Standards · 06 — Data Types · Other common types
+        - generic [ref=e1900]:
+          - generic [ref=e1901] [cursor=pointer]:
+            - checkbox "type-binary-data no SID Preview" [ref=e1902]
+            - generic [ref=e1903]: type-binary-data
+            - generic "No SID assigned yet" [ref=e1904]: no SID
+            - button "Preview" [ref=e1905]
+          - generic [ref=e1906]:
+            - code [ref=e1907]: type-binary-data
+            - text: · API Standards · 06 — Data Types · Other common types
+        - generic [ref=e1908]:
+          - generic [ref=e1909] [cursor=pointer]:
+            - checkbox "type-collections-arrays no SID Preview" [ref=e1910]
+            - generic [ref=e1911]: type-collections-arrays
+            - generic "No SID assigned yet" [ref=e1912]: no SID
+            - button "Preview" [ref=e1913]
+          - generic [ref=e1914]:
+            - code [ref=e1915]: type-collections-arrays
+            - text: · API Standards · 06 — Data Types · Other common types
+    - generic [ref=e1916]:
+      - heading "API Standards — 06 — Data Types · Polymorphism" [level=3] [ref=e1917]
+      - generic [ref=e1918]:
+        - generic [ref=e1919]:
+          - generic [ref=e1920] [cursor=pointer]:
+            - checkbox "type-discriminator no SID Preview" [ref=e1921]
+            - generic [ref=e1922]: type-discriminator
+            - generic "No SID assigned yet" [ref=e1923]: no SID
+            - button "Preview" [ref=e1924]
+          - generic [ref=e1925]:
+            - code [ref=e1926]: type-discriminator
+            - text: · API Standards · 06 — Data Types · Polymorphism
+        - generic [ref=e1927]:
+          - generic [ref=e1928] [cursor=pointer]:
+            - checkbox "type-discriminator-stable no SID Preview" [ref=e1929]
+            - generic [ref=e1930]: type-discriminator-stable
+            - generic "No SID assigned yet" [ref=e1931]: no SID
+            - button "Preview" [ref=e1932]
+          - generic [ref=e1933]:
+            - code [ref=e1934]: type-discriminator-stable
+            - text: · API Standards · 06 — Data Types · Polymorphism
+    - generic [ref=e1935]:
+      - heading "API Standards — 07 — Errors · Foundations" [level=3] [ref=e1936]
+      - generic [ref=e1937]:
+        - generic [ref=e1938]:
+          - generic [ref=e1939] [cursor=pointer]:
+            - checkbox "error-status-code no SID Preview" [ref=e1940]
+            - generic [ref=e1941]: error-status-code
+            - generic "No SID assigned yet" [ref=e1942]: no SID
+            - button "Preview" [ref=e1943]
+          - generic [ref=e1944]:
+            - code [ref=e1945]: error-status-code
+            - text: · API Standards · 07 — Errors · Foundations
+        - generic [ref=e1946]:
+          - generic [ref=e1947] [cursor=pointer]:
+            - checkbox "error-problem-details no SID Preview" [ref=e1948]
+            - generic [ref=e1949]: error-problem-details
+            - generic "No SID assigned yet" [ref=e1950]: no SID
+            - button "Preview" [ref=e1951]
+          - generic [ref=e1952]:
+            - code [ref=e1953]: error-problem-details
+            - text: · API Standards · 07 — Errors · Foundations
+        - generic [ref=e1954]:
+          - generic [ref=e1955] [cursor=pointer]:
+            - checkbox "error-machine-code no SID Preview" [ref=e1956]
+            - generic [ref=e1957]: error-machine-code
+            - generic "No SID assigned yet" [ref=e1958]: no SID
+            - button "Preview" [ref=e1959]
+          - generic [ref=e1960]:
+            - code [ref=e1961]: error-machine-code
+            - text: · API Standards · 07 — Errors · Foundations
+        - generic [ref=e1962]:
+          - generic [ref=e1963] [cursor=pointer]:
+            - checkbox "error-stable-codes no SID Preview" [ref=e1964]
+            - generic [ref=e1965]: error-stable-codes
+            - generic "No SID assigned yet" [ref=e1966]: no SID
+            - button "Preview" [ref=e1967]
+          - generic [ref=e1968]:
+            - code [ref=e1969]: error-stable-codes
+            - text: · API Standards · 07 — Errors · Foundations
+    - generic [ref=e1970]:
+      - heading "API Standards — 07 — Errors · Content" [level=3] [ref=e1971]
+      - generic [ref=e1972]:
+        - generic [ref=e1973]:
+          - generic [ref=e1974] [cursor=pointer]:
+            - checkbox "error-human-message no SID Preview" [ref=e1975]
+            - generic [ref=e1976]: error-human-message
+            - generic "No SID assigned yet" [ref=e1977]: no SID
+            - button "Preview" [ref=e1978]
+          - generic [ref=e1979]:
+            - code [ref=e1980]: error-human-message
+            - text: · API Standards · 07 — Errors · Content
+        - generic [ref=e1981]:
+          - generic [ref=e1982] [cursor=pointer]:
+            - checkbox "error-field-level no SID Preview" [ref=e1983]
+            - generic [ref=e1984]: error-field-level
+            - generic "No SID assigned yet" [ref=e1985]: no SID
+            - button "Preview" [ref=e1986]
+          - generic [ref=e1987]:
+            - code [ref=e1988]: error-field-level
+            - text: · API Standards · 07 — Errors · Content
+        - generic [ref=e1989]:
+          - generic [ref=e1990] [cursor=pointer]:
+            - checkbox "error-actionable no SID Preview" [ref=e1991]
+            - generic [ref=e1992]: error-actionable
+            - generic "No SID assigned yet" [ref=e1993]: no SID
+            - button "Preview" [ref=e1994]
+          - generic [ref=e1995]:
+            - code [ref=e1996]: error-actionable
+            - text: · API Standards · 07 — Errors · Content
+        - generic [ref=e1997]:
+          - generic [ref=e1998] [cursor=pointer]:
+            - checkbox "error-correlation no SID Preview" [ref=e1999]
+            - generic [ref=e2000]: error-correlation
+            - generic "No SID assigned yet" [ref=e2001]: no SID
+            - button "Preview" [ref=e2002]
+          - generic [ref=e2003]:
+            - code [ref=e2004]: error-correlation
+            - text: · API Standards · 07 — Errors · Content
+    - generic [ref=e2005]:
+      - heading "API Standards — 07 — Errors · Consistency" [level=3] [ref=e2006]
+      - generic [ref=e2007]:
+        - generic [ref=e2008]:
+          - generic [ref=e2009] [cursor=pointer]:
+            - checkbox "error-consistent-shape no SID Preview" [ref=e2010]
+            - generic [ref=e2011]: error-consistent-shape
+            - generic "No SID assigned yet" [ref=e2012]: no SID
+            - button "Preview" [ref=e2013]
+          - generic [ref=e2014]:
+            - code [ref=e2015]: error-consistent-shape
+            - text: · API Standards · 07 — Errors · Consistency
+        - generic [ref=e2016]:
+          - generic [ref=e2017] [cursor=pointer]:
+            - checkbox "error-no-success-in-error no SID Preview" [ref=e2018]
+            - generic [ref=e2019]: error-no-success-in-error
+            - generic "No SID assigned yet" [ref=e2020]: no SID
+            - button "Preview" [ref=e2021]
+          - generic [ref=e2022]:
+            - code [ref=e2023]: error-no-success-in-error
+            - text: · API Standards · 07 — Errors · Consistency
+        - generic [ref=e2024]:
+          - generic [ref=e2025] [cursor=pointer]:
+            - checkbox "error-localization no SID Preview" [ref=e2026]
+            - generic [ref=e2027]: error-localization
+            - generic "No SID assigned yet" [ref=e2028]: no SID
+            - button "Preview" [ref=e2029]
+          - generic [ref=e2030]:
+            - code [ref=e2031]: error-localization
+            - text: · API Standards · 07 — Errors · Consistency
+    - generic [ref=e2032]:
+      - heading "API Standards — 08 — Collections · Collection responses" [level=3] [ref=e2033]
+      - generic [ref=e2034]:
+        - generic [ref=e2035]:
+          - generic [ref=e2036] [cursor=pointer]:
+            - checkbox "collection-envelope no SID Preview" [ref=e2037]
+            - generic [ref=e2038]: collection-envelope
+            - generic "No SID assigned yet" [ref=e2039]: no SID
+            - button "Preview" [ref=e2040]
+          - generic [ref=e2041]:
+            - code [ref=e2042]: collection-envelope
+            - text: · API Standards · 08 — Collections · Collection responses
+        - generic [ref=e2043]:
+          - generic [ref=e2044] [cursor=pointer]:
+            - checkbox "collection-item-shape no SID Preview" [ref=e2045]
+            - generic [ref=e2046]: collection-item-shape
+            - generic "No SID assigned yet" [ref=e2047]: no SID
+            - button "Preview" [ref=e2048]
+          - generic [ref=e2049]:
+            - code [ref=e2050]: collection-item-shape
+            - text: · API Standards · 08 — Collections · Collection responses
+    - generic [ref=e2051]:
+      - heading "API Standards — 08 — Collections · Pagination" [level=3] [ref=e2052]
+      - generic [ref=e2053]:
+        - generic [ref=e2054]:
+          - generic [ref=e2055] [cursor=pointer]:
+            - checkbox "collection-pagination-required no SID Preview" [ref=e2056]
+            - generic [ref=e2057]: collection-pagination-required
+            - generic "No SID assigned yet" [ref=e2058]: no SID
+            - button "Preview" [ref=e2059]
+          - generic [ref=e2060]:
+            - code [ref=e2061]: collection-pagination-required
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2062]:
+          - generic [ref=e2063] [cursor=pointer]:
+            - checkbox "collection-default-and-max-page-size no SID Preview" [ref=e2064]
+            - generic [ref=e2065]: collection-default-and-max-page-size
+            - generic "No SID assigned yet" [ref=e2066]: no SID
+            - button "Preview" [ref=e2067]
+          - generic [ref=e2068]:
+            - code [ref=e2069]: collection-default-and-max-page-size
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2070]:
+          - generic [ref=e2071] [cursor=pointer]:
+            - checkbox "collection-cursor-pagination no SID Preview" [ref=e2072]
+            - generic [ref=e2073]: collection-cursor-pagination
+            - generic "No SID assigned yet" [ref=e2074]: no SID
+            - button "Preview" [ref=e2075]
+          - generic [ref=e2076]:
+            - code [ref=e2077]: collection-cursor-pagination
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2078]:
+          - generic [ref=e2079] [cursor=pointer]:
+            - checkbox "collection-cursor-opaque no SID Preview" [ref=e2080]
+            - generic [ref=e2081]: collection-cursor-opaque
+            - generic "No SID assigned yet" [ref=e2082]: no SID
+            - button "Preview" [ref=e2083]
+          - generic [ref=e2084]:
+            - code [ref=e2085]: collection-cursor-opaque
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2086]:
+          - generic [ref=e2087] [cursor=pointer]:
+            - checkbox "collection-offset-pagination no SID Preview" [ref=e2088]
+            - generic [ref=e2089]: collection-offset-pagination
+            - generic "No SID assigned yet" [ref=e2090]: no SID
+            - button "Preview" [ref=e2091]
+          - generic [ref=e2092]:
+            - code [ref=e2093]: collection-offset-pagination
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2094]:
+          - generic [ref=e2095] [cursor=pointer]:
+            - checkbox "collection-next-link no SID Preview" [ref=e2096]
+            - generic [ref=e2097]: collection-next-link
+            - generic "No SID assigned yet" [ref=e2098]: no SID
+            - button "Preview" [ref=e2099]
+          - generic [ref=e2100]:
+            - code [ref=e2101]: collection-next-link
+            - text: · API Standards · 08 — Collections · Pagination
+        - generic [ref=e2102]:
+          - generic [ref=e2103] [cursor=pointer]:
+            - checkbox "collection-total-count-optional no SID Preview" [ref=e2104]
+            - generic [ref=e2105]: collection-total-count-optional
+            - generic "No SID assigned yet" [ref=e2106]: no SID
+            - button "Preview" [ref=e2107]
+          - generic [ref=e2108]:
+            - code [ref=e2109]: collection-total-count-optional
+            - text: · API Standards · 08 — Collections · Pagination
+    - generic [ref=e2110]:
+      - heading "API Standards — 08 — Collections · Filtering" [level=3] [ref=e2111]
+      - generic [ref=e2112]:
+        - generic [ref=e2113]:
+          - generic [ref=e2114] [cursor=pointer]:
+            - checkbox "collection-filter-param no SID Preview" [ref=e2115]
+            - generic [ref=e2116]: collection-filter-param
+            - generic "No SID assigned yet" [ref=e2117]: no SID
+            - button "Preview" [ref=e2118]
+          - generic [ref=e2119]:
+            - code [ref=e2120]: collection-filter-param
+            - text: · API Standards · 08 — Collections · Filtering
+        - generic [ref=e2121]:
+          - generic [ref=e2122] [cursor=pointer]:
+            - checkbox "collection-filter-grammar no SID Preview" [ref=e2123]
+            - generic [ref=e2124]: collection-filter-grammar
+            - generic "No SID assigned yet" [ref=e2125]: no SID
+            - button "Preview" [ref=e2126]
+          - generic [ref=e2127]:
+            - code [ref=e2128]: collection-filter-grammar
+            - text: · API Standards · 08 — Collections · Filtering
+        - generic [ref=e2129]:
+          - generic [ref=e2130] [cursor=pointer]:
+            - checkbox "collection-filter-defined-fields no SID Preview" [ref=e2131]
+            - generic [ref=e2132]: collection-filter-defined-fields
+            - generic "No SID assigned yet" [ref=e2133]: no SID
+            - button "Preview" [ref=e2134]
+          - generic [ref=e2135]:
+            - code [ref=e2136]: collection-filter-defined-fields
+            - text: · API Standards · 08 — Collections · Filtering
+    - generic [ref=e2137]:
+      - heading "API Standards — 08 — Collections · Sorting" [level=3] [ref=e2138]
+      - generic [ref=e2140]:
+        - generic [ref=e2141] [cursor=pointer]:
+          - checkbox "collection-sort-param no SID Preview" [ref=e2142]
+          - generic [ref=e2143]: collection-sort-param
+          - generic "No SID assigned yet" [ref=e2144]: no SID
+          - button "Preview" [ref=e2145]
+        - generic [ref=e2146]:
+          - code [ref=e2147]: collection-sort-param
+          - text: · API Standards · 08 — Collections · Sorting
+    - generic [ref=e2148]:
+      - heading "API Standards — 08 — Collections · Field selection and embedding" [level=3] [ref=e2149]
+      - generic [ref=e2150]:
+        - generic [ref=e2151]:
+          - generic [ref=e2152] [cursor=pointer]:
+            - checkbox "collection-field-selection no SID Preview" [ref=e2153]
+            - generic [ref=e2154]: collection-field-selection
+            - generic "No SID assigned yet" [ref=e2155]: no SID
+            - button "Preview" [ref=e2156]
+          - generic [ref=e2157]:
+            - code [ref=e2158]: collection-field-selection
+            - text: · API Standards · 08 — Collections · Field selection and embedding
+        - generic [ref=e2159]:
+          - generic [ref=e2160] [cursor=pointer]:
+            - checkbox "collection-embedding no SID Preview" [ref=e2161]
+            - generic [ref=e2162]: collection-embedding
+            - generic "No SID assigned yet" [ref=e2163]: no SID
+            - button "Preview" [ref=e2164]
+          - generic [ref=e2165]:
+            - code [ref=e2166]: collection-embedding
+            - text: · API Standards · 08 — Collections · Field selection and embedding
+    - generic [ref=e2167]:
+      - heading "API Standards — 08 — Collections · Large or complex queries" [level=3] [ref=e2168]
+      - generic [ref=e2170]:
+        - generic [ref=e2171] [cursor=pointer]:
+          - checkbox "collection-search-subresource no SID Preview" [ref=e2172]
+          - generic [ref=e2173]: collection-search-subresource
+          - generic "No SID assigned yet" [ref=e2174]: no SID
+          - button "Preview" [ref=e2175]
+        - generic [ref=e2176]:
+          - code [ref=e2177]: collection-search-subresource
+          - text: · API Standards · 08 — Collections · Large or complex queries
+    - generic [ref=e2178]:
+      - heading "API Standards — 09 — Versioning and Compatibility · The compatibility contract" [level=3] [ref=e2179]
+      - generic [ref=e2180]:
+        - generic [ref=e2181]:
+          - generic [ref=e2182] [cursor=pointer]:
+            - checkbox "compat-no-silent-break no SID Preview" [ref=e2183]
+            - generic [ref=e2184]: compat-no-silent-break
+            - generic "No SID assigned yet" [ref=e2185]: no SID
+            - button "Preview" [ref=e2186]
+          - generic [ref=e2187]:
+            - code [ref=e2188]: compat-no-silent-break
+            - text: · API Standards · 09 — Versioning and Compatibility · The compatibility contract
+        - generic [ref=e2189]:
+          - generic [ref=e2190] [cursor=pointer]:
+            - checkbox "compat-breaking-taxonomy no SID Preview" [ref=e2191]
+            - generic [ref=e2192]: compat-breaking-taxonomy
+            - generic "No SID assigned yet" [ref=e2193]: no SID
+            - button "Preview" [ref=e2194]
+          - generic [ref=e2195]:
+            - code [ref=e2196]: compat-breaking-taxonomy
+            - text: · API Standards · 09 — Versioning and Compatibility · The compatibility contract
+        - generic [ref=e2197]:
+          - generic [ref=e2198] [cursor=pointer]:
+            - checkbox "compat-nonbreaking-taxonomy no SID Preview" [ref=e2199]
+            - generic [ref=e2200]: compat-nonbreaking-taxonomy
+            - generic "No SID assigned yet" [ref=e2201]: no SID
+            - button "Preview" [ref=e2202]
+          - generic [ref=e2203]:
+            - code [ref=e2204]: compat-nonbreaking-taxonomy
+            - text: · API Standards · 09 — Versioning and Compatibility · The compatibility contract
+        - generic [ref=e2205]:
+          - generic [ref=e2206] [cursor=pointer]:
+            - checkbox "compat-client-robustness no SID Preview" [ref=e2207]
+            - generic [ref=e2208]: compat-client-robustness
+            - generic "No SID assigned yet" [ref=e2209]: no SID
+            - button "Preview" [ref=e2210]
+          - generic [ref=e2211]:
+            - code [ref=e2212]: compat-client-robustness
+            - text: · API Standards · 09 — Versioning and Compatibility · The compatibility contract
+    - generic [ref=e2213]:
+      - heading "API Standards — 09 — Versioning and Compatibility · Versioning strategy" [level=3] [ref=e2214]
+      - generic [ref=e2215]:
+        - generic [ref=e2216]:
+          - generic [ref=e2217] [cursor=pointer]:
+            - checkbox "version-explicit no SID Preview" [ref=e2218]
+            - generic [ref=e2219]: version-explicit
+            - generic "No SID assigned yet" [ref=e2220]: no SID
+            - button "Preview" [ref=e2221]
+          - generic [ref=e2222]:
+            - code [ref=e2223]: version-explicit
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+        - generic [ref=e2224]:
+          - generic [ref=e2225] [cursor=pointer]:
+            - checkbox "version-strategy-choice no SID Preview" [ref=e2226]
+            - generic [ref=e2227]: version-strategy-choice
+            - generic "No SID assigned yet" [ref=e2228]: no SID
+            - button "Preview" [ref=e2229]
+          - generic [ref=e2230]:
+            - code [ref=e2231]: version-strategy-choice
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+        - generic [ref=e2232]:
+          - generic [ref=e2233] [cursor=pointer]:
+            - checkbox "version-major-only no SID Preview" [ref=e2234]
+            - generic [ref=e2235]: version-major-only
+            - generic "No SID assigned yet" [ref=e2236]: no SID
+            - button "Preview" [ref=e2237]
+          - generic [ref=e2238]:
+            - code [ref=e2239]: version-major-only
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+        - generic [ref=e2240]:
+          - generic [ref=e2241] [cursor=pointer]:
+            - checkbox "version-semantic-meaning no SID Preview" [ref=e2242]
+            - generic [ref=e2243]: version-semantic-meaning
+            - generic "No SID assigned yet" [ref=e2244]: no SID
+            - button "Preview" [ref=e2245]
+          - generic [ref=e2246]:
+            - code [ref=e2247]: version-semantic-meaning
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+        - generic [ref=e2248]:
+          - generic [ref=e2249] [cursor=pointer]:
+            - checkbox "version-minimize-live-versions no SID Preview" [ref=e2250]
+            - generic [ref=e2251]: version-minimize-live-versions
+            - generic "No SID assigned yet" [ref=e2252]: no SID
+            - button "Preview" [ref=e2253]
+          - generic [ref=e2254]:
+            - code [ref=e2255]: version-minimize-live-versions
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+        - generic [ref=e2256]:
+          - generic [ref=e2257] [cursor=pointer]:
+            - checkbox "version-default-behavior no SID Preview" [ref=e2258]
+            - generic [ref=e2259]: version-default-behavior
+            - generic "No SID assigned yet" [ref=e2260]: no SID
+            - button "Preview" [ref=e2261]
+          - generic [ref=e2262]:
+            - code [ref=e2263]: version-default-behavior
+            - text: · API Standards · 09 — Versioning and Compatibility · Versioning strategy
+    - generic [ref=e2264]:
+      - heading "API Standards — 09 — Versioning and Compatibility · Deprecation and sunset" [level=3] [ref=e2265]
+      - generic [ref=e2266]:
+        - generic [ref=e2267]:
+          - generic [ref=e2268] [cursor=pointer]:
+            - checkbox "deprecation-announce no SID Preview" [ref=e2269]
+            - generic [ref=e2270]: deprecation-announce
+            - generic "No SID assigned yet" [ref=e2271]: no SID
+            - button "Preview" [ref=e2272]
+          - generic [ref=e2273]:
+            - code [ref=e2274]: deprecation-announce
+            - text: · API Standards · 09 — Versioning and Compatibility · Deprecation and sunset
+        - generic [ref=e2275]:
+          - generic [ref=e2276] [cursor=pointer]:
+            - checkbox "deprecation-window no SID Preview" [ref=e2277]
+            - generic [ref=e2278]: deprecation-window
+            - generic "No SID assigned yet" [ref=e2279]: no SID
+            - button "Preview" [ref=e2280]
+          - generic [ref=e2281]:
+            - code [ref=e2282]: deprecation-window
+            - text: · API Standards · 09 — Versioning and Compatibility · Deprecation and sunset
+        - generic [ref=e2283]:
+          - generic [ref=e2284] [cursor=pointer]:
+            - checkbox "deprecation-monitor no SID Preview" [ref=e2285]
+            - generic [ref=e2286]: deprecation-monitor
+            - generic "No SID assigned yet" [ref=e2287]: no SID
+            - button "Preview" [ref=e2288]
+          - generic [ref=e2289]:
+            - code [ref=e2290]: deprecation-monitor
+            - text: · API Standards · 09 — Versioning and Compatibility · Deprecation and sunset
+        - generic [ref=e2291]:
+          - generic [ref=e2292] [cursor=pointer]:
+            - checkbox "deprecation-gone no SID Preview" [ref=e2293]
+            - generic [ref=e2294]: deprecation-gone
+            - generic "No SID assigned yet" [ref=e2295]: no SID
+            - button "Preview" [ref=e2296]
+          - generic [ref=e2297]:
+            - code [ref=e2298]: deprecation-gone
+            - text: · API Standards · 09 — Versioning and Compatibility · Deprecation and sunset
+    - generic [ref=e2299]:
+      - heading "API Standards — 09 — Versioning and Compatibility · Previews" [level=3] [ref=e2300]
+      - generic [ref=e2302]:
+        - generic [ref=e2303] [cursor=pointer]:
+          - checkbox "version-preview-marking no SID Preview" [ref=e2304]
+          - generic [ref=e2305]: version-preview-marking
+          - generic "No SID assigned yet" [ref=e2306]: no SID
+          - button "Preview" [ref=e2307]
+        - generic [ref=e2308]:
+          - code [ref=e2309]: version-preview-marking
+          - text: · API Standards · 09 — Versioning and Compatibility · Previews
+    - generic [ref=e2310]:
+      - heading "API Standards — 10 — Security · Transport" [level=3] [ref=e2311]
+      - generic [ref=e2312]:
+        - generic [ref=e2313]:
+          - generic [ref=e2314] [cursor=pointer]:
+            - checkbox "security-tls-only no SID Preview" [ref=e2315]
+            - generic [ref=e2316]: security-tls-only
+            - generic "No SID assigned yet" [ref=e2317]: no SID
+            - button "Preview" [ref=e2318]
+          - generic [ref=e2319]:
+            - code [ref=e2320]: security-tls-only
+            - text: · API Standards · 10 — Security · Transport
+        - generic [ref=e2321]:
+          - generic [ref=e2322] [cursor=pointer]:
+            - checkbox "security-modern-tls no SID Preview" [ref=e2323]
+            - generic [ref=e2324]: security-modern-tls
+            - generic "No SID assigned yet" [ref=e2325]: no SID
+            - button "Preview" [ref=e2326]
+          - generic [ref=e2327]:
+            - code [ref=e2328]: security-modern-tls
+            - text: · API Standards · 10 — Security · Transport
+        - generic [ref=e2329]:
+          - generic [ref=e2330] [cursor=pointer]:
+            - checkbox "security-no-secrets-in-url no SID Preview" [ref=e2331]
+            - generic [ref=e2332]: security-no-secrets-in-url
+            - generic "No SID assigned yet" [ref=e2333]: no SID
+            - button "Preview" [ref=e2334]
+          - generic [ref=e2335]:
+            - code [ref=e2336]: security-no-secrets-in-url
+            - text: · API Standards · 10 — Security · Transport
+    - generic [ref=e2337]:
+      - heading "API Standards — 10 — Security · Authentication" [level=3] [ref=e2338]
+      - generic [ref=e2339]:
+        - generic [ref=e2340]:
+          - generic [ref=e2341] [cursor=pointer]:
+            - checkbox "security-authn-required no SID Preview" [ref=e2342]
+            - generic [ref=e2343]: security-authn-required
+            - generic "No SID assigned yet" [ref=e2344]: no SID
+            - button "Preview" [ref=e2345]
+          - generic [ref=e2346]:
+            - code [ref=e2347]: security-authn-required
+            - text: · API Standards · 10 — Security · Authentication
+        - generic [ref=e2348]:
+          - generic [ref=e2349] [cursor=pointer]:
+            - checkbox "security-standard-auth no SID Preview" [ref=e2350]
+            - generic [ref=e2351]: security-standard-auth
+            - generic "No SID assigned yet" [ref=e2352]: no SID
+            - button "Preview" [ref=e2353]
+          - generic [ref=e2354]:
+            - code [ref=e2355]: security-standard-auth
+            - text: · API Standards · 10 — Security · Authentication
+        - generic [ref=e2356]:
+          - generic [ref=e2357] [cursor=pointer]:
+            - checkbox "security-authorization-header no SID Preview" [ref=e2358]
+            - generic [ref=e2359]: security-authorization-header
+            - generic "No SID assigned yet" [ref=e2360]: no SID
+            - button "Preview" [ref=e2361]
+          - generic [ref=e2362]:
+            - code [ref=e2363]: security-authorization-header
+            - text: · API Standards · 10 — Security · Authentication
+        - generic [ref=e2364]:
+          - generic [ref=e2365] [cursor=pointer]:
+            - checkbox "security-token-validation no SID Preview" [ref=e2366]
+            - generic [ref=e2367]: security-token-validation
+            - generic "No SID assigned yet" [ref=e2368]: no SID
+            - button "Preview" [ref=e2369]
+          - generic [ref=e2370]:
+            - code [ref=e2371]: security-token-validation
+            - text: · API Standards · 10 — Security · Authentication
+        - generic [ref=e2372]:
+          - generic [ref=e2373] [cursor=pointer]:
+            - checkbox "security-no-credentials-in-code-paths no SID Preview" [ref=e2374]
+            - generic [ref=e2375]: security-no-credentials-in-code-paths
+            - generic "No SID assigned yet" [ref=e2376]: no SID
+            - button "Preview" [ref=e2377]
+          - generic [ref=e2378]:
+            - code [ref=e2379]: security-no-credentials-in-code-paths
+            - text: · API Standards · 10 — Security · Authentication
+    - generic [ref=e2380]:
+      - heading "API Standards — 10 — Security · Authorization" [level=3] [ref=e2381]
+      - generic [ref=e2382]:
+        - generic [ref=e2383]:
+          - generic [ref=e2384] [cursor=pointer]:
+            - checkbox "security-authz-server-side no SID Preview" [ref=e2385]
+            - generic [ref=e2386]: security-authz-server-side
+            - generic "No SID assigned yet" [ref=e2387]: no SID
+            - button "Preview" [ref=e2388]
+          - generic [ref=e2389]:
+            - code [ref=e2390]: security-authz-server-side
+            - text: · API Standards · 10 — Security · Authorization
+        - generic [ref=e2391]:
+          - generic [ref=e2392] [cursor=pointer]:
+            - checkbox "security-least-privilege no SID Preview" [ref=e2393]
+            - generic [ref=e2394]: security-least-privilege
+            - generic "No SID assigned yet" [ref=e2395]: no SID
+            - button "Preview" [ref=e2396]
+          - generic [ref=e2397]:
+            - code [ref=e2398]: security-least-privilege
+            - text: · API Standards · 10 — Security · Authorization
+        - generic [ref=e2399]:
+          - generic [ref=e2400] [cursor=pointer]:
+            - checkbox "security-object-level-authz no SID Preview" [ref=e2401]
+            - generic [ref=e2402]: security-object-level-authz
+            - generic "No SID assigned yet" [ref=e2403]: no SID
+            - button "Preview" [ref=e2404]
+          - generic [ref=e2405]:
+            - code [ref=e2406]: security-object-level-authz
+            - text: · API Standards · 10 — Security · Authorization
+        - generic [ref=e2407]:
+          - generic [ref=e2408] [cursor=pointer]:
+            - checkbox "security-avoid-enumeration no SID Preview" [ref=e2409]
+            - generic [ref=e2410]: security-avoid-enumeration
+            - generic "No SID assigned yet" [ref=e2411]: no SID
+            - button "Preview" [ref=e2412]
+          - generic [ref=e2413]:
+            - code [ref=e2414]: security-avoid-enumeration
+            - text: · API Standards · 10 — Security · Authorization
+    - generic [ref=e2415]:
+      - heading "API Standards — 10 — Security · Input handling" [level=3] [ref=e2416]
+      - generic [ref=e2417]:
+        - generic [ref=e2418]:
+          - generic [ref=e2419] [cursor=pointer]:
+            - checkbox "security-validate-input no SID Preview" [ref=e2420]
+            - generic [ref=e2421]: security-validate-input
+            - generic "No SID assigned yet" [ref=e2422]: no SID
+            - button "Preview" [ref=e2423]
+          - generic [ref=e2424]:
+            - code [ref=e2425]: security-validate-input
+            - text: · API Standards · 10 — Security · Input handling
+        - generic [ref=e2426]:
+          - generic [ref=e2427] [cursor=pointer]:
+            - checkbox "security-no-injection no SID Preview" [ref=e2428]
+            - generic [ref=e2429]: security-no-injection
+            - generic "No SID assigned yet" [ref=e2430]: no SID
+            - button "Preview" [ref=e2431]
+          - generic [ref=e2432]:
+            - code [ref=e2433]: security-no-injection
+            - text: · API Standards · 10 — Security · Input handling
+        - generic [ref=e2434]:
+          - generic [ref=e2435] [cursor=pointer]:
+            - checkbox "security-limit-payload-size no SID Preview" [ref=e2436]
+            - generic [ref=e2437]: security-limit-payload-size
+            - generic "No SID assigned yet" [ref=e2438]: no SID
+            - button "Preview" [ref=e2439]
+          - generic [ref=e2440]:
+            - code [ref=e2441]: security-limit-payload-size
+            - text: · API Standards · 10 — Security · Input handling
+        - generic [ref=e2442]:
+          - generic [ref=e2443] [cursor=pointer]:
+            - checkbox "security-mass-assignment no SID Preview" [ref=e2444]
+            - generic [ref=e2445]: security-mass-assignment
+            - generic "No SID assigned yet" [ref=e2446]: no SID
+            - button "Preview" [ref=e2447]
+          - generic [ref=e2448]:
+            - code [ref=e2449]: security-mass-assignment
+            - text: · API Standards · 10 — Security · Input handling
+    - generic [ref=e2450]:
+      - heading "API Standards — 10 — Security · Response hygiene" [level=3] [ref=e2451]
+      - generic [ref=e2452]:
+        - generic [ref=e2453]:
+          - generic [ref=e2454] [cursor=pointer]:
+            - checkbox "security-minimal-exposure no SID Preview" [ref=e2455]
+            - generic [ref=e2456]: security-minimal-exposure
+            - generic "No SID assigned yet" [ref=e2457]: no SID
+            - button "Preview" [ref=e2458]
+          - generic [ref=e2459]:
+            - code [ref=e2460]: security-minimal-exposure
+            - text: · API Standards · 10 — Security · Response hygiene
+        - generic [ref=e2461]:
+          - generic [ref=e2462] [cursor=pointer]:
+            - checkbox "security-cors-explicit no SID Preview" [ref=e2463]
+            - generic [ref=e2464]: security-cors-explicit
+            - generic "No SID assigned yet" [ref=e2465]: no SID
+            - button "Preview" [ref=e2466]
+          - generic [ref=e2467]:
+            - code [ref=e2468]: security-cors-explicit
+            - text: · API Standards · 10 — Security · Response hygiene
+        - generic [ref=e2469]:
+          - generic [ref=e2470] [cursor=pointer]:
+            - checkbox "security-rate-limit no SID Preview" [ref=e2471]
+            - generic [ref=e2472]: security-rate-limit
+            - generic "No SID assigned yet" [ref=e2473]: no SID
+            - button "Preview" [ref=e2474]
+          - generic [ref=e2475]:
+            - code [ref=e2476]: security-rate-limit
+            - text: · API Standards · 10 — Security · Response hygiene
+        - generic [ref=e2477]:
+          - generic [ref=e2478] [cursor=pointer]:
+            - checkbox "security-relevant-headers no SID Preview" [ref=e2479]
+            - generic [ref=e2480]: security-relevant-headers
+            - generic "No SID assigned yet" [ref=e2481]: no SID
+            - button "Preview" [ref=e2482]
+          - generic [ref=e2483]:
+            - code [ref=e2484]: security-relevant-headers
+            - text: · API Standards · 10 — Security · Response hygiene
+    - generic [ref=e2485]:
+      - heading "API Standards — 11 — Rate Limiting · Applying limits" [level=3] [ref=e2486]
+      - generic [ref=e2487]:
+        - generic [ref=e2488]:
+          - generic [ref=e2489] [cursor=pointer]:
+            - checkbox "ratelimit-apply no SID Preview" [ref=e2490]
+            - generic [ref=e2491]: ratelimit-apply
+            - generic "No SID assigned yet" [ref=e2492]: no SID
+            - button "Preview" [ref=e2493]
+          - generic [ref=e2494]:
+            - code [ref=e2495]: ratelimit-apply
+            - text: · API Standards · 11 — Rate Limiting · Applying limits
+        - generic [ref=e2496]:
+          - generic [ref=e2497] [cursor=pointer]:
+            - checkbox "ratelimit-documented no SID Preview" [ref=e2498]
+            - generic [ref=e2499]: ratelimit-documented
+            - generic "No SID assigned yet" [ref=e2500]: no SID
+            - button "Preview" [ref=e2501]
+          - generic [ref=e2502]:
+            - code [ref=e2503]: ratelimit-documented
+            - text: · API Standards · 11 — Rate Limiting · Applying limits
+        - generic [ref=e2504]:
+          - generic [ref=e2505] [cursor=pointer]:
+            - checkbox "ratelimit-scope no SID Preview" [ref=e2506]
+            - generic [ref=e2507]: ratelimit-scope
+            - generic "No SID assigned yet" [ref=e2508]: no SID
+            - button "Preview" [ref=e2509]
+          - generic [ref=e2510]:
+            - code [ref=e2511]: ratelimit-scope
+            - text: · API Standards · 11 — Rate Limiting · Applying limits
+    - generic [ref=e2512]:
+      - heading "API Standards — 11 — Rate Limiting · Signaling rejection" [level=3] [ref=e2513]
+      - generic [ref=e2514]:
+        - generic [ref=e2515]:
+          - generic [ref=e2516] [cursor=pointer]:
+            - checkbox "ratelimit-429 no SID Preview" [ref=e2517]
+            - generic [ref=e2518]: ratelimit-429
+            - generic "No SID assigned yet" [ref=e2519]: no SID
+            - button "Preview" [ref=e2520]
+          - generic [ref=e2521]:
+            - code [ref=e2522]: ratelimit-429
+            - text: · API Standards · 11 — Rate Limiting · Signaling rejection
+        - generic [ref=e2523]:
+          - generic [ref=e2524] [cursor=pointer]:
+            - checkbox "ratelimit-retry-after no SID Preview" [ref=e2525]
+            - generic [ref=e2526]: ratelimit-retry-after
+            - generic "No SID assigned yet" [ref=e2527]: no SID
+            - button "Preview" [ref=e2528]
+          - generic [ref=e2529]:
+            - code [ref=e2530]: ratelimit-retry-after
+            - text: · API Standards · 11 — Rate Limiting · Signaling rejection
+        - generic [ref=e2531]:
+          - generic [ref=e2532] [cursor=pointer]:
+            - checkbox "ratelimit-headers no SID Preview" [ref=e2533]
+            - generic [ref=e2534]: ratelimit-headers
+            - generic "No SID assigned yet" [ref=e2535]: no SID
+            - button "Preview" [ref=e2536]
+          - generic [ref=e2537]:
+            - code [ref=e2538]: ratelimit-headers
+            - text: · API Standards · 11 — Rate Limiting · Signaling rejection
+    - generic [ref=e2539]:
+      - heading "API Standards — 11 — Rate Limiting · Client guidance the API enables" [level=3] [ref=e2540]
+      - generic [ref=e2541]:
+        - generic [ref=e2542]:
+          - generic [ref=e2543] [cursor=pointer]:
+            - checkbox "ratelimit-idempotent-retry no SID Preview" [ref=e2544]
+            - generic [ref=e2545]: ratelimit-idempotent-retry
+            - generic "No SID assigned yet" [ref=e2546]: no SID
+            - button "Preview" [ref=e2547]
+          - generic [ref=e2548]:
+            - code [ref=e2549]: ratelimit-idempotent-retry
+            - text: · API Standards · 11 — Rate Limiting · Client guidance the API enables
+        - generic [ref=e2550]:
+          - generic [ref=e2551] [cursor=pointer]:
+            - checkbox "ratelimit-backoff-friendly no SID Preview" [ref=e2552]
+            - generic [ref=e2553]: ratelimit-backoff-friendly
+            - generic "No SID assigned yet" [ref=e2554]: no SID
+            - button "Preview" [ref=e2555]
+          - generic [ref=e2556]:
+            - code [ref=e2557]: ratelimit-backoff-friendly
+            - text: · API Standards · 11 — Rate Limiting · Client guidance the API enables
+    - generic [ref=e2558]:
+      - heading "API Standards — 11 — Rate Limiting · Server behavior under load" [level=3] [ref=e2559]
+      - generic [ref=e2560]:
+        - generic [ref=e2561]:
+          - generic [ref=e2562] [cursor=pointer]:
+            - checkbox "ratelimit-graceful-degradation no SID Preview" [ref=e2563]
+            - generic [ref=e2564]: ratelimit-graceful-degradation
+            - generic "No SID assigned yet" [ref=e2565]: no SID
+            - button "Preview" [ref=e2566]
+          - generic [ref=e2567]:
+            - code [ref=e2568]: ratelimit-graceful-degradation
+            - text: · API Standards · 11 — Rate Limiting · Server behavior under load
+        - generic [ref=e2569]:
+          - generic [ref=e2570] [cursor=pointer]:
+            - checkbox "ratelimit-fairness no SID Preview" [ref=e2571]
+            - generic [ref=e2572]: ratelimit-fairness
+            - generic "No SID assigned yet" [ref=e2573]: no SID
+            - button "Preview" [ref=e2574]
+          - generic [ref=e2575]:
+            - code [ref=e2576]: ratelimit-fairness
+            - text: · API Standards · 11 — Rate Limiting · Server behavior under load
+    - generic [ref=e2577]:
+      - heading "API Standards — 12 — Governance · Description-first" [level=3] [ref=e2578]
+      - generic [ref=e2579]:
+        - generic [ref=e2580]:
+          - generic [ref=e2581] [cursor=pointer]:
+            - checkbox "governance-description-first no SID Preview" [ref=e2582]
+            - generic [ref=e2583]: governance-description-first
+            - generic "No SID assigned yet" [ref=e2584]: no SID
+            - button "Preview" [ref=e2585]
+          - generic [ref=e2586]:
+            - code [ref=e2587]: governance-description-first
+            - text: · API Standards · 12 — Governance · Description-first
+        - generic [ref=e2588]:
+          - generic [ref=e2589] [cursor=pointer]:
+            - checkbox "governance-openapi no SID Preview" [ref=e2590]
+            - generic [ref=e2591]: governance-openapi
+            - generic "No SID assigned yet" [ref=e2592]: no SID
+            - button "Preview" [ref=e2593]
+          - generic [ref=e2594]:
+            - code [ref=e2595]: governance-openapi
+            - text: · API Standards · 12 — Governance · Description-first
+        - generic [ref=e2596]:
+          - generic [ref=e2597] [cursor=pointer]:
+            - checkbox "governance-description-accurate no SID Preview" [ref=e2598]
+            - generic [ref=e2599]: governance-description-accurate
+            - generic "No SID assigned yet" [ref=e2600]: no SID
+            - button "Preview" [ref=e2601]
+          - generic [ref=e2602]:
+            - code [ref=e2603]: governance-description-accurate
+            - text: · API Standards · 12 — Governance · Description-first
+        - generic [ref=e2604]:
+          - generic [ref=e2605] [cursor=pointer]:
+            - checkbox "governance-examples no SID Preview" [ref=e2606]
+            - generic [ref=e2607]: governance-examples
+            - generic "No SID assigned yet" [ref=e2608]: no SID
+            - button "Preview" [ref=e2609]
+          - generic [ref=e2610]:
+            - code [ref=e2611]: governance-examples
+            - text: · API Standards · 12 — Governance · Description-first
+    - generic [ref=e2612]:
+      - heading "API Standards — 12 — Governance · Automated enforcement" [level=3] [ref=e2613]
+      - generic [ref=e2614]:
+        - generic [ref=e2615]:
+          - generic [ref=e2616] [cursor=pointer]:
+            - checkbox "governance-lint no SID Preview" [ref=e2617]
+            - generic [ref=e2618]: governance-lint
+            - generic "No SID assigned yet" [ref=e2619]: no SID
+            - button "Preview" [ref=e2620]
+          - generic [ref=e2621]:
+            - code [ref=e2622]: governance-lint
+            - text: · API Standards · 12 — Governance · Automated enforcement
+        - generic [ref=e2623]:
+          - generic [ref=e2624] [cursor=pointer]:
+            - checkbox "governance-contract-tests no SID Preview" [ref=e2625]
+            - generic [ref=e2626]: governance-contract-tests
+            - generic "No SID assigned yet" [ref=e2627]: no SID
+            - button "Preview" [ref=e2628]
+          - generic [ref=e2629]:
+            - code [ref=e2630]: governance-contract-tests
+            - text: · API Standards · 12 — Governance · Automated enforcement
+        - generic [ref=e2631]:
+          - generic [ref=e2632] [cursor=pointer]:
+            - checkbox "governance-breaking-change-detection no SID Preview" [ref=e2633]
+            - generic [ref=e2634]: governance-breaking-change-detection
+            - generic "No SID assigned yet" [ref=e2635]: no SID
+            - button "Preview" [ref=e2636]
+          - generic [ref=e2637]:
+            - code [ref=e2638]: governance-breaking-change-detection
+            - text: · API Standards · 12 — Governance · Automated enforcement
+    - generic [ref=e2639]:
+      - heading "API Standards — 12 — Governance · Human review" [level=3] [ref=e2640]
+      - generic [ref=e2641]:
+        - generic [ref=e2642]:
+          - generic [ref=e2643] [cursor=pointer]:
+            - checkbox "governance-review-judgment no SID Preview" [ref=e2644]
+            - generic [ref=e2645]: governance-review-judgment
+            - generic "No SID assigned yet" [ref=e2646]: no SID
+            - button "Preview" [ref=e2647]
+          - generic [ref=e2648]:
+            - code [ref=e2649]: governance-review-judgment
+            - text: · API Standards · 12 — Governance · Human review
+        - generic [ref=e2650]:
+          - generic [ref=e2651] [cursor=pointer]:
+            - checkbox "governance-exceptions no SID Preview" [ref=e2652]
+            - generic [ref=e2653]: governance-exceptions
+            - generic "No SID assigned yet" [ref=e2654]: no SID
+            - button "Preview" [ref=e2655]
+          - generic [ref=e2656]:
+            - code [ref=e2657]: governance-exceptions
+            - text: · API Standards · 12 — Governance · Human review
+        - generic [ref=e2658]:
+          - generic [ref=e2659] [cursor=pointer]:
+            - checkbox "governance-evolve-standard no SID Preview" [ref=e2660]
+            - generic [ref=e2661]: governance-evolve-standard
+            - generic "No SID assigned yet" [ref=e2662]: no SID
+            - button "Preview" [ref=e2663]
+          - generic [ref=e2664]:
+            - code [ref=e2665]: governance-evolve-standard
+            - text: · API Standards · 12 — Governance · Human review
+    - generic [ref=e2666]:
+      - heading "API Standards — 12 — Governance · Documentation and discovery" [level=3] [ref=e2667]
+      - generic [ref=e2668]:
+        - generic [ref=e2669]:
+          - generic [ref=e2670] [cursor=pointer]:
+            - checkbox "governance-docs-generated no SID Preview" [ref=e2671]
+            - generic [ref=e2672]: governance-docs-generated
+            - generic "No SID assigned yet" [ref=e2673]: no SID
+            - button "Preview" [ref=e2674]
+          - generic [ref=e2675]:
+            - code [ref=e2676]: governance-docs-generated
+            - text: · API Standards · 12 — Governance · Documentation and discovery
+        - generic [ref=e2677]:
+          - generic [ref=e2678] [cursor=pointer]:
+            - checkbox "governance-changelog no SID Preview" [ref=e2679]
+            - generic [ref=e2680]: governance-changelog
+            - generic "No SID assigned yet" [ref=e2681]: no SID
+            - button "Preview" [ref=e2682]
+          - generic [ref=e2683]:
+            - code [ref=e2684]: governance-changelog
+            - text: · API Standards · 12 — Governance · Documentation and discovery
+        - generic [ref=e2685]:
+          - generic [ref=e2686] [cursor=pointer]:
+            - checkbox "governance-discoverable no SID Preview" [ref=e2687]
+            - generic [ref=e2688]: governance-discoverable
+            - generic "No SID assigned yet" [ref=e2689]: no SID
+            - button "Preview" [ref=e2690]
+          - generic [ref=e2691]:
+            - code [ref=e2692]: governance-discoverable
+            - text: · API Standards · 12 — Governance · Documentation and discovery
+    - generic [ref=e2693]:
+      - heading "API Standards — Batch and Bulk Operations" [level=3] [ref=e2694]
+      - generic [ref=e2696]:
+        - generic [ref=e2697] [cursor=pointer]:
+          - checkbox "Batch and Bulk Operations no SID pattern Preview" [ref=e2698]
+          - generic [ref=e2699]: Batch and Bulk Operations
+          - generic "No SID assigned yet" [ref=e2700]: no SID
+          - generic [ref=e2701]: pattern
+          - button "Preview" [ref=e2702]
+        - generic [ref=e2703]:
+          - code [ref=e2704]: batch-and-bulk
+          - text: · API Standards · Batch and Bulk Operations
+    - generic [ref=e2705]:
+      - heading "API Standards — Conditional Requests" [level=3] [ref=e2706]
+      - generic [ref=e2708]:
+        - generic [ref=e2709] [cursor=pointer]:
+          - checkbox "Conditional Requests no SID pattern Preview" [ref=e2710]
+          - generic [ref=e2711]: Conditional Requests
+          - generic "No SID assigned yet" [ref=e2712]: no SID
+          - generic [ref=e2713]: pattern
+          - button "Preview" [ref=e2714]
+        - generic [ref=e2715]:
+          - code [ref=e2716]: conditional-requests
+          - text: · API Standards · Conditional Requests
+    - generic [ref=e2717]:
+      - heading "API Standards — Idempotency Keys" [level=3] [ref=e2718]
+      - generic [ref=e2720]:
+        - generic [ref=e2721] [cursor=pointer]:
+          - checkbox "Idempotency Keys no SID pattern Preview" [ref=e2722]
+          - generic [ref=e2723]: Idempotency Keys
+          - generic "No SID assigned yet" [ref=e2724]: no SID
+          - generic [ref=e2725]: pattern
+          - button "Preview" [ref=e2726]
+        - generic [ref=e2727]:
+          - code [ref=e2728]: idempotency
+          - text: · API Standards · Idempotency Keys
+    - generic [ref=e2729]:
+      - heading "API Standards — Long-Running Operations" [level=3] [ref=e2730]
+      - generic [ref=e2732]:
+        - generic [ref=e2733] [cursor=pointer]:
+          - checkbox "Long-Running Operations no SID pattern Preview" [ref=e2734]
+          - generic [ref=e2735]: Long-Running Operations
+          - generic "No SID assigned yet" [ref=e2736]: no SID
+          - generic [ref=e2737]: pattern
+          - button "Preview" [ref=e2738]
+        - generic [ref=e2739]:
+          - code [ref=e2740]: long-running-operations
+          - text: · API Standards · Long-Running Operations
+    - generic [ref=e2741]:
+      - heading "API Standards — Webhooks" [level=3] [ref=e2742]
+      - generic [ref=e2744]:
+        - generic [ref=e2745] [cursor=pointer]:
+          - checkbox "Webhooks no SID pattern Preview" [ref=e2746]
+          - generic [ref=e2747]: Webhooks
+          - generic "No SID assigned yet" [ref=e2748]: no SID
+          - generic [ref=e2749]: pattern
+          - button "Preview" [ref=e2750]
+        - generic [ref=e2751]:
+          - code [ref=e2752]: webhooks
+          - text: · API Standards · Webhooks
+    - generic [ref=e2753]:
+      - heading "API Standards — Tooling" [level=3] [ref=e2754]
+      - generic [ref=e2756]:
+        - generic [ref=e2757] [cursor=pointer]:
+          - checkbox "Tooling no SID tooling Preview" [ref=e2758]
+          - generic [ref=e2759]: Tooling
+          - generic "No SID assigned yet" [ref=e2760]: no SID
+          - generic [ref=e2761]: tooling
+          - button "Preview" [ref=e2762]
+        - generic [ref=e2763]:
+          - code [ref=e2764]: tooling
+          - text: · API Standards · Tooling

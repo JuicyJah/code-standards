@@ -95,7 +95,12 @@ A whole pattern/tooling document carries its SID directly under the document's `
 3. Add an entry to `registry.json` with `status: "Active"` and today's date in `since`.
 4. Embed the SID in the source markdown as shown above.
 
-The build script (`scripts/build-catalog.mjs`) enforces all of this and fails CI on any
-violation: malformed or duplicate SIDs, a SID present in source but missing from the
-registry (or vice versa), a `slug ↔ sid` mapping that changed versus the committed
+The helper `scripts/assign-sids.mjs` automates steps 2–4: it allocates the next free
+number for every rule/doc that lacks one, embeds the SID line in source, and records the
+entry in `registry.json`. It is idempotent — re-running leaves already-assigned units
+untouched.
+
+The build script (`scripts/build-catalog.mjs --strict`) enforces all of this and fails CI
+on any violation: malformed or duplicate SIDs, a SID present in source but missing from
+the registry (or vice versa), a `slug ↔ sid` mapping that changed versus the committed
 registry, or an `obsoletedBy` that does not resolve.

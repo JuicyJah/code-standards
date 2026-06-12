@@ -8,6 +8,7 @@ and across APIs. This document defines how to represent common kinds of data in 
 ## Primitives
 
 ### `type-use-json-types`
+<a id="SDLC-API-0076"></a>**`SDLC-API-0076`**
 
 **MUST** use JSON's native types for their natural values: `string`, `number`,
 `boolean`, `object`, `array`, and `null`. **MUST NOT** encode a boolean as the
@@ -15,6 +16,7 @@ string `"true"`, or a number as a string, *except* where a rule below requires a
 string for precision or format reasons.
 
 ### `type-no-magic-values`
+<a id="SDLC-API-0077"></a>**`SDLC-API-0077`**
 
 **MUST NOT** use sentinel values to mean "absent" (e.g. `-1`, `0`, `""`, or
 `"9999-12-31"` standing in for "unknown" or "never"). Use `null` or omit the
@@ -23,6 +25,7 @@ property (see [Requests and responses](05-requests-and-responses.md#payload-omit
 ## Numbers
 
 ### `type-number-precision`
+<a id="SDLC-API-0078"></a>**`SDLC-API-0078`**
 
 **MUST** represent values that require exact precision or exceed the safe range of an
 IEEE-754 double (integers beyond ±2^53, high-precision decimals) as **strings**, not
@@ -31,12 +34,14 @@ precision. This applies to large identifiers, monetary amounts, and arbitrary-
 precision decimals.
 
 ### `type-integers`
+<a id="SDLC-API-0079"></a>**`SDLC-API-0079`**
 
 **MUST** document the range of integer fields and **SHOULD** keep them within signed
 64-bit range. Identifiers that may exceed 2^53 **MUST** be represented as strings
 (see `type-identifiers`).
 
 ### `type-money`
+<a id="SDLC-API-0080"></a>**`SDLC-API-0080`**
 
 **MUST** represent monetary amounts as an object carrying both an exact amount and a
 currency, never as a bare floating-point number:
@@ -53,18 +58,21 @@ strings within one API without documenting exactly one convention.
 ## Strings and text
 
 ### `type-string-length`
+<a id="SDLC-API-0081"></a>**`SDLC-API-0081`**
 
 **SHOULD** document a maximum length for every string field and **MUST** enforce a
 sane upper bound on accepted input to protect the service. Reject overlong input
 with `400`/`422` (see [Errors](07-errors.md)).
 
 ### `type-enums`
+<a id="SDLC-API-0082"></a>**`SDLC-API-0082`**
 
 **MUST** define enumerations as a fixed set of documented string values (not magic
 numbers). Enum values follow the casing rule in
 [Naming](02-naming.md#naming-enum-values).
 
 ### `type-extensible-enums`
+<a id="SDLC-API-0083"></a>**`SDLC-API-0083`**
 
 **SHOULD** treat most enums as **extensible**: document that new values may be added
 over time and require clients to handle unknown values gracefully (typically by
@@ -76,6 +84,7 @@ each enum is closed or extensible.
 ## Date and time
 
 ### `type-datetime-rfc3339`
+<a id="SDLC-API-0084"></a>**`SDLC-API-0084`**
 
 **MUST** represent timestamps as strings in
 [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339) / ISO 8601 format, in UTC, with an
@@ -90,17 +99,20 @@ without an offset. **SHOULD** use `Z` (UTC) for stored/returned timestamps and
 preserve a meaningful offset only when the local offset is itself significant.
 
 ### `type-date-only`
+<a id="SDLC-API-0085"></a>**`SDLC-API-0085`**
 
 **MUST** represent date-only values (with no time component) as `YYYY-MM-DD` and
 document them as date-only so consumers do not assume a time or zone.
 
 ### `type-duration`
+<a id="SDLC-API-0086"></a>**`SDLC-API-0086`**
 
 **MUST** represent durations using the ISO 8601 duration format (`P30D`, `PT2H30M`)
 or an explicit numeric value paired with a documented unit field. **MUST NOT** use a
 bare number whose unit is implied.
 
 ### `type-http-date-headers`
+<a id="SDLC-API-0087"></a>**`SDLC-API-0087`**
 
 **MUST** format dates carried in HTTP **headers** (such as `Last-Modified`,
 `Retry-After` when given as a date) using the IMF-fixdate format required by
@@ -110,6 +122,7 @@ RFC 3339. Header dates and body dates use different formats by HTTP rule.
 ## Identifiers
 
 ### `type-identifiers`
+<a id="SDLC-API-0088"></a>**`SDLC-API-0088`**
 
 **MUST** treat resource identifiers as **opaque strings** in payloads and URLs, even
 when they are numeric internally. Representing IDs as strings avoids precision loss
@@ -118,6 +131,7 @@ breaking type change. Consumers **MUST NOT** be required to parse structure out 
 an ID.
 
 ### `type-id-no-leak`
+<a id="SDLC-API-0089"></a>**`SDLC-API-0089`**
 
 **SHOULD NOT** use sequential integer surrogate keys as public identifiers where
 they would leak business-sensitive information (record counts, growth rate,
@@ -125,6 +139,7 @@ creation order) or enable enumeration. Prefer UUIDs, ULIDs, or other
 non-guessable identifiers for resources exposed to untrusted callers.
 
 ### `type-id-name-vs-id`
+<a id="SDLC-API-0090"></a>**`SDLC-API-0090`**
 
 **SHOULD** distinguish a stable, immutable `id` (identity that never changes) from a
 human-meaningful, possibly mutable `name` or `slug`. Do not overload one field to
@@ -133,6 +148,7 @@ serve both roles.
 ## Other common types
 
 ### `type-enumerated-standards`
+<a id="SDLC-API-0091"></a>**`SDLC-API-0091`**
 
 **SHOULD** reuse established code lists rather than inventing your own: ISO 4217 for
 currency, ISO 3166 for countries, ISO 639 for languages, BCP 47 for locales, E.164
@@ -140,6 +156,7 @@ for phone numbers, and RFC 5321 syntax for email addresses. Reuse makes values
 interoperable and validatable.
 
 ### `type-binary-data`
+<a id="SDLC-API-0092"></a>**`SDLC-API-0092`**
 
 **SHOULD** serve binary data (images, files) as its own resource with the correct
 `Content-Type`, referenced by URL, rather than base64-encoding it inside JSON.
@@ -148,6 +165,7 @@ fields **MAY** be base64-encoded strings when a separate resource is impractical
 mark them clearly.
 
 ### `type-collections-arrays`
+<a id="SDLC-API-0093"></a>**`SDLC-API-0093`**
 
 **MUST** represent an ordered or unordered list as a JSON array of homogeneous
 items. **MUST NOT** represent a list as an object keyed by index or id when order or
@@ -157,6 +175,7 @@ iteration matters; use an array, and use the
 ## Polymorphism
 
 ### `type-discriminator`
+<a id="SDLC-API-0094"></a>**`SDLC-API-0094`**
 
 **SHOULD**, when a field or resource may take one of several shapes, include an
 explicit **discriminator** property (conventionally named `type`) whose value names
@@ -165,6 +184,7 @@ the variant. The discriminator **MUST** be a documented, extensible enum and
 discriminator rather than guessing from which fields are present.
 
 ### `type-discriminator-stable`
+<a id="SDLC-API-0095"></a>**`SDLC-API-0095`**
 
 **MUST NOT** change a value's discriminator meaning over time, and **MUST** treat
 adding a new variant as you would extending an enum: clients must tolerate unknown

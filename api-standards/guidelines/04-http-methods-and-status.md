@@ -11,6 +11,7 @@ generic clients work correctly without special-casing your API.
 ## Methods
 
 ### `method-standard-semantics`
+<a id="SDLC-API-0042"></a>**`SDLC-API-0042`**
 
 **MUST** use HTTP methods only with their standard semantics:
 
@@ -27,12 +28,14 @@ generic clients work correctly without special-casing your API.
 \* `PATCH` can be made idempotent by design; see `method-patch-idempotency`.
 
 ### `method-get-no-side-effects`
+<a id="SDLC-API-0043"></a>**`SDLC-API-0043`**
 
 **MUST NOT** cause state changes via `GET` or `HEAD`. Safe methods are assumed
 side-effect-free by caches, prefetchers, crawlers, and link-checkers. A `GET` that
 mutates state will be triggered unexpectedly and cannot be retried safely.
 
 ### `method-get-no-body`
+<a id="SDLC-API-0044"></a>**`SDLC-API-0044`**
 
 **MUST NOT** require a request body on `GET`. Bodies on `GET` are not universally
 supported by intermediaries and clients. When a query is too large or complex for
@@ -40,6 +43,7 @@ the query string, use a `POST` to a search sub-resource (see
 [Collections](08-collections.md)).
 
 ### `method-put-full-replace`
+<a id="SDLC-API-0045"></a>**`SDLC-API-0045`**
 
 **MUST** treat `PUT` as a full replacement of the target resource with the supplied
 representation. Fields omitted from a `PUT` body **MUST** be reset to their default
@@ -47,6 +51,7 @@ or cleared, not left unchanged. A consumer that wants to change one field uses
 `PATCH`, not `PUT`.
 
 ### `method-patch-partial`
+<a id="SDLC-API-0046"></a>**`SDLC-API-0046`**
 
 **MUST** treat `PATCH` as a partial update: only the fields present in the request
 are modified. **MUST** document the patch format used — either a
@@ -57,6 +62,7 @@ are modified. **MUST** document the patch format used — either a
 accept both with the same media type.
 
 ### `method-patch-idempotency`
+<a id="SDLC-API-0047"></a>**`SDLC-API-0047`**
 
 **SHOULD** design `PATCH` semantics to be idempotent where practical (setting fields
 to absolute values is idempotent; relative operations like "increment" are not).
@@ -64,6 +70,7 @@ When `PATCH` is not idempotent, support the
 [Idempotency-Key pattern](../patterns/idempotency.md) so clients can retry safely.
 
 ### `method-idempotency`
+<a id="SDLC-API-0048"></a>**`SDLC-API-0048`**
 
 **MUST** make `GET`, `HEAD`, `PUT`, and `DELETE` idempotent: repeating the same
 request has the same effect on server state as making it once. This lets clients
@@ -71,6 +78,7 @@ safely retry after a network failure. `POST` is not idempotent; when a client ne
 retry-safe creation, support the [Idempotency-Key pattern](../patterns/idempotency.md).
 
 ### `method-no-custom-methods`
+<a id="SDLC-API-0049"></a>**`SDLC-API-0049`**
 
 **MUST NOT** invent non-standard HTTP methods. If an operation does not fit a
 standard method, model it as a resource or action (see
@@ -79,6 +87,7 @@ standard method, model it as a resource or action (see
 ## Status codes
 
 ### `status-correct-class`
+<a id="SDLC-API-0050"></a>**`SDLC-API-0050`**
 
 **MUST** return a status code whose class matches the outcome:
 
@@ -92,6 +101,7 @@ in a `2xx` response breaks every client, cache, and tool that relies on the stat
 line. Errors use `4xx`/`5xx` with a [Problem Details](07-errors.md) body.
 
 ### `status-use-standard-codes`
+<a id="SDLC-API-0051"></a>**`SDLC-API-0051`**
 
 **MUST** use the standard, registered status codes for their defined meaning and
 **SHOULD** restrict usage to this common set unless a more specific registered code
@@ -123,6 +133,7 @@ clearly applies:
 | `502`/`503`/`504` | Upstream failure, overload/maintenance, upstream timeout |
 
 ### `status-400-vs-422`
+<a id="SDLC-API-0052"></a>**`SDLC-API-0052`**
 
 **MAY** distinguish `400 Bad Request` (the request is malformed — bad JSON, wrong
 types, missing required fields) from `422 Unprocessable Content` (the request is
@@ -131,6 +142,7 @@ consistently; do not return `400` for a validation error on one endpoint and `42
 for the same kind of error on another.
 
 ### `status-401-vs-403`
+<a id="SDLC-API-0053"></a>**`SDLC-API-0053`**
 
 **MUST** return `401 Unauthorized` when authentication is missing or invalid (the
 client should authenticate and retry) and `403 Forbidden` when the authenticated
@@ -138,23 +150,27 @@ principal is not allowed (retrying without a credential change will not help).
 A `401` response **MUST** include a `WWW-Authenticate` header.
 
 ### `status-404-for-authorization`
+<a id="SDLC-API-0054"></a>**`SDLC-API-0054`**
 
 **MAY** return `404 Not Found` instead of `403 Forbidden` when revealing the
 resource's existence would itself leak sensitive information. Choose one behavior
 per resource type and document it. See [Security](10-security.md).
 
 ### `status-201-location`
+<a id="SDLC-API-0055"></a>**`SDLC-API-0055`**
 
 **MUST** include a `Location` header pointing to the new resource's URL on every
 `201 Created` response, and **SHOULD** return the created resource's representation
 in the body.
 
 ### `status-405-allow`
+<a id="SDLC-API-0056"></a>**`SDLC-API-0056`**
 
 **MUST** include an `Allow` header listing the supported methods when responding
 `405 Method Not Allowed`.
 
 ### `status-no-vanity-codes`
+<a id="SDLC-API-0057"></a>**`SDLC-API-0057`**
 
 **MUST NOT** use unregistered or repurposed status codes (e.g. returning `418`, or
 `200` to mean "partial failure"). Clients and intermediaries interpret status codes

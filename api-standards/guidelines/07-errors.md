@@ -9,6 +9,7 @@ paths and chaotic error responses is hard to build against.
 ## Foundations
 
 ### `error-status-code`
+<a id="SDLC-API-0096"></a>**`SDLC-API-0096`**
 
 **MUST** signal failure with an appropriate `4xx` or `5xx` status code (see
 [HTTP methods and status](04-http-methods-and-status.md#status-codes)). The status
@@ -16,6 +17,7 @@ code is the primary, machine-readable error signal. The body explains; it never
 replaces the status line.
 
 ### `error-problem-details`
+<a id="SDLC-API-0097"></a>**`SDLC-API-0097`**
 
 **MUST** return a structured error body using the **Problem Details** format defined
 by [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) (which obsoletes RFC 7807),
@@ -51,6 +53,7 @@ Content-Type: application/problem+json
 ```
 
 ### `error-machine-code`
+<a id="SDLC-API-0098"></a>**`SDLC-API-0098`**
 
 **MUST** include a stable, machine-readable error **code** that consumers can branch
 on programmatically — either via a dereferenceable `type` URI, an explicit extension
@@ -60,6 +63,7 @@ wording. Codes follow the [enum casing](02-naming.md#naming-enum-values) convent
 and are treated as an [extensible enum](06-data-types.md#type-extensible-enums).
 
 ### `error-stable-codes`
+<a id="SDLC-API-0099"></a>**`SDLC-API-0099`**
 
 **MUST NOT** change the meaning of an existing error code or its associated status
 code once published; consumers branch on them. Adding a new code is a
@@ -68,6 +72,7 @@ code once published; consumers branch on them. Adding a new code is a
 ## Content
 
 ### `error-human-message`
+<a id="SDLC-API-0100"></a>**`SDLC-API-0100`**
 
 **MUST** provide a human-readable `detail` that helps a developer understand and fix
 the problem, without leaking sensitive information. **MUST NOT** put stack traces,
@@ -75,6 +80,7 @@ internal hostnames, SQL, or secrets in any error field. The message is read by t
 consumer's developer, not an attacker who should learn your internals.
 
 ### `error-field-level`
+<a id="SDLC-API-0101"></a>**`SDLC-API-0101`**
 
 **SHOULD**, for validation failures, identify the specific offending fields using a
 consistent extension member so clients can map errors to inputs. This standard
@@ -97,12 +103,14 @@ consistent extension member so clients can map errors to inputs. This standard
 JSON Pointer, `items/0/quantity`) and apply it consistently.
 
 ### `error-actionable`
+<a id="SDLC-API-0102"></a>**`SDLC-API-0102`**
 
 **SHOULD** tell the consumer what to do about retriable conditions: pair `429` and
 `503` with `Retry-After` (see [Rate limiting](11-rate-limiting.md)), and indicate in
 the body whether an operation may be safely retried.
 
 ### `error-correlation`
+<a id="SDLC-API-0103"></a>**`SDLC-API-0103`**
 
 **SHOULD** include a correlation/request identifier in the error (commonly via
 `instance` or an extension member) that matches a response header (see
@@ -112,6 +120,7 @@ consumer can report it and an operator can find the corresponding logs.
 ## Consistency
 
 ### `error-consistent-shape`
+<a id="SDLC-API-0104"></a>**`SDLC-API-0104`**
 
 **MUST** return the same error shape for every error across the entire API —
 including errors produced by gateways, middleware, and frameworks, which often
@@ -119,6 +128,7 @@ default to HTML or a different JSON shape. Configure the edge so that a `404` fr
 the framework and a `404` from your code look identical to the consumer.
 
 ### `error-no-success-in-error`
+<a id="SDLC-API-0105"></a>**`SDLC-API-0105`**
 
 **MUST NOT** return partial-success results in an error response or error results in
 a success response. For operations that can partially succeed (batch/bulk), use the
@@ -126,6 +136,7 @@ explicit per-item result model in
 [Batch and bulk operations](../patterns/batch-and-bulk.md), not an ambiguous mixed body.
 
 ### `error-localization`
+<a id="SDLC-API-0106"></a>**`SDLC-API-0106`**
 
 **MAY** localize the human-readable `title` and `detail` based on the request's
 `Accept-Language`. If localized, the machine-readable `code`/`type` **MUST** remain

@@ -11,6 +11,7 @@ review of sensitive systems, or domain-specific compliance requirements.
 ## Secrets
 
 ### `security-no-hardcoded-secrets`
+<a id="SDLC-CODE-0087"></a>**`SDLC-CODE-0087`**
 
 Secrets — passwords, API keys, tokens, private keys, connection strings — **MUST NOT**
 be hardcoded in source, configuration, or committed anywhere in version control (see
@@ -20,6 +21,7 @@ compromised the moment the repo is cloned, forked, or leaked, and revoking it me
 rotation, not deletion.
 
 ### `security-secret-scanning`
+<a id="SDLC-CODE-0088"></a>**`SDLC-CODE-0088`**
 
 The codebase **MUST** run automated secret scanning (pre-commit and/or in CI) to catch
 credentials before they are committed
@@ -30,6 +32,7 @@ than a leaked one discovered months later.
 ## Handling untrusted input
 
 ### `security-validate-input`
+<a id="SDLC-CODE-0089"></a>**`SDLC-CODE-0089`**
 
 All input crossing a trust boundary — user input, request payloads, file contents,
 inter-service messages, environment data — **MUST** be validated against an expected
@@ -39,6 +42,7 @@ known-good) over deny-lists (block known-bad). Unvalidated input is the root of 
 injection and corruption vulnerabilities.
 
 ### `security-safe-interpolation`
+<a id="SDLC-CODE-0090"></a>**`SDLC-CODE-0090`**
 
 Untrusted data **MUST NOT** be concatenated into the syntax of another language or
 interpreter — SQL, shell commands, HTML, file paths, template expressions. Use the safe,
@@ -48,6 +52,7 @@ against injection (SQL injection, command injection, cross-site scripting, path
 traversal).
 
 ### `security-no-sensitive-data-exposure`
+<a id="SDLC-CODE-0091"></a>**`SDLC-CODE-0091`**
 
 Sensitive data **MUST** be protected in transit and at rest, and **MUST NOT** be exposed
 where it doesn't belong — in logs ([`log-no-secrets`](08-logging-and-observability.md#log-no-secrets)),
@@ -56,6 +61,7 @@ data in motion, and collect and retain only what you actually need (data minimiz
 limits the blast radius of any breach).
 
 ### `security-error-no-leak`
+<a id="SDLC-CODE-0092"></a>**`SDLC-CODE-0092`**
 
 Errors crossing a trust boundary **MUST NOT** reveal internal implementation detail —
 stack traces, library versions, queries, internal paths — that aids an attacker
@@ -65,6 +71,7 @@ generic safe message externally; keep the detail in internal logs.
 ## Access and trust
 
 ### `security-least-privilege`
+<a id="SDLC-CODE-0093"></a>**`SDLC-CODE-0093`**
 
 Code, services, and the credentials they use **MUST** operate with the minimum
 privileges required for their task, scoped as narrowly as practical. A component that
@@ -72,6 +79,7 @@ needs read access gets read access, not admin. Least privilege ensures a comprom
 buggy component can do limited damage.
 
 ### `security-authorize-every-access`
+<a id="SDLC-CODE-0094"></a>**`SDLC-CODE-0094`**
 
 Every access to a protected resource or operation **MUST** be authorized on the server,
 against the identity making the request — not assumed because the caller reached the
@@ -82,6 +90,7 @@ data by changing an id) is among the most common and damaging flaws.
 ## Building securely
 
 ### `security-trusted-crypto`
+<a id="SDLC-CODE-0095"></a>**`SDLC-CODE-0095`**
 
 Cryptography and other security-critical primitives **MUST** use well-vetted, current
 standard libraries; teams **MUST NOT** invent their own crypto, password hashing, or
@@ -90,6 +99,7 @@ for encryption and signing, and a cryptographically secure random source for any
 security-relevant. Rolling your own is how subtle, catastrophic flaws are born.
 
 ### `security-secure-defaults`
+<a id="SDLC-CODE-0096"></a>**`SDLC-CODE-0096`**
 
 Systems **MUST** be secure by default: access denied unless granted, encryption on
 unless explicitly and deliberately disabled, the safe option the path of least
@@ -97,6 +107,7 @@ resistance. Security that depends on every user remembering to turn it on will b
 in production somewhere.
 
 ### `security-dependencies`
+<a id="SDLC-CODE-0097"></a>**`SDLC-CODE-0097`**
 
 Third-party dependencies **MUST** be tracked and scanned for known vulnerabilities, and
 patched promptly — most application risk arrives through dependencies. The full set of

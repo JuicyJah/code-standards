@@ -10,6 +10,7 @@ what automation cannot check.
 ## Automated enforcement
 
 ### `governance-automate`
+<a id="SDLC-CODE-0108"></a>**`SDLC-CODE-0108`**
 
 Wherever a rule in this standard can be checked by a machine, it **MUST** be enforced by
 a machine, in continuous integration, on every change. Machines enforce consistency far
@@ -18,6 +19,7 @@ and easily worn down. Human review is for what tools cannot judge, not for catch
 unformatted code.
 
 ### `governance-required-checks`
+<a id="SDLC-CODE-0109"></a>**`SDLC-CODE-0109`**
 
 The following checks **MUST** be configured as required status checks that block merge
 to a protected branch when they fail:
@@ -39,6 +41,7 @@ A check that merely warns and can be ignored is not enforcement. See the
 [tooling guide](../tooling/README.md) for tool categories that satisfy each check.
 
 ### `governance-protected-main`
+<a id="SDLC-CODE-0110"></a>**`SDLC-CODE-0110`**
 
 The main/trunk branch **MUST** be protected: no direct pushes, required review
 ([`review-required`](04-code-review.md#review-required)), and required passing checks
@@ -49,6 +52,7 @@ true in practice rather than in principle.
 ## Applying the standard
 
 ### `governance-conformance`
+<a id="SDLC-CODE-0111"></a>**`SDLC-CODE-0111`**
 
 Conformance is assessed per repository against the levels defined in the
 [README](../README.md#conformance). A repository **SHOULD** make its conformance status
@@ -56,6 +60,7 @@ and its enforced checks visible (for example, in its README), so consumers and
 contributors know what bar the code is held to.
 
 ### `governance-new-code`
+<a id="SDLC-CODE-0112"></a>**`SDLC-CODE-0112`**
 
 This standard **MUST** be applied to new code and to code being changed, and **SHOULD
 NOT** trigger a mass rewrite of working legacy code solely to conform. The cost of a
@@ -64,6 +69,7 @@ bar where you are already working
 ([`principle-boy-scout`](01-design-principles.md#principle-boy-scout)).
 
 ### `governance-ratchet-legacy`
+<a id="SDLC-CODE-0113"></a>**`SDLC-CODE-0113`**
 
 For an existing codebase adopting this standard, enforcement **SHOULD** ratchet: gate on
 *not getting worse* (new violations blocked, coverage not decreasing) while existing
@@ -74,6 +80,7 @@ rather than indefinite "we'll clean it up later".
 ## Exceptions and evolution
 
 ### `governance-exceptions`
+<a id="SDLC-CODE-0114"></a>**`SDLC-CODE-0114`**
 
 Any deliberate deviation from a `MUST`/`SHOULD` rule **MUST** be recorded as an explicit,
 reviewed exception that names the rule (by its identifier), the reason, and — for
@@ -82,6 +89,7 @@ documented, justified one is a decision. Prefer narrowly scoped, in-code suppres
 (with the rule id and a reason) over disabling a check globally.
 
 ### `governance-tech-debt`
+<a id="SDLC-CODE-0115"></a>**`SDLC-CODE-0115`**
 
 Known shortcuts and deferred work **SHOULD** be tracked explicitly (a linked issue, a
 tracked `TODO` — see
@@ -90,6 +98,7 @@ that debt is visible and managed rather than silently accumulating. Debt that no
 see is debt that never gets paid down.
 
 ### `governance-evolve`
+<a id="SDLC-CODE-0116"></a>**`SDLC-CODE-0116`**
 
 This standard **SHOULD** be treated as a living document. When a real, recurring need is
 not served by an existing rule — or a rule proves wrong in practice — change the standard

@@ -10,6 +10,7 @@ reproducible, and defending the supply chain.
 ## Declared and reproducible
 
 ### `dep-declared`
+<a id="SDLC-CODE-0098"></a>**`SDLC-CODE-0098`**
 
 All third-party dependencies **MUST** be declared explicitly in the project's manifest,
 not vendored by hand, copy-pasted, or relied upon from a developer's globally installed
@@ -17,6 +18,7 @@ tools. The full dependency set must be visible and reconstructable from the repo
 alone ([`vc-everything-tracked`](03-version-control.md#vc-everything-tracked)).
 
 ### `dep-pinned`
+<a id="SDLC-CODE-0099"></a>**`SDLC-CODE-0099`**
 
 Dependency versions **MUST** be pinned via a committed lockfile (or equivalent exact
 version constraints) so that every build — on every machine and in CI — resolves the
@@ -26,6 +28,7 @@ commit. The lockfile is a source artifact and is committed; the downloaded packa
 not ([`vc-no-generated-artifacts`](03-version-control.md#vc-no-generated-artifacts)).
 
 ### `dep-reproducible-build`
+<a id="SDLC-CODE-0100"></a>**`SDLC-CODE-0100`**
 
 Building the same commit **SHOULD** produce the same result regardless of when or where
 it is built. Pinned dependencies ([`dep-pinned`](#dep-pinned)) are the foundation;
@@ -35,6 +38,7 @@ is what makes a build trustworthy and an incident debuggable.
 ## Choosing dependencies
 
 ### `dep-vetted`
+<a id="SDLC-CODE-0101"></a>**`SDLC-CODE-0101`**
 
 A new dependency **SHOULD** be evaluated before adoption: is it actively maintained,
 reasonably popular, secure, and compatibly licensed? Each dependency is a long-term
@@ -42,6 +46,7 @@ commitment and an expansion of your trusted surface. A moment's vetting prevents
 inheriting an abandoned, insecure, or legally incompatible package.
 
 ### `dep-minimal`
+<a id="SDLC-CODE-0102"></a>**`SDLC-CODE-0102`**
 
 **SHOULD** keep the dependency surface as small as the problem allows. Prefer the
 standard library or a small, focused dependency over a sprawling framework pulled in for
@@ -50,6 +55,7 @@ transitive risk. Pulling in a large package to avoid writing a few lines is rare
 good trade.
 
 ### `dep-license-compliance`
+<a id="SDLC-CODE-0103"></a>**`SDLC-CODE-0103`**
 
 Dependency licenses **MUST** be compatible with how the project is distributed and used,
 and **SHOULD** be tracked automatically. A license incompatibility discovered late can
@@ -59,6 +65,7 @@ not at release.
 ## Keeping them safe
 
 ### `dep-vulnerability-scanning`
+<a id="SDLC-CODE-0104"></a>**`SDLC-CODE-0104`**
 
 Dependencies (including transitive ones) **MUST** be scanned automatically and
 continuously for known vulnerabilities, with scanning enforced in CI
@@ -68,6 +75,7 @@ cannot patch what you do not know is vulnerable. See
 [`security-dependencies`](09-security.md#security-dependencies).
 
 ### `dep-keep-current`
+<a id="SDLC-CODE-0105"></a>**`SDLC-CODE-0105`**
 
 Dependencies **SHOULD** be kept reasonably up to date, ideally via automated update
 pull requests gated by the test suite. Large, deferred upgrades are painful and risky
@@ -75,6 +83,7 @@ and tend to coincide with an urgent security patch you now cannot apply safely. 
 frequent, tested updates keep the cost low and the security window short.
 
 ### `dep-verify-integrity`
+<a id="SDLC-CODE-0106"></a>**`SDLC-CODE-0106`**
 
 The toolchain **SHOULD** verify the integrity of downloaded dependencies (checksums or
 signatures recorded in the lockfile) so a tampered or substituted package is detected
@@ -82,6 +91,7 @@ before it enters a build. This defends against supply-chain attacks where a regi
 network path is compromised. **SHOULD** prefer trusted, controlled sources for packages.
 
 ### `dep-no-unmaintained`
+<a id="SDLC-CODE-0107"></a>**`SDLC-CODE-0107`**
 
 **SHOULD NOT** depend on unmaintained or abandoned packages for anything important. An
 abandoned dependency receives no security fixes and becomes a stranded liability; plan a
