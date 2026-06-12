@@ -86,7 +86,7 @@ that differ only by a trailing slash with different behavior.
 **SHOULD** keep URLs readable and avoid unnecessary encoding. Prefer human-readable
 identifiers and slugs where the domain allows; avoid forcing opaque UUIDs into the
 path when a stable, readable key exists. **SHOULD** keep total URL length under
-2,000 characters so that intermediaries and browsers handle it; **MUST** respond
+{{max_url_length|2000|Maximum URL length in characters}} characters so that intermediaries and browsers handle it; **MUST** respond
 `414 URI Too Long` if a URL exceeds the server's supported length.
 
 ### `url-query-for-non-identity`
