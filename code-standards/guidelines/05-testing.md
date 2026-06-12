@@ -44,7 +44,8 @@ accumulating, whatever your current level.
 ### `test-coverage-floor`
 <a id="SDLC-CODE-0051"></a>**`SDLC-CODE-0051`**
 
-New and changed code **SHOULD** meet a coverage floor of at least **80%**, and teams
+New and changed code **SHOULD** meet a coverage floor of at least
+**{{coverage_floor|80|Minimum test coverage percentage}}%**, and teams
 **MAY** set a higher bar. The exact number is less important than measuring it,
 enforcing it ([`test-coverage-gate`](#test-coverage-gate)), and not regressing.
 Coverage is a *floor and a smoke detector*, not a goal: 100% coverage of meaningless

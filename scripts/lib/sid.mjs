@@ -136,19 +136,19 @@ export function validateEntries(entries) {
  */
 export function validateAgainstPrior(priorEntries, nextEntries) {
   const errors = [];
+  // Slugs are unique only within a standard, so key by standard+slug.
+  const slugKey = (e) => `${e.standard}:${e.slug}`;
   const priorBySid = new Map(priorEntries.map((e) => [e.sid, e]));
-  const priorBySlug = new Map(priorEntries.map((e) => [e.slug, e]));
-  const nextBySlug = new Map();
+  const nextBySlugKey = new Map(nextEntries.map((e) => [slugKey(e), e]));
 
   for (const e of nextEntries) {
-    nextBySlug.set(e.slug, e);
     const prior = priorBySid.get(e.sid);
-    if (prior && prior.slug !== e.slug) {
+    if (prior && slugKey(prior) !== slugKey(e)) {
       errors.push(`${e.sid}: reassigned from slug "${prior.slug}" to "${e.slug}" (reuse)`);
     }
   }
   for (const prior of priorEntries) {
-    const now = nextBySlug.get(prior.slug);
+    const now = nextBySlugKey.get(slugKey(prior));
     if (now && now.sid !== prior.sid) {
       errors.push(`slug "${prior.slug}": renumbered from ${prior.sid} to ${now.sid}`);
     }
