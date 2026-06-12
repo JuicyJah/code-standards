@@ -96,7 +96,7 @@ function collect(input: BuildInput): SelectedStandard[] {
         status: doc.status,
         title: doc.title,
         bodyMarkdown: doc.bodyMarkdown,
-        params: [],
+        params: doc.params,
       };
       docs.push({ unit, body: bodyFor(input, unit) });
     }

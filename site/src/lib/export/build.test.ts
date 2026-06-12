@@ -53,8 +53,15 @@ const CATALOG: Catalog = {
           status: 'Active',
           path: 'patterns/webhooks.md',
           title: 'Webhooks',
-          bodyMarkdown: 'Deliver events.',
-          params: [],
+          bodyMarkdown: 'Deliver events within a documented window.',
+          params: [
+            {
+              id: 'webhook_timeout_seconds',
+              default: '10',
+              label: 'Webhook delivery timeout (seconds)',
+              template: 'This organization times out webhook delivery after {value} seconds.',
+            },
+          ],
         },
       ],
     },
@@ -173,6 +180,12 @@ describe('buildMirrored', () => {
     const file = map['code-standards/guidelines/05-testing.md'];
     expect(file).toContain('test-fast');
     expect(file).not.toContain('test-coverage-floor');
+  });
+
+  it('materializes a selected document’s annotation param (abstract prose kept)', () => {
+    const doc = map['code-standards/patterns/webhooks.md'];
+    expect(doc).toContain('a documented window'); // prose stays abstract
+    expect(doc).toContain('times out webhook delivery after 10 seconds'); // concretized
   });
 
   it('includes a README index and the LICENSE', () => {
