@@ -127,6 +127,17 @@ class BuilderStore {
     this.org = { ...emptyOrg(), ...(data.org ?? {}) };
   }
 
+  /** Apply a (possibly partial) config and persist — used by URL/preset import. */
+  applyConfig(data: Partial<PersistShape>): void {
+    this.apply({
+      selected: data.selected ?? [...this.selected],
+      overrides: data.overrides ?? this.overrides,
+      params: data.params ?? this.params,
+      org: data.org ?? this.org,
+    });
+    this.persist();
+  }
+
   reset(): void {
     this.apply({});
     this.persist();

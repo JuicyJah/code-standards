@@ -3,6 +3,7 @@
   import { store } from '../lib/store.svelte';
   import { buildFileMap, buildCombined, selectionCount, type BuildInput } from '../lib/export/build';
   import { zipFileMap, downloadBlob, zipFilename } from '../lib/export/zip';
+  import SharePanel from './SharePanel.svelte';
 
   let layout = $state<'combined' | 'mirrored'>('combined');
   let busy = $state(false);
@@ -34,6 +35,8 @@
     }
   }
 </script>
+
+<SharePanel />
 
 {#if count === 0}
   <p class="muted">Nothing selected yet. Pick rules on the “Browse &amp; select” tab.</p>
