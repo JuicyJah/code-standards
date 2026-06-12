@@ -72,22 +72,24 @@ The source markdown is the system of record. Two content changes are part of thi
 Each selectable unit (every rule and every whole-doc pattern/tooling item) carries a
 permanent numeric identifier, modeled on IETF RFC numbering: **opaque, sequentially
 assigned from a registry, permanent, and never reused.** The human slug (`rule-id`) is
-retained as a mnemonic alias; the canonical citation is `CS-0042` (`test-coverage-floor`).
+retained as a mnemonic alias; the canonical citation is `SDLC-CODE-0042`
+(`test-coverage-floor`).
 
 This numbering scheme is itself documented as a first-class standard in a root
 `NUMBERING.md`, and the allocation ledger lives in a root `registry.json`.
 
 #### Format
 ```
-SID    = SERIES [ "-" KIND ] "-" NUMBER
-SERIES = "AS"          ; API Standards
-       | "CS"          ; Code Standards
+SID    = REPO "-" SERIES [ "-" KIND ] "-" NUMBER
+REPO   = "SDLC"        ; the overall standards repo (fixed prefix)
+SERIES = "API"         ; API Standards
+       | "CODE"        ; Code Standards
 KIND   = "P"           ; pattern document   (absent for guideline rules)
        | "T"           ; tooling document
 NUMBER = 4*DIGIT       ; zero-padded, ≥4 digits
 ```
-Examples: `AS-0001` / `CS-0042` (rules), `CS-P-0001` (a pattern doc),
-`AS-T-0001` (a tooling doc).
+Examples: `SDLC-API-0001` / `SDLC-CODE-0042` (rules), `SDLC-CODE-P-0001` (a pattern doc),
+`SDLC-API-T-0001` (a tooling doc).
 
 #### Properties (IETF-modeled)
 - **Opaque** — the number encodes no location; a rule may move file/section without
@@ -100,8 +102,9 @@ Examples: `AS-0001` / `CS-0042` (rules), `CS-P-0001` (a pattern doc),
   rather than being deleted or renumbered.
 
 #### Registry (`registry.json`) — allocation ledger / source of truth
-Each entry: `sid`, `series`, `kind` (rule|pattern|tooling), `slug`, `standard`, `file`,
-`section`, `title`, `status`, `since` (ISO date), and optional `obsoletedBy`.
+Each entry: `sid`, `repo` (`SDLC`), `series` (`API`|`CODE`), `kind` (rule|pattern|tooling),
+`slug`, `standard`, `file`, `section`, `title`, `status`, `since` (ISO date), and optional
+`obsoletedBy`.
 
 #### Embedding in source markdown (anchor-safe)
 Existing cross-references use slug anchors (e.g. `#test-coverage-gate`) and **must not
@@ -110,11 +113,12 @@ GitHub auto-anchor is unchanged), and the SID is placed on the line immediately 
 it with an explicit HTML anchor for numeric linking:
 ```markdown
 ### `test-coverage-floor`
-<a id="CS-0042"></a>**`CS-0042`**
+<a id="SDLC-CODE-0042"></a>**`SDLC-CODE-0042`**
 
 A merge is blocked below a coverage floor of {{coverage_floor|80|Minimum test coverage percentage}}%.
 ```
-Whole-doc items carry their SID directly under the document H1 (e.g. `**`CS-P-0001`**`).
+Whole-doc items carry their SID directly under the document H1
+(e.g. `**`SDLC-CODE-P-0001`**`).
 
 #### Allocation procedure (documented in `NUMBERING.md` + `CONTRIBUTING.md`)
 A new rule/doc takes the next free number in its (series, kind) counter, is added to
@@ -168,7 +172,7 @@ source markdown ──(build)──> catalog.json ──> Svelte SPA ──(JSZi
               "rules": [
                 {
                   "id": "test-coverage-floor",
-                  "sid": "CS-0042",
+                  "sid": "SDLC-CODE-0042",
                   "status": "Active",
                   "title": "test-coverage-floor",
                   "bodyMarkdown": "...",
@@ -183,7 +187,7 @@ source markdown ──(build)──> catalog.json ──> Svelte SPA ──(JSZi
         }
       ],
       "documents": [
-        { "kind": "pattern", "sid": "CS-P-0001", "path": "patterns/webhooks.md",
+        { "kind": "pattern", "sid": "SDLC-CODE-P-0001", "path": "patterns/webhooks.md",
           "title": "Webhooks", "status": "Active", "bodyMarkdown": "..." }
       ]
     }
