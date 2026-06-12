@@ -1,9 +1,13 @@
 <script lang="ts">
   import type { Unit } from '../lib/types';
   import { store } from '../lib/store.svelte';
+  import { renderBody } from '../lib/export/render';
   import Markdown from '../lib/Markdown.svelte';
 
   let { unit }: { unit: Unit } = $props();
+
+  // Documentation reads with inline defaults filled; annotation params stay hidden.
+  const displayBody = $derived(renderBody(unit, undefined, undefined));
 
   let expanded = $state(false);
   const selected = $derived(store.isSelected(unit.key));
@@ -35,7 +39,7 @@
   </div>
   {#if expanded}
     <div class="body">
-      <Markdown source={unit.bodyMarkdown} />
+      <Markdown source={displayBody} />
     </div>
   {/if}
 </div>

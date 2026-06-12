@@ -8,7 +8,7 @@ import type { Catalog, Standard, Unit, Param } from '../types';
 import type { OrgMeta } from '../store.svelte';
 import { unitKey } from '../catalog';
 import {
-  renderBody,
+  renderExportBody,
   ruleHeading,
   orgPreamble,
   orgFooter,
@@ -33,7 +33,7 @@ function bodyFor(
   input: BuildInput,
   unit: Pick<Unit, 'key' | 'bodyMarkdown' | 'sid' | 'id'> & { params: Param[] },
 ): string {
-  return renderBody(unit as Unit, input.overrides[unit.key], input.params[unit.key]);
+  return renderExportBody(unit as Unit, input.overrides[unit.key], input.params[unit.key]);
 }
 
 /** Units selected within a standard, preserving source order, with resolved bodies. */

@@ -49,7 +49,7 @@ export function flattenUnits(cat: Catalog): Unit[] {
         status: doc.status,
         title: doc.title,
         bodyMarkdown: doc.bodyMarkdown,
-        params: [],
+        params: doc.params ?? [],
       });
     }
   }

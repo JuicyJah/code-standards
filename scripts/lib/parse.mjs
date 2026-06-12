@@ -13,7 +13,7 @@ import remarkParse from 'remark-parse';
 
 const processor = unified().use(remarkParse);
 
-/** Extract `{{id|default|label}}` placeholders from a markdown string. */
+/** Extract inline `{{id|default|label}}` placeholders from a markdown string. */
 export function extractParams(markdown) {
   const re = /\{\{\s*([^|{}]+?)\s*\|([^|{}]*)\|([^{}]*?)\}\}/g;
   const params = [];
@@ -26,6 +26,47 @@ export function extractParams(markdown) {
     params.push({ id, default: m[2].trim(), label: m[3].trim() });
   }
   return params;
+}
+
+// Hidden annotation params let a rule expose a tunable value WITHOUT putting a number in
+// the prose — the documentation stays abstract, while exports can materialize the value.
+//   <!-- param: id | default | label | sentence with {value} -->
+// The trailing template (with {value}) is what an export appends; it is optional.
+const ANNOT_RE = /<!--\s*param:\s*([^|]+?)\s*\|([^|]*?)\|([^|]*?)(?:\|([\s\S]*?))?-->/g;
+
+/** Extract hidden annotation params (with optional render template) from markdown. */
+export function extractAnnotations(markdown) {
+  const params = [];
+  const seen = new Set();
+  let m;
+  ANNOT_RE.lastIndex = 0;
+  while ((m = ANNOT_RE.exec(markdown)) !== null) {
+    const id = m[1].trim();
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const p = { id, default: (m[2] ?? '').trim(), label: (m[3] ?? '').trim() };
+    const tpl = (m[4] ?? '').trim();
+    if (tpl) p.template = tpl;
+    params.push(p);
+  }
+  return params;
+}
+
+/** Remove annotation comments, leaving the prose abstract. */
+export function stripAnnotations(markdown) {
+  return markdown
+    .replace(ANNOT_RE, '')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+/** Combined param extraction + body cleanup for a rule/doc body. */
+export function extractAllParams(body) {
+  const annotations = extractAnnotations(body);
+  const cleanBody = stripAnnotations(body);
+  const inline = extractParams(cleanBody);
+  return { params: [...inline, ...annotations], cleanBody };
 }
 
 // Matches a leading SID line: <a id="SDLC-..."></a>**`SDLC-...`**
@@ -107,12 +148,13 @@ export function parseGuidelineFile(file, source) {
       }
       const rawBody = source.slice(h.end, bodyEnd).replace(/^\n+/, '').replace(/\s+$/, '');
       const { sid, body } = stripSidLine(rawBody);
+      const { params, cleanBody } = extractAllParams(body);
       const rule = {
         slug: h.slug,
         title: h.text,
         sid,
-        bodyMarkdown: body,
-        params: extractParams(body),
+        bodyMarkdown: cleanBody,
+        params,
       };
       if (!currentSection) {
         currentSection = { title: '', rules: [] };
@@ -144,11 +186,10 @@ export function parseDocFile(file, source, { kind, slug }) {
   const title = h1 ? headingText(h1) : slug;
 
   let sid = null;
-  let bodyMarkdown = source.trim();
   if (h1) {
     const after = source.slice(h1.position.end.offset).replace(/^\n+/, '');
-    const stripped = stripSidLine(after);
-    sid = stripped.sid;
+    sid = stripSidLine(after).sid;
   }
-  return { file, kind, slug, title, sid, bodyMarkdown };
+  const { params, cleanBody } = extractAllParams(source.trim());
+  return { file, kind, slug, title, sid, bodyMarkdown: cleanBody, params };
 }

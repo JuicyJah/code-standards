@@ -1,7 +1,7 @@
 <script lang="ts">
   import { units } from '../lib/catalog';
   import { store } from '../lib/store.svelte';
-  import { renderBody } from '../lib/export/render';
+  import { renderExportBody } from '../lib/export/render';
   import Markdown from '../lib/Markdown.svelte';
 
   const selectedUnits = $derived(units.filter((u) => store.isSelected(u.key)));
@@ -95,7 +95,7 @@
 
       {#if preview[u.key]}
         <div class="previewbox">
-          <Markdown source={renderBody(u, store.getOverride(u.key), store.params[u.key])} />
+          <Markdown source={renderExportBody(u, store.getOverride(u.key), store.params[u.key])} />
         </div>
       {/if}
     </section>

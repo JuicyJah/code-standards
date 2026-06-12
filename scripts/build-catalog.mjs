@@ -147,6 +147,7 @@ function main() {
           path: rel,
           title: parsed.title,
           bodyMarkdown: parsed.bodyMarkdown,
+          params: parsed.params ?? [],
         });
       }
     }

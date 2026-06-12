@@ -7,6 +7,13 @@ export interface Param {
   id: string;
   default: string;
   label: string;
+  /**
+   * Optional render template containing `{value}`. When present, the param is an
+   * annotation param: it is not in the prose, and the export *appends* the rendered
+   * sentence (keeping the documentation abstract). When absent, the param is inline
+   * (a `{{…}}` token substituted in place).
+   */
+  template?: string;
 }
 
 export interface Rule {
@@ -37,6 +44,7 @@ export interface StandardDoc {
   path: string;
   title: string;
   bodyMarkdown: string;
+  params: Param[];
 }
 
 export interface Standard {

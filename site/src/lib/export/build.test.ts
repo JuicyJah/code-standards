@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { substituteParams, withTrailingNewline } from './render';
+import { substituteParams, withTrailingNewline, renderExportBody } from './render';
+import type { Unit } from '../types';
 import { buildCombined, buildMirrored, buildFileMap, selectionCount } from './build';
 import { zipFilename } from './zip';
 import type { Catalog } from '../types';
@@ -53,6 +54,7 @@ const CATALOG: Catalog = {
           path: 'patterns/webhooks.md',
           title: 'Webhooks',
           bodyMarkdown: 'Deliver events.',
+          params: [],
         },
       ],
     },
@@ -81,6 +83,31 @@ describe('substituteParams', () => {
   });
   it('honors an explicitly empty value', () => {
     expect(substituteParams('a{{x|d|l}}b', { x: '' })).toBe('ab');
+  });
+});
+
+describe('renderExportBody (annotation params)', () => {
+  const unit = {
+    bodyMarkdown: 'Keys are kept for a documented retention window.',
+    params: [
+      {
+        id: 'retention_hours',
+        default: '24',
+        label: 'Retention (hours)',
+        template: 'This organization retains keys for {value} hours.',
+      },
+    ],
+  } as unknown as Unit;
+
+  it('keeps prose abstract but appends the concretized sentence with the default', () => {
+    const out = renderExportBody(unit, undefined, undefined);
+    expect(out).toContain('a documented retention window'); // prose stays abstract
+    expect(out).toContain('retains keys for 24 hours'); // materialized default
+  });
+
+  it('uses the user-set value when provided', () => {
+    const out = renderExportBody(unit, undefined, { retention_hours: '72' });
+    expect(out).toContain('retains keys for 72 hours');
   });
 });
 

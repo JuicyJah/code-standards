@@ -1,6 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import {
   extractParams,
+  extractAnnotations,
+  stripAnnotations,
+  extractAllParams,
   stripSidLine,
   parseGuidelineFile,
   parseDocFile,
@@ -30,6 +33,46 @@ describe('extractParams', () => {
 
   it('ignores malformed placeholders', () => {
     expect(extractParams('{{notvalid}} and {single} and {{a|b}}')).toEqual([]);
+  });
+});
+
+describe('annotation params', () => {
+  const md = `Idempotency keys are kept for a documented retention window.
+<!-- param: retention_hours | 24 | Idempotency key retention (hours) | Keys are retained for {value} hours. -->
+
+More prose.`;
+
+  it('extracts id/default/label/template', () => {
+    expect(extractAnnotations(md)).toEqual([
+      {
+        id: 'retention_hours',
+        default: '24',
+        label: 'Idempotency key retention (hours)',
+        template: 'Keys are retained for {value} hours.',
+      },
+    ]);
+  });
+
+  it('template is optional', () => {
+    expect(extractAnnotations('<!-- param: x | 5 | Label X -->')).toEqual([
+      { id: 'x', default: '5', label: 'Label X' },
+    ]);
+  });
+
+  it('stripAnnotations removes the comment and keeps prose abstract', () => {
+    const out = stripAnnotations(md);
+    expect(out).not.toMatch(/param:/);
+    expect(out).toContain('documented retention window');
+    expect(out).toContain('More prose.');
+  });
+
+  it('extractAllParams merges inline + annotation and cleans the body', () => {
+    const body =
+      'Floor {{cov|80|Coverage}}%.\n<!-- param: ttl | 24 | TTL hours | TTL is {value}h. -->';
+    const { params, cleanBody } = extractAllParams(body);
+    expect(params.map((p) => p.id)).toEqual(['cov', 'ttl']);
+    expect(cleanBody).toContain('{{cov|80|Coverage}}');
+    expect(cleanBody).not.toMatch(/param:/);
   });
 });
 
