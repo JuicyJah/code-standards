@@ -42,6 +42,8 @@ export interface StandardDoc {
 export interface Standard {
   id: 'api' | 'code';
   title: string;
+  dir: string; // source directory name, e.g. "code-standards"
+  license: string | null;
   files: StandardFile[];
   documents: StandardDoc[];
 }

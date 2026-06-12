@@ -99,7 +99,9 @@ function main() {
 
   for (const std of STANDARDS) {
     const stdDir = join(ROOT, std.dir);
-    const stdOut = { id: std.id, title: std.title, files: [], documents: [] };
+    const licensePath = join(stdDir, 'LICENSE');
+    const license = existsSync(licensePath) ? readFileSync(licensePath, 'utf8') : null;
+    const stdOut = { id: std.id, title: std.title, dir: std.dir, license, files: [], documents: [] };
 
     // Guideline files.
     for (const f of listMarkdown(join(stdDir, 'guidelines'))) {
