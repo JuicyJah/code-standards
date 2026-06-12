@@ -10,6 +10,7 @@ enum values.
 ## Casing
 
 ### `naming-json-camelcase`
+<a id="SDLC-API-0011"></a>**`SDLC-API-0011`**
 
 **MUST** name JSON object properties in `camelCase`: a lowercase first letter, no
 separators, subsequent words capitalized (`createdAt`, `phoneNumber`,
@@ -17,6 +18,7 @@ separators, subsequent words capitalized (`createdAt`, `phoneNumber`,
 SDK generators expect. An API **MUST NOT** mix casing styles across properties.
 
 ### `naming-url-kebabcase`
+<a id="SDLC-API-0012"></a>**`SDLC-API-0012`**
 
 **MUST** use `kebab-case` for multi-word URL **path** segments that the API defines
 (`/payment-methods`, `/access-reviews`). Path segments are case-sensitive
@@ -25,6 +27,7 @@ case-related mistakes and reads well in URLs. Resource-identifier segments suppl
 by the client are exempt — they carry whatever value the resource uses.
 
 ### `naming-query-camelcase`
+<a id="SDLC-API-0013"></a>**`SDLC-API-0013`**
 
 **MUST** name query parameters in `camelCase` (`pageSize`, `orderBy`,
 `includeDeleted`). A small set of standard parameters defined by this standard are
@@ -32,6 +35,7 @@ lowercase single words by convention (`filter`, `fields`, `sort`, `cursor`); see
 [Collections](08-collections.md). Match those exactly.
 
 ### `naming-header-conventional`
+<a id="SDLC-API-0014"></a>**`SDLC-API-0014`**
 
 **MUST** name HTTP headers in `Hyphenated-Pascal-Case` (`X-Request-Id`,
 `Idempotency-Key`). HTTP header field names are case-insensitive per
@@ -41,6 +45,7 @@ conventional capitalization keeps logs and tooling readable. **SHOULD NOT** use 
 deprecates it); use it only to match an established de-facto header.
 
 ### `naming-enum-values`
+<a id="SDLC-API-0015"></a>**`SDLC-API-0015`**
 
 **MUST** use a single, documented casing for enumeration string values across the
 entire API. `camelCase` is **RECOMMENDED** for consistency with property names.
@@ -49,12 +54,14 @@ Whatever is chosen, it **MUST NOT** vary between enums.
 ## Word choice
 
 ### `naming-collections-plural`
+<a id="SDLC-API-0016"></a>**`SDLC-API-0016`**
 
 **MUST** name resource collections with a plural noun (`/orders`, `/users`,
 `/invoices`). A collection holds many resources; its name should say so. The
 single-resource URL is the collection name plus an identifier (`/orders/{orderId}`).
 
 ### `naming-no-verbs-in-paths`
+<a id="SDLC-API-0017"></a>**`SDLC-API-0017`**
 
 **MUST NOT** put verbs in resource path segments (`/getUser`, `/createOrder`,
 `/users/{id}/delete`). The HTTP method is the verb. The rare, genuinely
@@ -62,6 +69,7 @@ non-CRUD operation is modeled as documented in
 [URLs and resources](03-urls-and-resources.md#actions), not as an ad-hoc verb path.
 
 ### `naming-consistent-vocabulary`
+<a id="SDLC-API-0018"></a>**`SDLC-API-0018`**
 
 **MUST** use one term for one concept throughout the API. Do not call the same
 thing `customer` in one place and `client` in another, or `delete` here and
@@ -69,6 +77,7 @@ thing `customer` in one place and `client` in another, or `delete` here and
 terms and reuse them.
 
 ### `naming-abbreviations`
+<a id="SDLC-API-0019"></a>**`SDLC-API-0019`**
 
 **SHOULD NOT** abbreviate names unless the abbreviation is more widely recognized
 than the full word (`id`, `url`, `html`, `iso`). Spell out everything else
@@ -76,6 +85,7 @@ than the full word (`id`, `url`, `html`, `iso`). Spell out everything else
 the ambiguity.
 
 ### `naming-acronyms`
+<a id="SDLC-API-0020"></a>**`SDLC-API-0020`**
 
 **MUST** treat acronyms as words for casing purposes and apply the casing rule
 uniformly: in `camelCase`, write `userId`, `ipAddress`, `httpStatus`,
@@ -83,6 +93,7 @@ uniformly: in `camelCase`, write `userId`, `ipAddress`, `httpStatus`,
 case conversion (to snake_case, PascalCase, etc.) lossless.
 
 ### `naming-booleans`
+<a id="SDLC-API-0021"></a>**`SDLC-API-0021`**
 
 **SHOULD** name boolean properties as a positive assertion with an `is`, `has`,
 `can`, or `allows` prefix where it improves readability (`isActive`, `hasChildren`,
@@ -91,6 +102,7 @@ case conversion (to snake_case, PascalCase, etc.) lossless.
 double-negative reasoning.
 
 ### `naming-dates`
+<a id="SDLC-API-0022"></a>**`SDLC-API-0022`**
 
 **SHOULD** suffix timestamp properties with `At` (`createdAt`, `expiresAt`) and
 date-only properties with `On` or `Date` (`bornOn`, `invoiceDate`). The suffix tells
@@ -98,6 +110,7 @@ the consumer the value is temporal and hints at its granularity. Timestamp value
 themselves follow [Data types](06-data-types.md#date-and-time).
 
 ### `naming-counts-and-collections`
+<a id="SDLC-API-0023"></a>**`SDLC-API-0023`**
 
 **SHOULD** name a property holding a count with a `Count` suffix (`itemCount`) and
 a property holding a list with a plural noun (`items`, `tags`). A property named
@@ -106,6 +119,7 @@ a property holding a list with a plural noun (`items`, `tags`). A property named
 ## Reserved and special names
 
 ### `naming-reserved-properties`
+<a id="SDLC-API-0024"></a>**`SDLC-API-0024`**
 
 **MUST NOT** repurpose property names that this standard reserves for a defined
 meaning. In particular: `error` (see [Errors](07-errors.md)), the pagination
@@ -115,6 +129,7 @@ as a polymorphic discriminator (see
 words for a different purpose, qualify it (`errorBudget`, `mediaType`).
 
 ### `naming-no-leading-special-characters`
+<a id="SDLC-API-0025"></a>**`SDLC-API-0025`**
 
 **MUST NOT** begin property names with characters that complicate access in common
 languages or tooling — no leading `$`, `@`, `_`, or digits, and no embedded spaces

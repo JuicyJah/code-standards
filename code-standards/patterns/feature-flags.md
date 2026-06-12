@@ -1,4 +1,5 @@
 # Feature flags
+<a id="SDLC-CODE-P-0002"></a>**`SDLC-CODE-P-0002`**
 
 ## Problem
 
@@ -28,11 +29,14 @@ with none.
 - A flag's purpose and intended lifetime **SHOULD** be recorded
   ([`governance-tech-debt`](../guidelines/11-governance.md#governance-tech-debt)).
   Short-lived release flags exist to be removed; treat a lingering flag as tracked debt.
+<!-- param: flag_max_lifetime_days | 90 | Maximum release flag lifetime (days) | This organization expects short-lived release flags to be removed within {value} days of creation. -->
+<!-- param: stale_flag_review_sla_days | 30 | Stale flag review SLA (days) | This organization reviews any flag still present after {value} days as tracked technical debt. -->
 - Flags **MUST NOT** be used to store secrets or enforce security boundaries; a flag is
   a behavior switch, not an authorization mechanism
   ([`security-authorize-every-access`](../guidelines/09-security.md#security-authorize-every-access)).
 - Once a feature is fully rolled out (or abandoned), the flag and its dead branch
   **SHOULD** be removed promptly ([`style-no-dead-code`](../guidelines/02-code-style.md#style-no-dead-code)).
+<!-- param: flag_cleanup_sla_days | 14 | Fully-rolled-out flag cleanup SLA (days) | This organization removes a fully rolled-out or abandoned flag and its dead branch within {value} days. -->
 
 ## Example
 

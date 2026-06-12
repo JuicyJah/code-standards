@@ -10,6 +10,7 @@ how to deprecate.
 ## The compatibility contract
 
 ### `compat-no-silent-break`
+<a id="SDLC-API-0123"></a>**`SDLC-API-0123`**
 
 **MUST NOT** make a change that breaks existing clients within a published version.
 Every URL, status code, header, request field, and response field that has been
@@ -17,6 +18,7 @@ published is a promise. Changing what a promise means — without a new version 
 defect, not an improvement.
 
 ### `compat-breaking-taxonomy`
+<a id="SDLC-API-0124"></a>**`SDLC-API-0124`**
 
 **MUST** treat the following as **breaking** changes (they require a new version):
 
@@ -33,6 +35,7 @@ defect, not an improvement.
   [`type-extensible-enums`](06-data-types.md#type-extensible-enums)).
 
 ### `compat-nonbreaking-taxonomy`
+<a id="SDLC-API-0125"></a>**`SDLC-API-0125`**
 
 **MUST** treat the following as **non-breaking** changes (they are allowed within a
 version, provided clients were built to the compatibility expectations below):
@@ -46,6 +49,7 @@ version, provided clients were built to the compatibility expectations below):
 - Adding new optional response headers.
 
 ### `compat-client-robustness`
+<a id="SDLC-API-0126"></a>**`SDLC-API-0126`**
 
 **MUST** document, and **SHOULD** design SDKs to enforce, the robustness rules
 clients must follow so that non-breaking changes stay non-breaking. Clients:
@@ -63,12 +67,14 @@ half of the contract.
 ## Versioning strategy
 
 ### `version-explicit`
+<a id="SDLC-API-0127"></a>**`SDLC-API-0127`**
 
 **MUST** version the API explicitly. **MUST NOT** ship an unversioned public API; an
 API with no version has no way to evolve through a breaking change without breaking
 everyone.
 
 ### `version-strategy-choice`
+<a id="SDLC-API-0128"></a>**`SDLC-API-0128`**
 
 **MUST** choose one versioning mechanism and apply it consistently across the whole
 API. Two mechanisms are acceptable under this standard:
@@ -82,6 +88,7 @@ API. Two mechanisms are acceptable under this standard:
 **MUST NOT** mix both schemes in one API.
 
 ### `version-major-only`
+<a id="SDLC-API-0129"></a>**`SDLC-API-0129`**
 
 **SHOULD** expose only **major** versions in the version identifier (`v1`, `v2`).
 Minor and patch evolution happens through non-breaking changes within a major
@@ -89,18 +96,24 @@ version (`compat-nonbreaking-taxonomy`); it does not get its own visible version
 This keeps the number of live versions small.
 
 ### `version-semantic-meaning`
+<a id="SDLC-API-0130"></a>**`SDLC-API-0130`**
 
 **MUST** make a new major version mean "breaking changes are present." A major
 version bump is the *only* place breaking changes are permitted, and they **MUST**
 be documented in a migration guide.
 
 ### `version-minimize-live-versions`
+<a id="SDLC-API-0131"></a>**`SDLC-API-0131`**
 
 **SHOULD** keep the number of simultaneously supported major versions small (two or
 three). Every live version multiplies maintenance, testing, and security surface.
 Pair new versions with a deprecation timeline for old ones.
 
+<!-- param: max_supported_major_versions | 2 | Maximum simultaneously supported major versions | This organization supports at most {value} major API versions at the same time. -->
+
+
 ### `version-default-behavior`
+<a id="SDLC-API-0132"></a>**`SDLC-API-0132`**
 
 **MUST** define and document what happens when a client does not specify a version
 (if the mechanism allows omission). **RECOMMENDED**: require the version explicitly
@@ -110,6 +123,7 @@ to a version that may change under the client.
 ## Deprecation and sunset
 
 ### `deprecation-announce`
+<a id="SDLC-API-0133"></a>**`SDLC-API-0133`**
 
 **MUST** announce a deprecation before removing anything, through documentation and
 **SHOULD** through machine-readable signaling on affected responses. This standard
@@ -118,20 +132,33 @@ to a version that may change under the client.
 that a resource is deprecated and the date after which it may stop working, with a
 `Link` to the migration guide.
 
+<!-- param: sunset_header_lead_days | 90 | Minimum lead time on Sunset header (days) | This organization sets the Sunset header date at least {value} days in the future when announcing a deprecation. -->
+
+
 ### `deprecation-window`
+<a id="SDLC-API-0134"></a>**`SDLC-API-0134`**
 
 **MUST** provide a reasonable, documented migration window between announcing a
 deprecation and removing the capability — long enough for consumers to migrate.
 **MUST NOT** remove a widely-used capability without a window, even between major
 versions.
 
+<!-- param: deprecation_notice_days | 90 | Minimum deprecation notice period (days) | This organization gives consumers at least {value} days of notice between announcing a deprecation and removing the capability. -->
+
+
 ### `deprecation-monitor`
+<a id="SDLC-API-0135"></a>**`SDLC-API-0135`**
 
 **SHOULD** track usage of deprecated capabilities so the removal decision is based on
 real consumption, and **SHOULD** proactively notify identifiable active consumers
 before removal.
 
+<!-- param: deprecation_usage_review_days | 30 | Deprecated-capability usage review interval (days) | This organization reviews usage of deprecated capabilities every {value} days before deciding to remove them. -->
+<!-- param: consumer_notice_before_removal_days | 30 | Direct consumer notification lead time before removal (days) | This organization notifies identifiable active consumers at least {value} days before removing a deprecated capability. -->
+
+
 ### `deprecation-gone`
+<a id="SDLC-API-0136"></a>**`SDLC-API-0136`**
 
 **SHOULD** respond `410 Gone` (not `404`) for an endpoint that was intentionally
 removed after deprecation, so consumers can distinguish "removed" from "never
@@ -141,6 +168,7 @@ replacement.
 ## Previews
 
 ### `version-preview-marking`
+<a id="SDLC-API-0137"></a>**`SDLC-API-0137`**
 
 **MAY** ship preview/beta capabilities to gather feedback, but **MUST** mark them
 clearly as unstable (distinct version label such as a date-stamped or `-preview`

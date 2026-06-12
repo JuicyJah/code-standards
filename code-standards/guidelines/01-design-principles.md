@@ -18,6 +18,7 @@ modules) so they stay changeable. They apply in any paradigm — substitute "mod
 "function" for "class" as your language demands.
 
 ### `principle-single-responsibility`
+<a id="SDLC-CODE-0001"></a>**`SDLC-CODE-0001`**
 
 A unit of code **SHOULD** have one reason to change. When unrelated concerns live in
 the same function or module, a change to one risks breaking the other and every change
@@ -25,6 +26,7 @@ touches a larger surface. If you cannot describe what a unit does without saying
 consider splitting it.
 
 ### `principle-open-closed`
+<a id="SDLC-CODE-0002"></a>**`SDLC-CODE-0002`**
 
 Code **SHOULD** be open to extension but closed to modification: prefer adding new
 behavior by adding new code (a new implementation, a new case) over editing
@@ -32,6 +34,7 @@ battle-tested code in place. This limits the blast radius of change and protects
 working code from accidental regressions.
 
 ### `principle-liskov-substitution`
+<a id="SDLC-CODE-0003"></a>**`SDLC-CODE-0003`**
 
 A subtype or implementation **MUST** be usable anywhere its abstraction is expected,
 without surprising the caller. An implementation that throws where the contract
@@ -40,12 +43,14 @@ were written against the abstraction. If a "kind of X" cannot honor X's contract
 is not an X.
 
 ### `principle-interface-segregation`
+<a id="SDLC-CODE-0004"></a>**`SDLC-CODE-0004`**
 
 An abstraction **SHOULD** expose only what its callers need. Fat interfaces force
 implementers to provide behavior they do not have and callers to depend on methods
 they never call. Prefer several small, role-focused interfaces over one large one.
 
 ### `principle-dependency-inversion`
+<a id="SDLC-CODE-0005"></a>**`SDLC-CODE-0005`**
 
 High-level policy **SHOULD** depend on abstractions, not on low-level details.
 Depending on an interface rather than a concrete implementation (a specific database,
@@ -55,6 +60,7 @@ rewriting policy. See also [`test-isolated`](05-testing.md#test-isolated).
 ## Simplicity and reuse
 
 ### `principle-kiss`
+<a id="SDLC-CODE-0006"></a>**`SDLC-CODE-0006`**
 
 Prefer the simplest design that solves the actual problem. Complexity is a cost paid on
 every future read, change, and debugging session. A clever solution that the next
@@ -62,6 +68,7 @@ engineer cannot follow is a liability, not an asset. Simplicity is measured by h
 hard the code is to *understand and change*, not by how few characters it has.
 
 ### `principle-yagni`
+<a id="SDLC-CODE-0007"></a>**`SDLC-CODE-0007`**
 
 **SHOULD NOT** build functionality, configuration, or abstraction for a need that is
 only speculated, not real. Speculative generality adds code to maintain, paths to
@@ -69,6 +76,7 @@ test, and concepts to learn, in exchange for flexibility that often never gets u
 and that is usually the wrong shape when the real need finally arrives.
 
 ### `principle-dry`
+<a id="SDLC-CODE-0008"></a>**`SDLC-CODE-0008`**
 
 Each piece of *knowledge* — a business rule, a constant, a validation — **SHOULD** have
 a single authoritative representation, so a change is made in one place. But beware:
@@ -80,18 +88,21 @@ over the wrong abstraction.
 ## Structure
 
 ### `principle-low-coupling`
+<a id="SDLC-CODE-0009"></a>**`SDLC-CODE-0009`**
 
 Modules **SHOULD** depend on as little of each other as possible, and through narrow,
 explicit interfaces. Loose coupling lets you understand, test, and change one module
 without holding the rest of the system in your head, and contains the spread of change.
 
 ### `principle-high-cohesion`
+<a id="SDLC-CODE-0010"></a>**`SDLC-CODE-0010`**
 
 Things that change together **SHOULD** live together. Code related to one capability
 belongs in one place rather than scattered across the codebase, so a feature can be
 found, understood, and changed as a unit.
 
 ### `principle-composition-over-inheritance`
+<a id="SDLC-CODE-0011"></a>**`SDLC-CODE-0011`**
 
 **SHOULD** prefer composing behavior from small parts over deep inheritance
 hierarchies. Inheritance couples a subtype to its parent's internals and is rigid;
@@ -102,6 +113,7 @@ test. Reserve inheritance for genuine, stable "is-a" relationships that honor
 ## Disposition
 
 ### `principle-least-astonishment`
+<a id="SDLC-CODE-0012"></a>**`SDLC-CODE-0012`**
 
 Code **SHOULD** behave the way a competent reader expects from its name, signature, and
 context. A function called `get*` that also writes, a parameter that is silently
@@ -109,6 +121,7 @@ ignored, or an operation with a surprising side effect costs every future reader
 the surprising explicit, or remove the surprise.
 
 ### `principle-explicit-over-implicit`
+<a id="SDLC-CODE-0013"></a>**`SDLC-CODE-0013`**
 
 **SHOULD** prefer explicit, visible behavior over hidden magic. Implicit global state,
 action-at-a-distance, and "it just works" conventions that aren't written down make
@@ -116,6 +129,7 @@ code hard to reason about and debug. When something must be implicit for ergonom
 document it.
 
 ### `principle-boy-scout`
+<a id="SDLC-CODE-0014"></a>**`SDLC-CODE-0014`**
 
 **SHOULD** leave code at least slightly better than you found it: a clearer name, a
 missing test, a deleted dead branch. Incremental improvement on every change is how a

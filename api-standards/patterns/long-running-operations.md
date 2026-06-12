@@ -1,4 +1,5 @@
 # Long-Running Operations
+<a id="SDLC-API-P-0004"></a>**`SDLC-API-P-0004`**
 
 ## Problem
 
@@ -40,6 +41,8 @@ The operation is modeled as a **status monitor** resource that the client polls.
 The status monitor itself is a resource: it has a stable URL, it can be listed
 (`GET /operations`), and it follows all the usual representation rules.
 
+<!-- param: retry_after_seconds | 5 | Default Retry-After polling interval (seconds) | This organization sets the default Retry-After interval on in-progress status monitors to {value} seconds. -->
+
 ### Requirements summary
 
 - **MUST** return `202 Accepted` with a `Location` pointing to the status monitor.
@@ -49,6 +52,8 @@ The status monitor itself is a resource: it has a stable URL, it can be listed
 - **SHOULD** support cancellation where meaningful (e.g. `POST /operations/{id}:cancel`).
 - **SHOULD** retain a completed status monitor for a documented period so a client
   that disconnected can still learn the outcome.
+
+<!-- param: status_monitor_retention_hours | 24 | Completed status monitor retention window (hours) | This organization retains completed status monitors for {value} hours before they may be deleted. -->
 
 ## Example
 

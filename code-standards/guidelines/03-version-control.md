@@ -12,6 +12,7 @@ terminology) but the rules are tool-independent.
 ## What goes in
 
 ### `vc-everything-tracked`
+<a id="SDLC-CODE-0027"></a>**`SDLC-CODE-0027`**
 
 All source code, configuration, tests, infrastructure definitions, and documentation
 needed to build and run the project **MUST** live in version control. If reproducing a
@@ -19,6 +20,7 @@ build depends on something only on someone's laptop or in someone's memory, the 
 is not reproducible.
 
 ### `vc-no-generated-artifacts`
+<a id="SDLC-CODE-0028"></a>**`SDLC-CODE-0028`**
 
 Build outputs, compiled binaries, dependency caches, and other generated files
 **MUST NOT** be committed; ignore them (for example, via `.gitignore`). They bloat the
@@ -27,6 +29,7 @@ them. The lockfile that *pins* dependencies is a source and is committed (see
 [`dep-pinned`](10-dependencies.md#dep-pinned)); the downloaded packages are not.
 
 ### `vc-no-secrets`
+<a id="SDLC-CODE-0029"></a>**`SDLC-CODE-0029`**
 
 Secrets — passwords, API keys, tokens, private keys — **MUST NOT** be committed, not
 even in history, not even in a private repository. A secret in history is a leaked
@@ -37,6 +40,7 @@ prevent it. See [`security-no-hardcoded-secrets`](09-security.md#security-no-har
 ## Commits
 
 ### `vc-atomic-commits`
+<a id="SDLC-CODE-0030"></a>**`SDLC-CODE-0030`**
 
 A commit **SHOULD** be a single, coherent, self-contained change: one logical step that
 builds and passes its tests on its own. Atomic commits make history readable, reverts
@@ -45,6 +49,7 @@ reformat, and bug fix into one commit — and don't split one logical change acr
 commits that individually break the build.
 
 ### `vc-meaningful-messages`
+<a id="SDLC-CODE-0031"></a>**`SDLC-CODE-0031`**
 
 Every commit message **MUST** explain the change well enough for a future reader: a
 concise subject line stating *what* changed, and, for any non-trivial change, a body
@@ -53,6 +58,7 @@ the subject in the imperative mood ("Add retry to upload", not "Added"/"Adds"). 
 message answers the question a future debugger will ask: "why was this done?"
 
 ### `vc-reference-context`
+<a id="SDLC-CODE-0032"></a>**`SDLC-CODE-0032`**
 
 A commit or its pull request **SHOULD** reference the issue, ticket, or discussion that
 motivated it, so the full context is one link away during a future investigation.
@@ -60,12 +66,14 @@ motivated it, so the full context is one link away during a future investigation
 ## Branches and integration
 
 ### `vc-main-always-releasable`
+<a id="SDLC-CODE-0033"></a>**`SDLC-CODE-0033`**
 
 The main/trunk branch **MUST** always be in a working, releasable state: it builds and
 its checks pass. Broken code **MUST NOT** be merged to main. Everyone branches from
 main and depends on it being green; a broken main blocks the whole team.
 
 ### `vc-short-lived-branches`
+<a id="SDLC-CODE-0034"></a>**`SDLC-CODE-0034`**
 
 Branches **SHOULD** be short-lived and integrated frequently. Long-running branches
 accumulate divergence and end in painful, risky merges. Prefer small changes merged
@@ -73,14 +81,20 @@ often (see [Trunk-based development](../patterns/trunk-based-development.md) and
 [Feature flags](../patterns/feature-flags.md) for how to ship incrementally without
 long branches).
 
+<!-- param: branch_max_age_days | 3 | Maximum branch lifetime before integration (days) | This organization expects feature branches to be integrated within {value} days. -->
+
 ### `vc-review-before-merge`
+<a id="SDLC-CODE-0035"></a>**`SDLC-CODE-0035`**
 
 Changes to a shared branch **MUST** be reviewed and pass all required automated checks
 before merging (see [Code review](04-code-review.md) and
 [`governance-required-checks`](11-governance.md#governance-required-checks)). Direct
 pushes to a protected main branch **MUST NOT** be allowed.
 
+<!-- param: review_sla_business_hours | 24 | Code review turnaround SLA (business hours) | This organization expects review of an open change to begin within {value} business hours. -->
+
 ### `vc-no-history-rewrite-shared`
+<a id="SDLC-CODE-0036"></a>**`SDLC-CODE-0036`**
 
 Published history on a shared branch **MUST NOT** be rewritten (no force-push to main).
 Others have built on it; rewriting it breaks their clones and erases the audit trail.

@@ -1,4 +1,5 @@
 # Batch and Bulk Operations
+<a id="SDLC-API-P-0001"></a>**`SDLC-API-P-0001`**
 
 ## Problem
 
@@ -65,6 +66,8 @@ ambiguous success or failure (this is why an error body
 - For non-atomic batches, the client **SHOULD** retry only the failed items. The
   operation **SHOULD** support [idempotency keys](idempotency.md) so a whole-batch
   retry does not duplicate the items that already succeeded.
+
+<!-- param: max_batch_items | 1000 | Maximum items per batch or bulk request | This organization rejects any batch or bulk request carrying more than {value} items. -->
 
 ## Example
 

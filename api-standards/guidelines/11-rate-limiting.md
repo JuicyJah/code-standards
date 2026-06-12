@@ -9,6 +9,7 @@ automatically. The goal is a limit that is predictable, observable, and recovera
 ## Applying limits
 
 ### `ratelimit-apply`
+<a id="SDLC-API-0158"></a>**`SDLC-API-0158`**
 
 **SHOULD** apply rate limits to protect the service, and **MUST** apply them to
 authentication and other abuse-prone endpoints (see
@@ -16,12 +17,18 @@ authentication and other abuse-prone endpoints (see
 can be taken down by a single misbehaving client.
 
 ### `ratelimit-documented`
+<a id="SDLC-API-0159"></a>**`SDLC-API-0159`**
 
 **MUST** document the limits that apply: the dimension they are scoped to (per API
 key, per user, per IP, per tenant), the quota, and the window. Consumers cannot
 build resilient clients against an undocumented, invisible limit.
 
+<!-- param: default_rate_limit_quota | 1000 | Default request quota per window | This organization permits {value} requests per principal within each rate-limit window by default. -->
+<!-- param: rate_limit_window_seconds | 60 | Rate-limit window length (seconds) | This organization measures rate limits over a rolling window of {value} seconds. -->
+<!-- param: rate_limit_burst_size | 50 | Burst allowance (requests) | This organization allows short bursts of up to {value} requests above the steady-state rate. -->
+
 ### `ratelimit-scope`
+<a id="SDLC-API-0160"></a>**`SDLC-API-0160`**
 
 **SHOULD** scope limits to the authenticated principal (API key, client, or user)
 rather than to the source IP alone, so that one client cannot exhaust another's
@@ -31,19 +38,24 @@ layer an IP-based limit beneath the principal limit for unauthenticated traffic.
 ## Signaling rejection
 
 ### `ratelimit-429`
+<a id="SDLC-API-0161"></a>**`SDLC-API-0161`**
 
 **MUST** reject requests that exceed a limit with `429 Too Many Requests` and a
 [Problem Details](07-errors.md) body explaining the limit. **MUST NOT** use a generic
 `400` or `403` for throttling, which prevents clients from reacting correctly.
 
 ### `ratelimit-retry-after`
+<a id="SDLC-API-0162"></a>**`SDLC-API-0162`**
 
 **MUST** include a `Retry-After` header on `429` (and on `503` when shedding load)
 telling the client how long to wait before retrying — as a number of seconds or an
 HTTP date. A throttling response without `Retry-After` forces clients to guess, and
 they usually guess by hammering.
 
+<!-- param: default_retry_after_seconds | 30 | Default Retry-After value (seconds) | This organization advises throttled clients to wait {value} seconds before retrying by default. -->
+
 ### `ratelimit-headers`
+<a id="SDLC-API-0163"></a>**`SDLC-API-0163`**
 
 **SHOULD** expose the client's current limit state on responses so clients can
 self-pace *before* being throttled, not just after. This standard **RECOMMENDS** the
@@ -66,12 +78,14 @@ de-facto headers:
 ## Client guidance the API enables
 
 ### `ratelimit-idempotent-retry`
+<a id="SDLC-API-0164"></a>**`SDLC-API-0164`**
 
 **SHOULD** make throttled requests safe to retry by supporting idempotency on unsafe
 operations (see [Idempotency keys](../patterns/idempotency.md)), so that a client
 honoring `Retry-After` cannot cause duplicate side effects.
 
 ### `ratelimit-backoff-friendly`
+<a id="SDLC-API-0165"></a>**`SDLC-API-0165`**
 
 **SHOULD** design limits and `Retry-After` values to reward exponential backoff with
 jitter, and **SHOULD** document that clients are expected to back off rather than
@@ -81,6 +95,7 @@ counting the rejected request against a stricter abuse threshold.
 ## Server behavior under load
 
 ### `ratelimit-graceful-degradation`
+<a id="SDLC-API-0166"></a>**`SDLC-API-0166`**
 
 **SHOULD** distinguish *rate limiting* (`429` — the client exceeded its allotted
 quota) from *overload* (`503 Service Unavailable` — the server as a whole cannot
@@ -89,6 +104,7 @@ serve right now). Use `429` for per-client quota enforcement and `503` with
 slowing down will help.
 
 ### `ratelimit-fairness`
+<a id="SDLC-API-0167"></a>**`SDLC-API-0167`**
 
 **SHOULD** enforce limits fairly so that heavy clients cannot starve light ones, and
 **SHOULD** consider request *cost* (an expensive query may consume more quota than a

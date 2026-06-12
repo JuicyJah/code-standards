@@ -11,6 +11,7 @@ observability as a feature, designed in, not bolted on after the first outage.
 ## Logging
 
 ### `log-structured`
+<a id="SDLC-CODE-0078"></a>**`SDLC-CODE-0078`**
 
 Services **SHOULD** emit logs in a structured, machine-parseable format (for example,
 key-value or JSON), not as free-form prose. Structured logs can be searched, filtered,
@@ -19,6 +20,7 @@ fields (operation, resource id, duration, outcome) rather than concatenating it 
 message string.
 
 ### `log-levels`
+<a id="SDLC-CODE-0079"></a>**`SDLC-CODE-0079`**
 
 Logs **MUST** use severity levels consistently and meaningfully (typically error / warn
 / info / debug). Levels let operators tune signal vs. noise and alert on what matters.
@@ -26,6 +28,7 @@ Reserve `error` for genuine failures that need attention; do not log routine,
 successful operations at `error`, and do not bury a real failure at `debug`.
 
 ### `log-actionable`
+<a id="SDLC-CODE-0080"></a>**`SDLC-CODE-0080`**
 
 Log what helps diagnose and operate the system, and **SHOULD NOT** drown it in noise. A
 log nobody reads is wasted I/O; a log that fires thousands of times an hour hides the
@@ -33,6 +36,7 @@ one line that matters and trains operators to ignore it. Every log line should b
 to answer "what happened, to what, and what should I do about it?"
 
 ### `log-no-secrets`
+<a id="SDLC-CODE-0081"></a>**`SDLC-CODE-0081`**
 
 Logs **MUST NOT** contain secrets, credentials, tokens, or sensitive personal data
 (see [`security-no-sensitive-data-exposure`](09-security.md#security-no-sensitive-data-exposure)).
@@ -41,6 +45,7 @@ treated as sensitive — making them a prime accidental leak. Redact or omit sen
 fields at the point of logging, not in a downstream filter you hope is configured.
 
 ### `log-correlation`
+<a id="SDLC-CODE-0082"></a>**`SDLC-CODE-0082`**
 
 In a system that spans multiple services or handles concurrent requests, logs **SHOULD**
 include a correlation/request identifier (and, where applicable, a trace id) so that all
@@ -49,6 +54,7 @@ boundaries. Without it, debugging a distributed request is reassembling a shredd
 document.
 
 ### `log-no-behavior-change`
+<a id="SDLC-CODE-0083"></a>**`SDLC-CODE-0083`**
 
 Logging **MUST NOT** change program behavior or be load-bearing. Code must run correctly
 with logging turned down, and a logging failure (a full disk, an unserializable field)
@@ -58,12 +64,14 @@ participant.
 ## Metrics, health, and tracing
 
 ### `observability-health`
+<a id="SDLC-CODE-0084"></a>**`SDLC-CODE-0084`**
 
 A long-running service **SHOULD** expose a health/readiness signal so that
 orchestrators and load balancers can tell whether it is alive and ready for traffic.
 This is the minimum needed to operate a service safely in a modern deployment.
 
 ### `observability-metrics`
+<a id="SDLC-CODE-0085"></a>**`SDLC-CODE-0085`**
 
 Services **SHOULD** emit key operational metrics — request rate, error rate, latency,
 and the saturation of critical resources — so operators can see health at a glance, set
@@ -71,6 +79,7 @@ alerts, and spot regressions. Metrics answer "is it healthy *right now*, and is 
 getting worse?" in a way scanning logs cannot.
 
 ### `observability-tracing`
+<a id="SDLC-CODE-0086"></a>**`SDLC-CODE-0086`**
 
 In a distributed system, services **SHOULD** support distributed tracing by propagating
 trace context across calls, so a single request can be followed across service

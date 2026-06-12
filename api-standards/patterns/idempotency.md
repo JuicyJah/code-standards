@@ -1,4 +1,5 @@
 # Idempotency Keys
+<a id="SDLC-API-P-0003"></a>**`SDLC-API-P-0003`**
 
 ## Problem
 
@@ -43,6 +44,8 @@ deduplicates on that key.
   payload with `422`, since that indicates a client bug rather than a retry.
 - The server **MUST** document the retention window after which a key is forgotten
   and the operation could run again.
+
+<!-- param: idempotency_key_retention_hours | 24 | Idempotency key retention window (hours) | This organization retains idempotency keys and their stored responses for {value} hours, after which a key is forgotten and the operation may run again. -->
 
 ## Example
 

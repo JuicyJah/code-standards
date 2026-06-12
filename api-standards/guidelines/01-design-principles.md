@@ -17,6 +17,7 @@ wrong thing. The principles below optimize for that.
 ## Principles
 
 ### `principle-contract-first`
+<a id="SDLC-API-0001"></a>**`SDLC-API-0001`**
 
 **MUST** treat the API contract — its URLs, payloads, headers, and status codes —
 as the product. Implementation details (database schema, internal services,
@@ -25,6 +26,7 @@ contract, not the implementation; the contract therefore changes more slowly and
 more carefully than the code behind it.
 
 ### `principle-design-before-build`
+<a id="SDLC-API-0002"></a>**`SDLC-API-0002`**
 
 **SHOULD** design the API contract before implementing it, and **SHOULD** express
 that design in a machine-readable description (see
@@ -33,6 +35,7 @@ naming problems while they are still cheap to fix. Reviewing a description is fa
 cheaper than reworking a shipped API.
 
 ### `principle-resource-oriented`
+<a id="SDLC-API-0003"></a>**`SDLC-API-0003`**
 
 **MUST** model the API as a set of **resources** — named things — manipulated with
 a uniform set of HTTP methods, rather than as a set of remote procedure calls.
@@ -41,6 +44,7 @@ predictable: once a consumer understands how one resource behaves, they understa
 how all of them behave. See [URLs and resources](03-urls-and-resources.md).
 
 ### `principle-least-surprise`
+<a id="SDLC-API-0004"></a>**`SDLC-API-0004`**
 
 **MUST** prefer the behavior an experienced HTTP developer would expect. Use HTTP
 methods and status codes for their standard meanings. Do not overload `200 OK` to
@@ -48,6 +52,7 @@ report failure, do not use `POST` where `GET` is correct, and do not invent a
 bespoke mechanism where a standard one exists. Surprise is a defect.
 
 ### `principle-consistency`
+<a id="SDLC-API-0005"></a>**`SDLC-API-0005`**
 
 **MUST** make the same concept look the same everywhere — across endpoints within
 an API, and, by following this standard, across APIs. Casing, date formats, error
@@ -57,6 +62,7 @@ if a service already does something one way, a new endpoint **SHOULD** match the
 service over the standard, and the service **SHOULD** migrate as a whole.
 
 ### `principle-evolvable`
+<a id="SDLC-API-0006"></a>**`SDLC-API-0006`**
 
 **MUST** design so the API can change without breaking existing clients. Add
 rather than remove, make new fields optional, never repurpose an existing field,
@@ -65,6 +71,7 @@ and treat every published behavior as a promise. See
 cannot evolve safely will either stagnate or break its consumers; both are failures.
 
 ### `principle-explicit`
+<a id="SDLC-API-0007"></a>**`SDLC-API-0007`**
 
 **SHOULD** be explicit rather than clever. Prefer obvious names over short ones,
 documented defaults over implicit behavior, and clear errors over silent
@@ -72,12 +79,14 @@ correction. A consumer **SHOULD** be able to predict what a request does from it
 shape alone.
 
 ### `principle-secure-by-default`
+<a id="SDLC-API-0008"></a>**`SDLC-API-0008`**
 
 **MUST** require transport security and authentication by default, grant the least
 privilege necessary, and never depend on obscurity. Security is not a layer added
 later; it is a property of the contract. See [Security](10-security.md).
 
 ### `principle-fault-tolerant`
+<a id="SDLC-API-0009"></a>**`SDLC-API-0009`**
 
 **SHOULD** enable consumers to build reliable clients: make unsafe operations
 retry-safe through idempotency, support optimistic concurrency where lost updates
@@ -85,6 +94,7 @@ matter, and signal overload with `429` and `Retry-After` rather than failing
 opaquely. The network is unreliable; the API should help clients cope.
 
 ### `principle-minimal-surface`
+<a id="SDLC-API-0010"></a>**`SDLC-API-0010`**
 
 **SHOULD** expose the smallest surface that satisfies real use cases (apply YAGNI).
 Every endpoint, field, parameter, and option is a permanent commitment that must be

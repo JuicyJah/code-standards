@@ -11,6 +11,7 @@ the principles below are universal.
 ## Never hide failure
 
 ### `error-no-silent-failure`
+<a id="SDLC-CODE-0069"></a>**`SDLC-CODE-0069`**
 
 An error **MUST NOT** be silently swallowed. Catching an error and ignoring it — an
 empty catch block, a discarded error return, a bare `except: pass` — hides failures
@@ -20,6 +21,7 @@ with context. "Log and continue" is only acceptable when continuing is genuinely
 correct, not as a reflex.
 
 ### `error-fail-fast`
+<a id="SDLC-CODE-0070"></a>**`SDLC-CODE-0070`**
 
 Code **SHOULD** detect invalid states and bad inputs as early as possible and stop,
 rather than limping on with corrupt data. Validate inputs at boundaries
@@ -28,6 +30,7 @@ invariants. A failure that stops immediately, near its cause, is cheap to diagno
 that propagates through layers of half-valid state is expensive.
 
 ### `error-no-control-flow`
+<a id="SDLC-CODE-0071"></a>**`SDLC-CODE-0071`**
 
 Errors **SHOULD NOT** be used for ordinary, expected control flow. Reserve the error
 channel (exceptions/error returns) for the exceptional. An expected "not found" or
@@ -38,6 +41,7 @@ performance and readability.
 ## Errors must carry information
 
 ### `error-context`
+<a id="SDLC-CODE-0072"></a>**`SDLC-CODE-0072`**
 
 An error **MUST** carry enough context to diagnose it: what operation failed, on what
 input or resource, and why. "Operation failed" is useless; "failed to write order 1234
@@ -46,6 +50,7 @@ to ledger: connection refused" is actionable. When propagating, **SHOULD** add c
 the root.
 
 ### `error-typed`
+<a id="SDLC-CODE-0073"></a>**`SDLC-CODE-0073`**
 
 Code **SHOULD** distinguish kinds of errors in a way callers can act on
 programmatically — distinct types, codes, or categories — rather than forcing callers to
@@ -54,6 +59,7 @@ failure but abort on a validation failure must be able to tell them apart withou
 parsing prose.
 
 ### `error-distinguish-recoverable`
+<a id="SDLC-CODE-0074"></a>**`SDLC-CODE-0074`**
 
 Code **SHOULD** distinguish *recoverable* errors (a transient network blip, a
 conflicting update) from *programmer errors / bugs* (a null where one is impossible, a
@@ -63,6 +69,7 @@ so they get fixed, not caught and hidden.
 ## Boundaries and cleanup
 
 ### `error-cleanup`
+<a id="SDLC-CODE-0075"></a>**`SDLC-CODE-0075`**
 
 Resources acquired — files, connections, locks, transactions — **MUST** be released on
 every path, including error paths. Use the language's scoped-cleanup mechanism
@@ -71,6 +78,7 @@ that a thrown error can skip. Leaks under failure are how a system degrades the 
 it runs.
 
 ### `error-no-leak-to-users`
+<a id="SDLC-CODE-0076"></a>**`SDLC-CODE-0076`**
 
 Errors surfaced to end users or across a trust boundary **MUST NOT** leak internal
 detail — stack traces, queries, secrets, internal hostnames. Return a safe, useful
@@ -79,6 +87,7 @@ not to the user (see [`security-error-no-leak`](09-security.md#security-error-no
 and [`log-correlation`](08-logging-and-observability.md#log-correlation)).
 
 ### `error-retry-safely`
+<a id="SDLC-CODE-0077"></a>**`SDLC-CODE-0077`**
 
 Automatic retries **MUST** be limited to operations that are safe to repeat
 (idempotent), and **MUST** use bounded retries with backoff. Blindly retrying a
@@ -86,6 +95,10 @@ non-idempotent operation can double-charge a customer or duplicate data; unbound
 un-spaced retries turn a brief outage into a self-inflicted denial of service (a
 "retry storm"). See [Feature flags](../patterns/feature-flags.md) for safely disabling a
 failing path.
+
+<!-- param: retry_max_attempts | 3 | Maximum automatic retry attempts | This organization limits automatic retries to {value} attempts before giving up. -->
+<!-- param: retry_initial_backoff_ms | 200 | Initial retry backoff (milliseconds) | This organization starts retry backoff at {value} milliseconds before exponential growth. -->
+<!-- param: retry_max_backoff_ms | 30000 | Maximum retry backoff (milliseconds) | This organization caps retry backoff at {value} milliseconds between attempts. -->
 
 ## Common mistakes
 

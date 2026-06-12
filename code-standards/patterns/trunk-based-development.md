@@ -1,4 +1,5 @@
 # Trunk-based development
+<a id="SDLC-CODE-P-0004"></a>**`SDLC-CODE-P-0004`**
 
 ## Problem
 
@@ -24,15 +25,22 @@ maintains several long-lived supported versions in parallel. Even then, the
 
 - Developers **SHOULD** integrate small changes into a single shared trunk (main)
   frequently — at least daily — rather than holding work on a branch for days or weeks.
+<!-- param: integration_cadence_hours | 24 | Maximum integration interval (hours) | This organization expects developers to integrate changes into the shared trunk at least every {value} hours. -->
 - Branches, where used, **SHOULD** be short-lived: branch, make a small reviewable
   change, merge, delete. Pull requests still apply
   ([`review-required`](../guidelines/04-code-review.md#review-required)).
+<!-- param: max_branch_lifetime_hours | 48 | Maximum branch lifetime before stale (hours) | This organization considers a short-lived branch stale once it has existed for more than {value} hours. -->
+<!-- param: max_pull_request_size_lines | 400 | Maximum reviewable pull request size (lines changed) | This organization expects a single reviewable pull request to change no more than {value} lines. -->
+<!-- param: review_sla_hours | 8 | Pull request review SLA (hours) | This organization expects pull requests to receive their first review within {value} hours. -->
+<!-- param: stale_branch_deletion_days | 30 | Stale branch deletion threshold (days) | This organization deletes merged or abandoned branches after {value} days. -->
+<!-- param: branch_behind_trunk_commits | 25 | Maximum commits a branch may trail trunk | This organization requires a branch to be rebased or updated once it falls more than {value} commits behind trunk. -->
 - The trunk **MUST** stay releasable at all times
   ([`vc-main-always-releasable`](../guidelines/03-version-control.md#vc-main-always-releasable));
   every integration is gated by the required automated checks.
 - Incomplete work **SHOULD** be integrated behind a [feature flag](feature-flags.md) or
   hidden behind an interface, so merging often does not mean shipping half-built
   features to users.
+<!-- param: incomplete_flag_cleanup_days | 90 | Feature flag cleanup window (days) | This organization removes feature flags guarding completed work within {value} days of full rollout. -->
 - Large changes **SHOULD** be decomposed into a sequence of small, safe, individually
   mergeable steps rather than one large branch.
 

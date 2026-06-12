@@ -9,6 +9,7 @@ million. This document defines pagination, filtering, sorting, and field selecti
 ## Collection responses
 
 ### `collection-envelope`
+<a id="SDLC-API-0107"></a>**`SDLC-API-0107`**
 
 **MUST** return a collection as a JSON **object** containing an array of items plus
 metadata — never a bare top-level array (see
@@ -27,6 +28,7 @@ This standard **RECOMMENDS** this envelope:
 `items`). The envelope can grow new metadata fields without breaking consumers.
 
 ### `collection-item-shape`
+<a id="SDLC-API-0108"></a>**`SDLC-API-0108`**
 
 **SHOULD** return collection items in the same shape as the single-resource
 representation, optionally trimmed to a documented subset of fields for efficiency.
@@ -36,19 +38,25 @@ two parsers for one resource type.
 ## Pagination
 
 ### `collection-pagination-required`
+<a id="SDLC-API-0109"></a>**`SDLC-API-0109`**
 
 **MUST** paginate any collection that can grow without a fixed, small upper bound.
 An endpoint that returns "all" rows will eventually time out, exhaust memory, or
 return unusably large payloads. Pagination is not optional for unbounded data.
 
 ### `collection-default-and-max-page-size`
+<a id="SDLC-API-0110"></a>**`SDLC-API-0110`**
 
 **MUST** apply a sensible default page size when the client does not specify one, and
 **MUST** enforce a maximum page size that caps server cost. **MUST** name the
 client's page-size parameter `pageSize`. If a client requests more than the maximum,
 **SHOULD** clamp to the maximum (and **MAY** indicate this) rather than rejecting.
 
+<!-- param: collection_default_page_size | 50 | Default page size when client omits pageSize | This organization returns {value} items per page when a client does not specify a page size. -->
+<!-- param: collection_max_page_size | 100 | Maximum allowed page size | This organization caps page size at {value} items and clamps larger requests to this maximum. -->
+
 ### `collection-cursor-pagination`
+<a id="SDLC-API-0111"></a>**`SDLC-API-0111`**
 
 **SHOULD** use **cursor- (token-) based** pagination for large or frequently-changing
 collections. The server returns an opaque cursor that the client passes back to get
@@ -64,6 +72,7 @@ offsets, whereas offset pagination skips or duplicates rows when the underlying 
 changes and degrades as the offset grows.
 
 ### `collection-cursor-opaque`
+<a id="SDLC-API-0112"></a>**`SDLC-API-0112`**
 
 **MUST** treat the cursor as opaque to the client: clients **MUST NOT** construct or
 parse it, and the server **MUST NOT** require them to. The server **MAY** encode page
@@ -71,19 +80,26 @@ position, filters, and sort within it. A cursor **MUST** remain valid for a
 documented window and **SHOULD** fail gracefully (`400` with a clear code) when
 expired or malformed.
 
+<!-- param: cursor_validity_minutes | 60 | Cursor validity window (minutes) | This organization keeps pagination cursors valid for {value} minutes before they expire. -->
+
 ### `collection-offset-pagination`
+<a id="SDLC-API-0113"></a>**`SDLC-API-0113`**
 
 **MAY** offer offset/limit pagination (`page`, `pageSize` or `offset`, `limit`) for
 small, stable collections or where consumers need random page access. When offered,
 **MUST** document the data-skew caveat above and **MUST** cap the maximum offset.
 
+<!-- param: collection_max_offset | 10000 | Maximum offset for offset-based pagination | This organization caps the maximum pagination offset at {value} rows. -->
+
 ### `collection-next-link`
+<a id="SDLC-API-0114"></a>**`SDLC-API-0114`**
 
 **SHOULD** return a ready-to-use link to the next page (and, where applicable, the
 previous page) in the response so clients can follow it without reconstructing query
 parameters. Absence of a next link **MUST** unambiguously mean "no more pages."
 
 ### `collection-total-count-optional`
+<a id="SDLC-API-0115"></a>**`SDLC-API-0115`**
 
 **SHOULD NOT** return a total count by default for large collections, because
 computing an exact count is often as expensive as the query itself. **MAY** provide
@@ -93,6 +109,7 @@ clearly labeled as such.
 ## Filtering
 
 ### `collection-filter-param`
+<a id="SDLC-API-0116"></a>**`SDLC-API-0116`**
 
 **SHOULD** support filtering via query parameters. Two approaches are acceptable;
 **MUST** pick one per API and apply it consistently:
@@ -102,6 +119,7 @@ clearly labeled as such.
   comparison and boolean logic, e.g. `?filter=status eq 'open' and priority eq 'high'`.
 
 ### `collection-filter-grammar`
+<a id="SDLC-API-0117"></a>**`SDLC-API-0117`**
 
 **MUST**, when offering an expression `filter`, document its grammar precisely
 (operators, precedence, value syntax, escaping) and validate input, returning `400`
@@ -110,6 +128,7 @@ expressions through to a backend query engine unsanitized (injection risk — se
 [Security](10-security.md)).
 
 ### `collection-filter-defined-fields`
+<a id="SDLC-API-0118"></a>**`SDLC-API-0118`**
 
 **MUST** restrict filtering to an explicitly documented set of fields and operators.
 **MUST NOT** allow arbitrary filtering on every field by default, which couples the
@@ -118,6 +137,7 @@ public contract to internal storage and creates performance and security cliffs.
 ## Sorting
 
 ### `collection-sort-param`
+<a id="SDLC-API-0119"></a>**`SDLC-API-0119`**
 
 **SHOULD** support sorting via a `sort` parameter accepting one or more fields with
 an explicit direction, applied in order:
@@ -134,6 +154,7 @@ skip or repeat items.
 ## Field selection and embedding
 
 ### `collection-field-selection`
+<a id="SDLC-API-0120"></a>**`SDLC-API-0120`**
 
 **MAY** support sparse fieldsets via a `fields` parameter so clients can request only
 the properties they need (`?fields=id,status,total`), reducing payload size. When
@@ -141,6 +162,7 @@ offered, **MUST** always include the resource's identifier regardless of selecti
 and **MUST** validate field names.
 
 ### `collection-embedding`
+<a id="SDLC-API-0121"></a>**`SDLC-API-0121`**
 
 **MAY** support opt-in expansion of related resources via an `expand` (or `include`)
 parameter (`?expand=customer,lineItems`) so clients can avoid extra round-trips.
@@ -149,9 +171,15 @@ parameter (`?expand=customer,lineItems`) so clients can avoid extra round-trips.
 **MUST** bound expansion depth, and **MUST** document which relationships are
 expandable.
 
+<!-- param: collection_max_expand_depth | 2 | Maximum relationship expansion depth | This organization allows related-resource expansion up to {value} levels deep. -->
+<!-- param: collection_max_expand_relationships | 5 | Maximum relationships per expand request | This organization allows expanding at most {value} relationships in a single request. -->
+
+## Large or complex queries
+
 ## Large or complex queries
 
 ### `collection-search-subresource`
+<a id="SDLC-API-0122"></a>**`SDLC-API-0122`**
 
 **SHOULD**, when query criteria are too large or complex to express safely in a query
 string (long lists of values, structured predicates), accept them in the body of a
@@ -159,6 +187,8 @@ string (long lists of values, structured predicates), accept them in the body of
 paginated collection. This avoids URL-length limits and request bodies on `GET`
 (see [`method-get-no-body`](04-http-methods-and-status.md#method-get-no-body)). Such
 a search `POST` is safe in intent; document it as non-mutating.
+
+<!-- param: search_max_body_bytes | 102400 | Maximum search POST body size (bytes) | This organization accepts search request bodies up to {value} bytes. -->
 
 ## Standard query parameter names
 
