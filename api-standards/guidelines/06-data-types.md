@@ -40,6 +40,9 @@ precision decimals.
 64-bit range. Identifiers that may exceed 2^53 **MUST** be represented as strings
 (see `type-identifiers`).
 
+<!-- param: integer_default_max | 9223372036854775807 | Default maximum value for integer fields | This organization documents a default upper bound of {value} for integer fields unless a narrower range is specified. -->
+<!-- param: integer_default_min | 0 | Default minimum value for integer fields | This organization treats {value} as the default lower bound for integer fields unless a field documents otherwise. -->
+
 ### `type-money`
 <a id="SDLC-API-0080"></a>**`SDLC-API-0080`**
 
@@ -63,6 +66,9 @@ strings within one API without documenting exactly one convention.
 **SHOULD** document a maximum length for every string field and **MUST** enforce a
 sane upper bound on accepted input to protect the service. Reject overlong input
 with `400`/`422` (see [Errors](07-errors.md)).
+
+<!-- param: string_default_max_length | 255 | Default maximum string field length (characters) | This organization caps string fields at {value} characters by default unless a field documents otherwise. -->
+<!-- param: string_freetext_max_length | 4000 | Maximum free-text field length (characters) | This organization rejects free-text input longer than {value} characters. -->
 
 ### `type-enums`
 <a id="SDLC-API-0082"></a>**`SDLC-API-0082`**

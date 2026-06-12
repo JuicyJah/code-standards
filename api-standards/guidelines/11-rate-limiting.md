@@ -23,6 +23,10 @@ can be taken down by a single misbehaving client.
 key, per user, per IP, per tenant), the quota, and the window. Consumers cannot
 build resilient clients against an undocumented, invisible limit.
 
+<!-- param: default_rate_limit_quota | 1000 | Default request quota per window | This organization permits {value} requests per principal within each rate-limit window by default. -->
+<!-- param: rate_limit_window_seconds | 60 | Rate-limit window length (seconds) | This organization measures rate limits over a rolling window of {value} seconds. -->
+<!-- param: rate_limit_burst_size | 50 | Burst allowance (requests) | This organization allows short bursts of up to {value} requests above the steady-state rate. -->
+
 ### `ratelimit-scope`
 <a id="SDLC-API-0160"></a>**`SDLC-API-0160`**
 
@@ -47,6 +51,8 @@ layer an IP-based limit beneath the principal limit for unauthenticated traffic.
 telling the client how long to wait before retrying — as a number of seconds or an
 HTTP date. A throttling response without `Retry-After` forces clients to guess, and
 they usually guess by hammering.
+
+<!-- param: default_retry_after_seconds | 30 | Default Retry-After value (seconds) | This organization advises throttled clients to wait {value} seconds before retrying by default. -->
 
 ### `ratelimit-headers`
 <a id="SDLC-API-0163"></a>**`SDLC-API-0163`**

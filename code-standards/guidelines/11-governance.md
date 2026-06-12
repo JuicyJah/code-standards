@@ -77,6 +77,8 @@ violations are burned down over time. A ratchet lets a large legacy codebase ado
 standard incrementally without halting feature work — and guarantees steady progress
 rather than indefinite "we'll clean it up later".
 
+<!-- param: ratchet_burndown_target_days | 180 | Legacy violation burn-down target window (days) | This organization expects existing violations under a ratchet to be burned down within {value} days of adopting the standard. -->
+
 ## Exceptions and evolution
 
 ### `governance-exceptions`
@@ -87,6 +89,8 @@ reviewed exception that names the rule (by its identifier), the reason, and — 
 temporary deviations — the plan to resolve it. An undocumented deviation is a defect; a
 documented, justified one is a decision. Prefer narrowly scoped, in-code suppressions
 (with the rule id and a reason) over disabling a check globally.
+
+<!-- param: temp_exception_max_validity_days | 90 | Temporary exception maximum validity (days) | This organization allows a temporary exception to remain valid for at most {value} days before it must be resolved or re-reviewed. -->
 
 ### `governance-tech-debt`
 <a id="SDLC-CODE-0115"></a>**`SDLC-CODE-0115`**

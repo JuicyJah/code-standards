@@ -109,6 +109,9 @@ be documented in a migration guide.
 three). Every live version multiplies maintenance, testing, and security surface.
 Pair new versions with a deprecation timeline for old ones.
 
+<!-- param: max_supported_major_versions | 2 | Maximum simultaneously supported major versions | This organization supports at most {value} major API versions at the same time. -->
+
+
 ### `version-default-behavior`
 <a id="SDLC-API-0132"></a>**`SDLC-API-0132`**
 
@@ -129,6 +132,9 @@ to a version that may change under the client.
 that a resource is deprecated and the date after which it may stop working, with a
 `Link` to the migration guide.
 
+<!-- param: sunset_header_lead_days | 90 | Minimum lead time on Sunset header (days) | This organization sets the Sunset header date at least {value} days in the future when announcing a deprecation. -->
+
+
 ### `deprecation-window`
 <a id="SDLC-API-0134"></a>**`SDLC-API-0134`**
 
@@ -137,12 +143,19 @@ deprecation and removing the capability — long enough for consumers to migrate
 **MUST NOT** remove a widely-used capability without a window, even between major
 versions.
 
+<!-- param: deprecation_notice_days | 90 | Minimum deprecation notice period (days) | This organization gives consumers at least {value} days of notice between announcing a deprecation and removing the capability. -->
+
+
 ### `deprecation-monitor`
 <a id="SDLC-API-0135"></a>**`SDLC-API-0135`**
 
 **SHOULD** track usage of deprecated capabilities so the removal decision is based on
 real consumption, and **SHOULD** proactively notify identifiable active consumers
 before removal.
+
+<!-- param: deprecation_usage_review_days | 30 | Deprecated-capability usage review interval (days) | This organization reviews usage of deprecated capabilities every {value} days before deciding to remove them. -->
+<!-- param: consumer_notice_before_removal_days | 30 | Direct consumer notification lead time before removal (days) | This organization notifies identifiable active consumers at least {value} days before removing a deprecated capability. -->
+
 
 ### `deprecation-gone`
 <a id="SDLC-API-0136"></a>**`SDLC-API-0136`**

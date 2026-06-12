@@ -151,6 +151,8 @@ that intermediaries and clients cache correctly. Resources that must not be cach
 **MUST** say so (`Cache-Control: no-store`). Do not rely on default heuristic
 caching for resources whose freshness matters.
 
+<!-- param: cache_default_max_age_seconds | 60 | Default Cache-Control max-age for GET responses (seconds) | This organization sets a default Cache-Control max-age of {value} seconds on cacheable GET responses. -->
+
 ### `cache-validators`
 <a id="SDLC-API-0075"></a>**`SDLC-API-0075`**
 

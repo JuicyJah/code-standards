@@ -52,6 +52,9 @@ return unusably large payloads. Pagination is not optional for unbounded data.
 client's page-size parameter `pageSize`. If a client requests more than the maximum,
 **SHOULD** clamp to the maximum (and **MAY** indicate this) rather than rejecting.
 
+<!-- param: collection_default_page_size | 50 | Default page size when client omits pageSize | This organization returns {value} items per page when a client does not specify a page size. -->
+<!-- param: collection_max_page_size | 100 | Maximum allowed page size | This organization caps page size at {value} items and clamps larger requests to this maximum. -->
+
 ### `collection-cursor-pagination`
 <a id="SDLC-API-0111"></a>**`SDLC-API-0111`**
 
@@ -77,12 +80,16 @@ position, filters, and sort within it. A cursor **MUST** remain valid for a
 documented window and **SHOULD** fail gracefully (`400` with a clear code) when
 expired or malformed.
 
+<!-- param: cursor_validity_minutes | 60 | Cursor validity window (minutes) | This organization keeps pagination cursors valid for {value} minutes before they expire. -->
+
 ### `collection-offset-pagination`
 <a id="SDLC-API-0113"></a>**`SDLC-API-0113`**
 
 **MAY** offer offset/limit pagination (`page`, `pageSize` or `offset`, `limit`) for
 small, stable collections or where consumers need random page access. When offered,
 **MUST** document the data-skew caveat above and **MUST** cap the maximum offset.
+
+<!-- param: collection_max_offset | 10000 | Maximum offset for offset-based pagination | This organization caps the maximum pagination offset at {value} rows. -->
 
 ### `collection-next-link`
 <a id="SDLC-API-0114"></a>**`SDLC-API-0114`**
@@ -164,6 +171,11 @@ parameter (`?expand=customer,lineItems`) so clients can avoid extra round-trips.
 **MUST** bound expansion depth, and **MUST** document which relationships are
 expandable.
 
+<!-- param: collection_max_expand_depth | 2 | Maximum relationship expansion depth | This organization allows related-resource expansion up to {value} levels deep. -->
+<!-- param: collection_max_expand_relationships | 5 | Maximum relationships per expand request | This organization allows expanding at most {value} relationships in a single request. -->
+
+## Large or complex queries
+
 ## Large or complex queries
 
 ### `collection-search-subresource`
@@ -175,6 +187,8 @@ string (long lists of values, structured predicates), accept them in the body of
 paginated collection. This avoids URL-length limits and request bodies on `GET`
 (see [`method-get-no-body`](04-http-methods-and-status.md#method-get-no-body)). Such
 a search `POST` is safe in intent; document it as non-mutating.
+
+<!-- param: search_max_body_bytes | 102400 | Maximum search POST body size (bytes) | This organization accepts search request bodies up to {value} bytes. -->
 
 ## Standard query parameter names
 

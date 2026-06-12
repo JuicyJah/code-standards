@@ -101,6 +101,7 @@ Content-Type: application/problem+json
 
 - Clients **MUST** be prepared to handle `412` by re-reading and retrying; this is
   the normal, expected outcome under contention, not an error to surface raw to users.
+<!-- param: precondition_retry_max | 3 | Maximum 412 retry attempts | This organization retries a write rejected with 412 Precondition Failed at most {value} times before surfacing a conflict to the caller. -->
 - `ETag`-based concurrency works across multiple servers without sticky sessions,
   because the validator lives in the resource, not in server memory.
 - A common mistake is generating a new `ETag` on every read (e.g. from a timestamp

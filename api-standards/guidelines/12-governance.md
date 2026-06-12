@@ -88,6 +88,8 @@ reviewed exception that names the rule, the reason, and (for temporary deviation
 the plan to resolve it. An undocumented deviation is a defect; a documented,
 justified one is a decision. Conformance claims (see
 [README](../README.md#conformance)) account for these exceptions.
+<!-- param: exception_review_sla_days | 5 | Exception review turnaround (business days) | This organization reviews and decides on a requested rule exception within {value} business days of submission. -->
+<!-- param: temporary_exception_max_days | 90 | Temporary exception maximum lifetime (days) | This organization requires every temporary exception to carry a resolution plan completing within {value} days. -->
 
 ### `governance-evolve-standard`
 <a id="SDLC-API-0177"></a>**`SDLC-API-0177`**
@@ -113,6 +115,9 @@ API's hero scenarios.
 **MUST** maintain a public, dated changelog of API changes, distinguishing
 non-breaking additions, deprecations, and (major-version) breaking changes. Consumers
 plan their work against it.
+<!-- param: changelog_retention_months | 24 | Public changelog history retention (months) | This organization keeps published changelog entries publicly available for at least {value} months. -->
+<!-- param: changelog_publish_lead_days | 7 | Changelog publication lead time before release (days) | This organization publishes changelog entries for upcoming changes at least {value} days before the change ships. -->
+
 
 ### `governance-discoverable`
 <a id="SDLC-API-0180"></a>**`SDLC-API-0180`**

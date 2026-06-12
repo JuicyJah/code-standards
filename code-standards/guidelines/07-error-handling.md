@@ -96,6 +96,10 @@ un-spaced retries turn a brief outage into a self-inflicted denial of service (a
 "retry storm"). See [Feature flags](../patterns/feature-flags.md) for safely disabling a
 failing path.
 
+<!-- param: retry_max_attempts | 3 | Maximum automatic retry attempts | This organization limits automatic retries to {value} attempts before giving up. -->
+<!-- param: retry_initial_backoff_ms | 200 | Initial retry backoff (milliseconds) | This organization starts retry backoff at {value} milliseconds before exponential growth. -->
+<!-- param: retry_max_backoff_ms | 30000 | Maximum retry backoff (milliseconds) | This organization caps retry backoff at {value} milliseconds between attempts. -->
+
 ## Common mistakes
 
 - Empty catch blocks and discarded error returns that erase a failure entirely.

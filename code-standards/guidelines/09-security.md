@@ -20,6 +20,8 @@ a secrets manager or injected environment configuration. A secret in a repo is
 compromised the moment the repo is cloned, forked, or leaked, and revoking it means
 rotation, not deletion.
 
+<!-- param: secret_rotation_days | 90 | Maximum secret rotation interval (days) | This organization rotates secrets at least every {value} days. -->
+
 ### `security-secret-scanning`
 <a id="SDLC-CODE-0088"></a>**`SDLC-CODE-0088`**
 
@@ -59,6 +61,8 @@ where it doesn't belong — in logs ([`log-no-secrets`](08-logging-and-observabi
 error messages, URLs, or responses to unauthorized callers. Use encrypted transport for
 data in motion, and collect and retain only what you actually need (data minimization
 limits the blast radius of any breach).
+
+<!-- param: sensitive_data_retention_days | 90 | Maximum sensitive data retention period (days) | This organization retains sensitive personal data for at most {value} days unless a longer period is legally required. -->
 
 ### `security-error-no-leak`
 <a id="SDLC-CODE-0092"></a>**`SDLC-CODE-0092`**
@@ -113,6 +117,8 @@ Third-party dependencies **MUST** be tracked and scanned for known vulnerabiliti
 patched promptly — most application risk arrives through dependencies. The full set of
 rules lives in [Dependencies](10-dependencies.md); see
 [`dep-vulnerability-scanning`](10-dependencies.md#dep-vulnerability-scanning).
+
+<!-- param: critical_vuln_patch_days | 7 | Critical dependency vulnerability patch SLA (days) | This organization patches critical-severity dependency vulnerabilities within {value} days of disclosure. -->
 
 ## Common mistakes
 

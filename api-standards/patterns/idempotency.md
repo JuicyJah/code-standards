@@ -45,6 +45,8 @@ deduplicates on that key.
 - The server **MUST** document the retention window after which a key is forgotten
   and the operation could run again.
 
+<!-- param: idempotency_key_retention_hours | 24 | Idempotency key retention window (hours) | This organization retains idempotency keys and their stored responses for {value} hours, after which a key is forgotten and the operation may run again. -->
+
 ## Example
 
 First attempt (response lost in transit):

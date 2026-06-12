@@ -67,6 +67,8 @@ ambiguous success or failure (this is why an error body
   operation **SHOULD** support [idempotency keys](idempotency.md) so a whole-batch
   retry does not duplicate the items that already succeeded.
 
+<!-- param: max_batch_items | 1000 | Maximum items per batch or bulk request | This organization rejects any batch or bulk request carrying more than {value} items. -->
+
 ## Example
 
 ```http

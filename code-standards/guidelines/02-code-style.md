@@ -82,12 +82,17 @@ reuse. Long functions, deep nesting, and high cyclomatic complexity are signals 
 extract — and a linter **SHOULD** flag them past an agreed threshold rather than
 leaving it to taste.
 
+<!-- param: max_function_lines | 50 | Maximum function length (lines) | This organization's linter flags any function longer than {value} lines for extraction. -->
+<!-- param: max_cyclomatic_complexity | 10 | Maximum cyclomatic complexity per function | This organization's linter flags any function whose cyclomatic complexity exceeds {value}. -->
+
 ### `style-no-deep-nesting`
 <a id="SDLC-CODE-0023"></a>**`SDLC-CODE-0023`**
 
 **SHOULD** keep nesting shallow by using guard clauses and early returns instead of
 arrowhead `if`/`else` pyramids. Flatter code has fewer states to track and fewer places
 for a bug to hide.
+
+<!-- param: max_nesting_depth | 4 | Maximum block nesting depth | This organization's linter flags code nested more than {value} blocks deep. -->
 
 ### `style-no-magic-values`
 <a id="SDLC-CODE-0024"></a>**`SDLC-CODE-0024`**

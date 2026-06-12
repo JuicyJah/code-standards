@@ -81,6 +81,8 @@ often (see [Trunk-based development](../patterns/trunk-based-development.md) and
 [Feature flags](../patterns/feature-flags.md) for how to ship incrementally without
 long branches).
 
+<!-- param: branch_max_age_days | 3 | Maximum branch lifetime before integration (days) | This organization expects feature branches to be integrated within {value} days. -->
+
 ### `vc-review-before-merge`
 <a id="SDLC-CODE-0035"></a>**`SDLC-CODE-0035`**
 
@@ -88,6 +90,8 @@ Changes to a shared branch **MUST** be reviewed and pass all required automated 
 before merging (see [Code review](04-code-review.md) and
 [`governance-required-checks`](11-governance.md#governance-required-checks)). Direct
 pushes to a protected main branch **MUST NOT** be allowed.
+
+<!-- param: review_sla_business_hours | 24 | Code review turnaround SLA (business hours) | This organization expects review of an open change to begin within {value} business hours. -->
 
 ### `vc-no-history-rewrite-shared`
 <a id="SDLC-CODE-0036"></a>**`SDLC-CODE-0036`**

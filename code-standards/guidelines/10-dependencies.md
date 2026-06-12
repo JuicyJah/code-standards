@@ -74,6 +74,9 @@ exploited application vulnerabilities live in dependencies, not first-party code
 cannot patch what you do not know is vulnerable. See
 [`security-dependencies`](09-security.md#security-dependencies).
 
+<!-- param: dep_scan_cadence_hours | 24 | Dependency vulnerability scan cadence (hours) | This organization rescans dependencies for known vulnerabilities at least every {value} hours. -->
+<!-- param: critical_vuln_remediation_days | 7 | Critical vulnerability remediation window (days) | This organization remediates critical dependency vulnerabilities within {value} days of disclosure. -->
+
 ### `dep-keep-current`
 <a id="SDLC-CODE-0105"></a>**`SDLC-CODE-0105`**
 
@@ -81,6 +84,9 @@ Dependencies **SHOULD** be kept reasonably up to date, ideally via automated upd
 pull requests gated by the test suite. Large, deferred upgrades are painful and risky
 and tend to coincide with an urgent security patch you now cannot apply safely. Small,
 frequent, tested updates keep the cost low and the security window short.
+
+<!-- param: dep_update_cadence_days | 7 | Automated dependency update cadence (days) | This organization opens automated dependency update pull requests at least every {value} days. -->
+<!-- param: dep_max_age_days | 90 | Maximum dependency staleness before flagging (days) | This organization flags any dependency more than {value} days behind its latest compatible release. -->
 
 ### `dep-verify-integrity`
 <a id="SDLC-CODE-0106"></a>**`SDLC-CODE-0106`**
@@ -96,6 +102,8 @@ network path is compromised. **SHOULD** prefer trusted, controlled sources for p
 **SHOULD NOT** depend on unmaintained or abandoned packages for anything important. An
 abandoned dependency receives no security fixes and becomes a stranded liability; plan a
 migration before it becomes an emergency.
+
+<!-- param: dep_abandoned_inactivity_months | 12 | Inactivity period before a dependency is deemed abandoned (months) | This organization treats a dependency with no upstream releases or commits for {value} months as abandoned and schedules its migration. -->
 
 ## Common mistakes
 

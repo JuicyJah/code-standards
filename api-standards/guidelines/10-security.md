@@ -24,6 +24,8 @@ the network path.
 and **MUST NOT** accept known-broken protocol versions or cipher suites. **SHOULD**
 send `Strict-Transport-Security` (HSTS) so clients refuse to downgrade.
 
+<!-- param: hsts_max_age_seconds | 31536000 | HSTS max-age directive (seconds) | This organization sets the Strict-Transport-Security max-age to {value} seconds. -->
+
 ### `security-no-secrets-in-url`
 <a id="SDLC-API-0140"></a>**`SDLC-API-0140`**
 
@@ -67,6 +69,9 @@ with a `WWW-Authenticate` header describing the scheme (see
 expiry, and revocation where applicable. **MUST NOT** trust claims from an unverified
 token, and **MUST NOT** accept expired tokens. **SHOULD** keep access-token lifetimes
 short and support refresh rather than long-lived bearer tokens.
+
+<!-- param: access_token_lifetime_minutes | 15 | Access token lifetime (minutes) | This organization issues access tokens with a lifetime of {value} minutes. -->
+<!-- param: token_revocation_check_window_seconds | 60 | Token revocation cache window (seconds) | This organization re-checks token revocation status at most every {value} seconds. -->
 
 ### `security-no-credentials-in-code-paths`
 <a id="SDLC-API-0145"></a>**`SDLC-API-0145`**
@@ -122,6 +127,8 @@ against an explicit schema of allowed types, ranges, lengths, and formats, and r
 violations with `400`/`422` (see [Errors](07-errors.md)). Treat all client input as
 untrusted.
 
+<!-- param: max_string_field_length | 4096 | Maximum string field length (characters) | This organization rejects string fields longer than {value} characters. -->
+
 ### `security-no-injection`
 <a id="SDLC-API-0151"></a>**`SDLC-API-0151`**
 
@@ -136,6 +143,10 @@ which **MUST** be parsed and validated against an allowlist, never passed throug
 **MUST** enforce a maximum request body size and reject larger payloads (`413
 Content Too Large`), and **MUST** bound the size and depth of nested structures and
 arrays. Unbounded input is a denial-of-service vector.
+
+<!-- param: max_request_body_size_mb | 10 | Maximum request body size (megabytes) | This organization rejects request bodies larger than {value} megabytes. -->
+<!-- param: max_nesting_depth | 32 | Maximum nested structure depth | This organization rejects request structures nested deeper than {value} levels. -->
+<!-- param: max_array_elements | 1000 | Maximum elements per array | This organization rejects request arrays containing more than {value} elements. -->
 
 ### `security-mass-assignment`
 <a id="SDLC-API-0153"></a>**`SDLC-API-0153`**
@@ -163,12 +174,17 @@ infrastructure identifiers) in any response (see [Errors](07-errors.md)).
 methods, and headers. **MUST NOT** reflect arbitrary origins or pair
 `Access-Control-Allow-Origin: *` with credentialed requests.
 
+<!-- param: cors_preflight_max_age_seconds | 600 | CORS preflight cache duration (seconds) | This organization sets the CORS preflight Access-Control-Max-Age to {value} seconds. -->
+
 ### `security-rate-limit`
 <a id="SDLC-API-0156"></a>**`SDLC-API-0156`**
 
 **MUST** apply rate limiting and abuse protection to authentication endpoints and
 **SHOULD** apply it across the API (see [Rate limiting](11-rate-limiting.md)) to
 blunt brute-force, scraping, and denial-of-service attempts.
+
+<!-- param: auth_rate_limit_per_minute | 10 | Authentication endpoint rate limit (requests per minute) | This organization limits authentication endpoints to {value} requests per minute per client. -->
+<!-- param: auth_lockout_threshold | 5 | Failed authentication attempts before lockout | This organization locks an account after {value} consecutive failed authentication attempts. -->
 
 ### `security-relevant-headers`
 <a id="SDLC-API-0157"></a>**`SDLC-API-0157`**

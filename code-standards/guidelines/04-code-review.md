@@ -71,6 +71,9 @@ thoroughly ([`vc-atomic-commits`](03-version-control.md#vc-atomic-commits)). Lar
 requests get shallow reviews — attention does not scale with diff size. Split big work
 into a sequence of reviewable steps.
 
+<!-- param: review_max_changed_lines | 400 | Recommended maximum changed lines per pull request | This organization recommends keeping pull requests under {value} changed lines so they can be reviewed thoroughly. -->
+<!-- param: review_max_files_changed | 20 | Recommended maximum files changed per pull request | This organization recommends keeping pull requests to at most {value} changed files for thorough review. -->
+
 ### `review-author-context`
 <a id="SDLC-CODE-0044"></a>**`SDLC-CODE-0044`**
 
@@ -84,6 +87,8 @@ reviewer should not have to reverse-engineer the intent from the diff.
 Reviews **SHOULD** be done promptly. A change waiting on review is blocked work and
 grows stale and harder to merge. Teams **SHOULD** agree on a turnaround expectation and
 treat reviewing peers' code as real work, not an interruption.
+
+<!-- param: review_turnaround_hours | 24 | Code review turnaround target (business hours) | This organization expects reviewers to respond to review requests within {value} business hours. -->
 
 ### `review-constructive`
 <a id="SDLC-CODE-0046"></a>**`SDLC-CODE-0046`**

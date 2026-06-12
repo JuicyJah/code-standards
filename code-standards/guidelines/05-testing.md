@@ -71,6 +71,8 @@ unseeded randomness — are worse than no tests, because they train the team to 
 red builds. A flaky test **MUST** be fixed or quarantined with a tracked issue, never
 left to erode trust in the suite.
 
+<!-- param: flaky_quarantine_max_days | 14 | Maximum days a flaky test may stay quarantined (days) | This organization requires a quarantined flaky test to be fixed or removed within {value} days. -->
+
 ### `test-isolated`
 <a id="SDLC-CODE-0054"></a>**`SDLC-CODE-0054`**
 
@@ -88,6 +90,8 @@ The suite **SHOULD** be fast enough that developers run it often. A suite that t
 long to run gets skipped, defeating its purpose. Keep the fast majority (unit tests)
 runnable in seconds; relegate slow tests to layers that run less often
 ([`test-pyramid`](#test-pyramid)).
+
+<!-- param: unit_suite_max_seconds | 120 | Maximum unit test suite runtime (seconds) | This organization expects the unit test suite to complete within {value} seconds. -->
 
 ### `test-behavior-not-implementation`
 <a id="SDLC-CODE-0056"></a>**`SDLC-CODE-0056`**
@@ -112,6 +116,8 @@ is brittle and expensive.
 Disabled, skipped, or ignored tests **MUST NOT** accumulate silently. A test turned off
 **MUST** have a tracked issue and a plan to re-enable it; otherwise it is a coverage
 gap pretending to be covered.
+
+<!-- param: skipped_test_max_days | 30 | Maximum days a test may stay disabled before re-enabling (days) | This organization requires a skipped or disabled test to be re-enabled or removed within {value} days. -->
 
 ## Common mistakes
 

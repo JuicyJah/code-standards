@@ -113,6 +113,9 @@ Deeper nesting (`/a/{}/b/{}/c/{}/d`) couples the URL to a rigid hierarchy and gr
 unwieldy. When a child has its own stable identity, **SHOULD** also expose it at a
 top-level collection (`/children/{childId}`) so it can be addressed directly.
 
+<!-- param: max_url_nesting_depth | 1 | Maximum URL nesting depth (parent levels) | This organization limits URL nesting to {value} parent level(s) before a child must be exposed at a top-level collection. -->
+
+
 ### `resource-relationship-by-reference`
 <a id="SDLC-API-0037"></a>**`SDLC-API-0037`**
 
